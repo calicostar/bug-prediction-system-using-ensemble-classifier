@@ -1,0 +1,13 @@
+[
+    {
+        "Data Point": 1,
+        "isBuggy": "Yes",
+        "Severity": "High",
+        "Probabilities": {
+            "Low": 0.18472159093216273,
+            "Medium": 0.05090493068339832,
+            "High": 0.7384779936968718,
+            "Critical": 0.025895484687567236
+        }
+    }
+]
