@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bug Prediction System - Info</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+
+<div class="top-links">
+    <a href="#">About Us</a>
+    <a href="#">Contact</a>
+    <a href="https://github.com/ApoorvaKrisna/NASA-promise-dataset-repository">Dataset</a>
+    <a href="#">Ensemble Classifier</a>
+    <a href="#">How to Use?</a>
+</div>
+
+<h1 class="main-title">Review Your Details</h1>
+<h2 class="sub-title">Make sure all information is correct</h2>
+
+<div class="info-container">
+    <div id="infoContent" class="info-content"></div>
+    <button type="button" class="back-button" onclick="goBackToForm()">Back</button>
+    <button type="button" class="next-button" onclick="goToPredictionPage()">Run</button>
+</div>
+
+<script src="{{ url_for('static', filename='js/info.js') }}"></script>
+</body>
+</html>
+
