@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bug Prediction System - Choose Input Method</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+
+<div class="top-links">
+    <a href="#">About Us</a>
+    <a href="#">Contact</a>
+    <a href="https://github.com/ApoorvaKrisna/NASA-promise-dataset-repository">Dataset</a>
+    <a href="#">Ensemble Classifier</a>
+    <a href="#">How to Use?</a>
+</div>
+
+<h1 class="main-title">Bug Prediction System</h1>
+<h2 class="sub-title">Choose Input Method</h2>
+
+<div class="content-container">
+    <button class="choice-button" onclick="showManualInput()">Enter Manually</button>
+    <button class="choice-button" onclick="showUploadInput('csv')">Upload CSV</button>
+    <button class="choice-button" onclick="showUploadInput('jsonl')">Upload JSONL</button>
+</div>
+
+<div id="manualInputContainer" class="form-container">
+    <h2 class="sub-title">Manual Input</h2>
+    <form id="manualInputForm" class="form-grid">
+        <div class="form-group">
+            <label for="projectName">Project Name</label>
+            <input type="text" id="projectName" name="project_name" required>
+        </div>
+        <div class="form-group">
+            <label for="projectVersion">Project Version</label>
+            <input type="text" id="projectVersion" name="project_version" required>
+        </div>
+        <div class="form-group">
+            <label for="label">Label</label>
+            <input type="number" id="label" name="label" required>
+        </div>
+        <div class="form-group full-width">
+            <label for="code">Code</label>
+            <textarea id="code" name="code" rows="10" required></textarea>
+        </div>
+        <div class="form-group">
+            <label for="lc">LC (Lines of Code)</label>
+            <input type="number" id="lc" name="lc" step="any" required>
+            <div class="description">The number of lines in the code.</div>
+        </div>
+        <div class="form-group">
+            <label for="pi">PI (Programming Index)</label>
+            <input type="number" id="pi" name="pi" step="any" required>
+            <div class="description">A derived metric combining various aspects of the code's complexity, readability, and maintainability.</div>
+        </div>
+        <div class="form-group">
+            <label for="ma">MA (Maintainability Index)</label>
+            <input type="number" id="ma" name="ma" step="any" required>
+            <div class="description">Evaluates how easy it is to maintain the code. Higher values indicate easier maintenance.</div>
+        </div>
+        <div class="form-group">
+            <label for="nbd">NBD (Nested Block Depth)</label>
+            <input type="number" id="nbd" name="nbd" step="any" required>
+            <div class="description">Measures the maximum depth of nested blocks in the code, indicating complexity.</div>
+        </div>
+        <div class="form-group">
+            <label for="r">R (Reusability Index)</label>
+            <input type="number" id="r" name="r" step="any" required>
+            <div class="description">Assesses how reusable the code is. Higher values suggest easier reuse in other projects.</div>
+        </div>
+        <div class="form-group">
+            <label for="ml">ML (McCabe's Cyclomatic Complexity)</label>
+            <input type="number" id="ml" name="ml" step="any" required>
+            <div class="description">Measures the complexity of a program's control flow by counting linearly independent paths.</div>
+        </div>
+        <div class="form-group">
+            <label for="d">D (Design Complexity)</label>
+            <input type="number" id="d" name="d" step="any" required>
+            <div class="description">Quantifies the complexity of the code's design, including architecture and structure.</div>
+        </div>
+        <div class="form-group">
+            <label for="mi">MI (Maintainability Index)</label>
+            <input type="number" id="mi" name="mi" step="any" required>
+            <div class="description">Evaluates how easy it is to maintain the code, often a composite metric including various factors.</div>
+        </div>
+        <div class="form-group">
+            <label for="fo">FO (Fan-Out Complexity)</label>
+            <input type="number" id="fo" name="fo" step="any" required>
+            <div class="description">Measures the number of other modules or functions a particular module or function calls.</div>
+        </div>
+        <div class="form-group">
+            <label for="e">E (Effort Estimate)</label>
+            <input type="number" id="e" name="e" step="any" required>
+            <div class="description">Estimates the effort required to develop or maintain the code based on various factors.</div>
+        </div>
+        <button type="button" class="next-button" onclick="submitManualInput()">Next</button>
+    </form>
+</div>
+
+<div id="uploadInputContainer" class="upload-container">
+    <h2 class="sub-title" id="uploadTitle">Upload File</h2>
+    <input type="file" id="fileInput" accept=".csv, .jsonl" required>
+    <button type="button" class="next-button" onclick="submitUploadInput()">Next</button>
+</div>
+
+<script src="{{ url_for('static', filename='js/index.js') }}"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
