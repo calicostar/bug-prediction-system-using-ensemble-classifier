@@ -1,0 +1,4432 @@
+project_name,project_version,label,code,code_comment,code_no_comment,lc,pi,ma,nbd,ml,d,mi,fo,r,e
+jackrabbit-oak,remotes/origin/bugs-dot-jar_OAK-1655_01a8b283,1.0,"@Nullable
+@Override
+public String apply(@Nullable DataIdentifier input) {
+    return input.toString();
+}","/**
+ * {@inheritDoc}
+ */
+","@Nullable
+@Override
+public String apply(@Nullable DataIdentifier input) {
+    return input.toString();
+}",-0.16666666666666666,-0.4952830188679243,-0.5,-1.0,0.0,0.0,0.35459332943241656,-0.6666666666666666,0.5125000000000001,0.0
+logging-log4j2,remotes/origin/bugs-dot-jar_LOG4J2-1025_a96b455c,1.0,"/*
+     * TODO consider making public.
+     */
+private void mapJulToLog4j(java.util.logging.Level julLevel, Level level) {
+    julToLog4j.put(julLevel, level);
+}","/**
+ * {@inheritDoc}
+ */
+","private void mapJulToLog4j(java.util.logging.Level julLevel, Level level) {
+    julToLog4j.put(julLevel, level);
+}",-0.5,-0.2216981132075472,-0.5,-1.0,0.0,0.0,0.6532475131655928,-0.6666666666666666,0.6625000000000001,0.0
+jackrabbit-oak,remotes/origin/bugs-dot-jar_OAK-1977_4bfbfcdd,1.0,"@Override
+public String getPath() {
+    String sub = r.getPath();
+    if (PathUtils.isAbsolute(sub)) {
+        return path + sub;
+    } else {
+        return PathUtils.concat(path, r.getPath());
+    }
+}","/**
+ * {@inheritDoc}
+ */
+","@Override
+public String getPath() {
+    String sub = r.getPath();
+    if (PathUtils.isAbsolute(sub)) {
+        return path + sub;
+    } else {
+        return PathUtils.concat(path, r.getPath());
+    }
+}",0.5,0.7783018867924528,0.0,0.0,1.0,1.2413793103448276,-0.31386775892334673,0.3333333333333333,-0.06249999999999999,0.9236549712833909
+accumulo,remotes/origin/bugs-dot-jar_ACCUMULO-217_46f62443,1.0,"@Override
+public void create(String tableName, boolean versioningIter, TimeType timeType) throws AccumuloException, AccumuloSecurityException, TableExistsException {
+    if (!tableName.matches(Constants.VALID_TABLE_NAME_REGEX)) {
+        throw new IllegalArgumentException();
+    }
+    acu.createTable(username, tableName, versioningIter, timeType);
+}","/**
+ * {@inheritDoc}
+ */
+","@Override
+public void create(String tableName, boolean versioningIter, TimeType timeType) throws AccumuloException, AccumuloSecurityException, TableExistsException {
+    if (!tableName.matches(Constants.VALID_TABLE_NAME_REGEX)) {
+        throw new IllegalArgumentException();
+    }
+    acu.createTable(username, tableName, versioningIter, timeType);
+}",0.16666666666666666,0.6367924528301884,0.5,0.0,0.6666666666666666,0.0,-0.20947922761849064,-0.3333333333333333,-0.4,0.0
+Closure,27.0,2.0,"public static Node tryFinally(Node tryBody, Node finallyBody) {
+    Preconditions.checkState(tryBody.isLabelName());
+    Preconditions.checkState(finallyBody.isLabelName());
+    Node catchBody = block().copyInformationFrom(tryBody);
+    return new Node(Token.TRY, tryBody, catchBody, finallyBody);
+}","/**
+ * {@inheritDoc}
+ */
+","public static Node tryFinally(Node tryBody, Node finallyBody) {
+    Preconditions.checkState(tryBody.isLabelName());
+    Preconditions.checkState(finallyBody.isLabelName());
+    Node catchBody = block().copyInformationFrom(tryBody);
+    return new Node(Token.TRY, tryBody, catchBody, finallyBody);
+}",0.0,-0.2216981132075472,-0.5,-1.0,0.0,0.0,-0.08355763604447025,1.0,-0.4,0.0
+commons-math,remotes/origin/bugs-dot-jar_MATH-757_76b7413d,1.0,"/**
+ * Sets the {@link ExpansionMode expansion mode}.
+ *
+ * @param expansionMode Expansion mode to use for resizing the array.
+ * @deprecated As of 3.1 (to be removed in 4.0 as field will become ""final"").
+ */
+@Deprecated
+public void setExpansionMode(ExpansionMode expansionMode) {
+    this.expansionMode = expansionMode;
+}","/**
+ * Sets the {@link ExpansionMode expansion mode}.
+ *
+ * @param expansionMode Expansion mode to use for resizing the array.
+ * @deprecated As of 3.1 (to be removed in 4.0 as field will become ""final"").
+ */
+","@Deprecated
+public void setExpansionMode(ExpansionMode expansionMode) {
+    this.expansionMode = expansionMode;
+}",-0.3333333333333333,-0.3726415094339622,-0.5,-1.0,0.0,0.0,0.6143943826799294,-1.0,0.7250000000000002,0.0
+camel,remotes/origin/bugs-dot-jar_CAMEL-7213_336663c9,1.0,"@Converter
+public static ByteBuffer toByteBuffer(Long value) {
+    ByteBuffer buf = ByteBuffer.allocate(8);
+    buf.putLong(value);
+    return buf;
+}","/**
+ * {@inheritDoc}
+ */
+","@Converter
+public static ByteBuffer toByteBuffer(Long value) {
+    ByteBuffer buf = ByteBuffer.allocate(8);
+    buf.putLong(value);
+    return buf;
+}",0.0,-0.11792452830188677,-0.5,-1.0,0.0,0.0,0.06717378583967239,-0.3333333333333333,0.18749999999999997,0.0
+flink,remotes/origin/bugs-dot-jar_FLINK-1820_39d526e6,0.0,"/**
+ *  Static utility to parse a field of type float from a byte sequence that represents text characters
+ *  (such as when read from a file stream).
+ *
+ *  @param bytes The bytes containing the text data that should be parsed.
+ *  @param startPos The offset to start the parsing.
+ *  @param length The length of the byte sequence (counting from the offset).
+ *
+ *  @return The parsed value.
+ *
+ *  @throws NumberFormatException Thrown when the value cannot be parsed because the text represents not a correct number.
+ */
+public static final float parseField(byte[] bytes, int startPos, int length) {
+    return parseField(bytes, startPos, length, (char) 0xffff);
+}","/**
+ *  Static utility to parse a field of type float from a byte sequence that represents text characters
+ *  (such as when read from a file stream).
+ *
+ *  @param bytes The bytes containing the text data that should be parsed.
+ *  @param startPos The offset to start the parsing.
+ *  @param length The length of the byte sequence (counting from the offset).
+ *
+ *  @return The parsed value.
+ *
+ *  @throws NumberFormatException Thrown when the value cannot be parsed because the text represents not a correct number.
+ */
+","public static final float parseField(byte[] bytes, int startPos, int length) {
+    return parseField(bytes, startPos, length, (char) 0xffff);
+}",-0.5,-0.2216981132075472,-0.5,-1.0,0.0,0.0,0.7782328847279106,-0.6666666666666666,0.525,0.0
+commons-math,remotes/origin/bugs-dot-jar_MATH-880_2a9cbbab,1.0,"/**
+ * Mark the incoming edge as processed.
+ */
+public void incomingProcessed() {
+    incomingNeedsProcessing = false;
+}","/**
+ * Mark the incoming edge as processed.
+ */
+","public void incomingProcessed() {
+    incomingNeedsProcessing = false;
+}",-0.5,-0.2216981132075472,-0.5,-1.0,0.0,0.0,0.9729666471620824,-1.0,0.85,0.0
+camel,remotes/origin/bugs-dot-jar_CAMEL-5137_afa1d132,3.0,"@Override
+public void run() {
+    try {
+        long count = counter.incrementAndGet();
+        boolean fire = endpoint.getRepeatCount() <= 0 || count <= endpoint.getRepeatCount();
+        if (fire) {
+            sendTimerExchange(count);
+        } else {
+            // no need to fire anymore as we exceeded repeat count
+            LOG.debug(""Cancelling {} timer as repeat count limit reached after {} counts."", endpoint.getTimerName(), endpoint.getRepeatCount());
+            cancel();
+        }
+    } catch (Throwable e) {
+        // catch all to avoid the JVM closing the thread and not firing again
+        LOG.warn(""Error processing exchange. This exception will be ignored, to let the timer be able to trigger again."", e);
+    }
+}","/**
+ * {@inheritDoc}
+ */
+","@Override
+public void run() {
+    try {
+        long count = counter.incrementAndGet();
+        boolean fire = endpoint.getRepeatCount() <= 0 || count <= endpoint.getRepeatCount();
+        if (fire) {
+            sendTimerExchange(count);
+        } else {
+                        LOG.debug(""Cancelling {} timer as repeat count limit reached after {} counts."", endpoint.getTimerName(), endpoint.getRepeatCount());
+            cancel();
+        }
+    } catch (Throwable e) {
+                LOG.warn(""Error processing exchange. This exception will be ignored, to let the timer be able to trigger again."", e);
+    }
+}",1.5,1.844339622641509,0.5,1.0,0.6666666666666666,1.0344827586206897,-0.9050906963136336,2.0,-0.3875,1.6996654201928756
+Closure,124.0,2.0,"/**
+ * Checks name referenced in node to determine if it might have
+ * changed.
+ * @return Whether the replacement can be made.
+ */
+private boolean isSafeReplacement(Node node, Node replacement) {
+    // No checks are needed for simple names.
+    if (node.isName()) {
+        return true;
+    }
+    Preconditions.checkArgument(node.isGetProp());
+    node = node.getFirstChild();
+    if (node.isName() && isNameAssignedTo(node.getString(), replacement)) {
+        return false;
+    }
+    return true;
+}","/**
+ * Checks name referenced in node to determine if it might have
+ * changed.
+ * @return Whether the replacement can be made.
+ */
+","private boolean isSafeReplacement(Node node, Node replacement) {
+        if (node.isName()) {
+        return true;
+    }
+    Preconditions.checkArgument(node.isGetProp());
+    node = node.getFirstChild();
+    if (node.isName() && isNameAssignedTo(node.getString(), replacement)) {
+        return false;
+    }
+    return true;
+}",0.8333333333333334,0.26886792452830194,0.5,0.0,2.3333333333333335,1.1793103448275861,-0.567583382094792,1.3333333333333333,-0.375,1.2759836109570415
+commons-math,remotes/origin/bugs-dot-jar_MATH-434_133cbc2d,1.0,"/**
+ * {@inheritDoc}
+ */
+@Override
+public RealPointValuePair doOptimize() throws OptimizationException {
+    final SimplexTableau tableau = new SimplexTableau(function, linearConstraints, goal, nonNegative, epsilon);
+    solvePhase1(tableau);
+    tableau.dropPhase1Objective();
+    while (!tableau.isOptimal()) {
+        doIteration(tableau);
+    }
+    return tableau.getSolution();
+}","/**
+ * {@inheritDoc}
+ */
+","@Override
+public RealPointValuePair doOptimize() throws OptimizationException {
+    final SimplexTableau tableau = new SimplexTableau(function, linearConstraints, goal, nonNegative, epsilon);
+    solvePhase1(tableau);
+    tableau.dropPhase1Objective();
+    while (!tableau.isOptimal()) {
+        doIteration(tableau);
+    }
+    return tableau.getSolution();
+}",0.6666666666666666,0.2594339622641508,0.0,0.0,0.6666666666666666,0.9310344827586208,-0.4894090111176123,0.6666666666666666,-0.28750000000000003,1.0282872018750784
+wicket,remotes/origin/bugs-dot-jar_WICKET-5418_e350f19e,1.0,"/**
+ *  Marks the form component required if necessary
+ */
+private void setComponentRequiredFlag() {
+    BeanValidationContext config = BeanValidationConfiguration.get();
+    Validator validator = config.getValidator();
+    Property property = getProperty();
+    // if the property has a NotNull constraint mark the form component required
+    Iterator<ConstraintDescriptor<?>> it = new ConstraintIterator(validator, property);
+    while (it.hasNext()) {
+        ConstraintDescriptor<?> desc = it.next();
+        if (desc.getAnnotation().annotationType().equals(NotNull.class)) {
+            component.setRequired(true);
+            break;
+        }
+    }
+}","/**
+ *  Marks the form component required if necessary
+ */
+","private void setComponentRequiredFlag() {
+    BeanValidationContext config = BeanValidationConfiguration.get();
+    Validator validator = config.getValidator();
+    Property property = getProperty();
+        Iterator<ConstraintDescriptor<?>> it = new ConstraintIterator(validator, property);
+    while (it.hasNext()) {
+        ConstraintDescriptor<?> desc = it.next();
+        if (desc.getAnnotation().annotationType().equals(NotNull.class)) {
+            component.setRequired(true);
+            break;
+        }
+    }
+}",1.1666666666666667,1.4764150943396221,1.0,1.0,1.3333333333333333,0.0,-0.8395552954944409,2.0,-0.1875,0.0
+jackrabbit-oak,remotes/origin/bugs-dot-jar_OAK-1977_4bfbfcdd,1.0,"@Override
+public Iterator<String> iterator() {
+    PathIterator pi = new PathIterator(filter, indexName);
+    pi.setPathContainsValue(true);
+    pi.enqueue(children.iterator());
+    return pi;
+}","/**
+ * {@inheritDoc}
+ */
+","@Override
+public Iterator<String> iterator() {
+    PathIterator pi = new PathIterator(filter, indexName);
+    pi.setPathContainsValue(true);
+    pi.enqueue(children.iterator());
+    return pi;
+}",0.16666666666666666,-0.13679245283018865,-0.5,-1.0,0.0,0.0,-0.11492100643651244,0.0,-0.26250000000000007,0.0
+Compress,46.0,1.0,"private static ZipLong unixTimeToZipLong(long l) {
+    final long TWO_TO_32 = 0x100000000L;
+    if (l >= TWO_TO_32) {
+        throw new IllegalArgumentException(""X5455 timestamps must fit in a signed 32 bit integer: "" + l);
+    }
+    return new ZipLong(l);
+}","/**
+ * {@inheritDoc}
+ */
+","private static ZipLong unixTimeToZipLong(long l) {
+    final long TWO_TO_32 = 0x100000000L;
+    if (l >= TWO_TO_32) {
+        throw new IllegalArgumentException(""X5455 timestamps must fit in a signed 32 bit integer: "" + l);
+    }
+    return new ZipLong(l);
+}",0.16666666666666666,0.410377358490566,0.5,0.0,0.6666666666666666,1.1172413793103448,-0.07091866588648331,-1.0,0.525,0.6437530192696499
+Cli,3.0,1.0,"/**
+ * <p>Create a number from a String. If a . is present, it creates a
+ *    Double, otherwise a Long. </p>
+ *
+ * @param str the value
+ * @return the number represented by <code>str</code>, if <code>str</code>
+ * is not a number, null is returned.
+ */
+public static Number createNumber(String str) {
+    try {
+        return NumberUtils.createNumber(str);
+    } catch (NumberFormatException nfe) {
+        System.err.println(nfe.getMessage());
+    }
+    return null;
+}","/**
+ * <p>Create a number from a String. If a . is present, it creates a
+ *    Double, otherwise a Long. </p>
+ *
+ * @param str the value
+ * @return the number represented by <code>str</code>, if <code>str</code>
+ * is not a number, null is returned.
+ */
+","public static Number createNumber(String str) {
+    try {
+        return NumberUtils.createNumber(str);
+    } catch (NumberFormatException nfe) {
+        System.err.println(nfe.getMessage());
+    }
+    return null;
+}",0.3333333333333333,0.6650943396226414,0.0,0.0,0.0,0.0,-0.17811585722644843,0.0,-0.10000000000000003,0.0
+flink,remotes/origin/bugs-dot-jar_FLINK-1496_0a4c7694,1.0,"/**
+ *  Returns the total number of input channels for this reader.
+ *  <p>
+ *  Note: This number might be smaller the current number of input channels
+ *  of the reader as channels are possibly updated during runtime.
+ */
+public int getNumberOfInputChannels() {
+    return totalNumberOfInputChannels;
+}","/**
+ *  Returns the total number of input channels for this reader.
+ *  <p>
+ *  Note: This number might be smaller the current number of input channels
+ *  of the reader as channels are possibly updated during runtime.
+ */
+","public int getNumberOfInputChannels() {
+    return totalNumberOfInputChannels;
+}",-0.5,-0.2216981132075472,-0.5,-1.0,0.0,0.0,1.190169689877121,-1.0,0.85,0.0
+accumulo,remotes/origin/bugs-dot-jar_ACCUMULO-2494_0dc92ca1,1.0,"public double getStdDev() {
+    return Math.sqrt(partialStdDev / count - getAverage() * getAverage());
+}","/**
+ * {@inheritDoc}
+ */
+","public double getStdDev() {
+    return Math.sqrt(partialStdDev / count - getAverage() * getAverage());
+}",-0.5,-0.2216981132075472,-0.5,-1.0,0.0,0.786206896551724,0.6939730836746626,0.0,0.6750000000000002,0.29886743840689917
+Closure,174.0,2.0,"/**
+ * Creates a node representing a qualified name.
+ *
+ * @param name A qualified name (e.g. ""foo"" or ""foo.bar.baz"")
+ * @return A NAME or GETPROP node
+ */
+public static Node newQualifiedNameNodeDeclaration(CodingConvention convention, String name, Node value, JSDocInfo info) {
+    Node result;
+    Node nameNode = newQualifiedNameNode(convention, name);
+    if (nameNode.isName()) {
+        result = IR.var(nameNode, value);
+        result.setJSDocInfo(info);
+    } else {
+        result = IR.exprResult(IR.assign(nameNode, value));
+        result.getFirstChild().setJSDocInfo(info);
+    }
+    return result;
+}","/**
+ * Creates a node representing a qualified name.
+ *
+ * @param name A qualified name (e.g. ""foo"" or ""foo.bar.baz"")
+ * @return A NAME or GETPROP node
+ */
+","public static Node newQualifiedNameNodeDeclaration(CodingConvention convention, String name, Node value, JSDocInfo info) {
+    Node result;
+    Node nameNode = newQualifiedNameNode(convention, name);
+    if (nameNode.isName()) {
+        result = IR.var(nameNode, value);
+        result.setJSDocInfo(info);
+    } else {
+        result = IR.exprResult(IR.assign(nameNode, value));
+        result.getFirstChild().setJSDocInfo(info);
+    }
+    return result;
+}",1.0,0.5896226415094338,0.0,0.0,0.6666666666666666,0.0,-0.7679344645991805,1.6666666666666667,-0.3500000000000001,0.0
+commons-math,remotes/origin/bugs-dot-jar_MATH-320_c06cc933,1.0,"/**
+ * Get the pseudo-inverse of the decomposed matrix.
+ * @return inverse matrix
+ * @throws InvalidMatrixException if decomposed matrix is singular
+ */
+public RealMatrix getInverse() throws InvalidMatrixException {
+    if (!isNonSingular()) {
+        throw new SingularMatrixException();
+    }
+    return solve(MatrixUtils.createRealIdentityMatrix(singularValues.length));
+}","/**
+ * Get the pseudo-inverse of the decomposed matrix.
+ * @return inverse matrix
+ * @throws InvalidMatrixException if decomposed matrix is singular
+ */
+","public RealMatrix getInverse() throws InvalidMatrixException {
+    if (!isNonSingular()) {
+        throw new SingularMatrixException();
+    }
+    return solve(MatrixUtils.createRealIdentityMatrix(singularValues.length));
+}",0.0,0.5896226415094338,0.5,0.0,0.6666666666666666,0.0,0.106963136337039,0.0,0.825,0.0
+Closure,137.0,2.0,"private static String getOrginalNameInternal(String name, int index) {
+    return name.substring(0, index);
+}","/**
+ * {@inheritDoc}
+ */
+","private static String getOrginalNameInternal(String name, int index) {
+    return name.substring(0, index);
+}",-0.5,-0.2216981132075472,-0.5,-1.0,0.0,0.0,0.7581041544763012,-0.6666666666666666,-0.3500000000000001,0.0
+Closure,146.0,2.0,"/**
+ * Computes the subset of {@code this} and {@code that} types if inequality
+ * is observed. If a value {@code v1} of type {@code number} is not equal to a
+ * value {@code v2} of type {@code (undefined,number)}, we can infer that the
+ * type of {@code v1} is {@code number} and the type of {@code v2} is
+ * {@code number} as well.
+ *
+ * @return a pair containing the restricted type of {@code this} as the first
+ *         component and the restricted type of {@code that} as the second
+ *         element. The returned pair is never {@code null} even though its
+ *         components may be {@code null}
+ */
+public TypePair getTypesUnderInequality(JSType that) {
+    // unions types
+    if (that instanceof UnionType) {
+        TypePair p = that.getTypesUnderInequality(this);
+        return new TypePair(p.typeB, p.typeA);
+    }
+    // other types
+    switch(this.testForEquality(that)) {
+        case TRUE:
+            return new TypePair(null, null);
+        case FALSE:
+        case UNKNOWN:
+            return new TypePair(this, that);
+    }
+    // switch case is exhaustive
+    throw new IllegalStateException();
+}","/**
+ * Computes the subset of {@code this} and {@code that} types if inequality
+ * is observed. If a value {@code v1} of type {@code number} is not equal to a
+ * value {@code v2} of type {@code (undefined,number)}, we can infer that the
+ * type of {@code v1} is {@code number} and the type of {@code v2} is
+ * {@code number} as well.
+ *
+ * @return a pair containing the restricted type of {@code this} as the first
+ *         component and the restricted type of {@code that} as the second
+ *         element. The returned pair is never {@code null} even though its
+ *         components may be {@code null}
+ */
+","public TypePair getTypesUnderInequality(JSType that) {
+        if (that instanceof UnionType) {
+        TypePair p = that.getTypesUnderInequality(this);
+        return new TypePair(p.typeB, p.typeA);
+    }
+        switch(this.testForEquality(that)) {
+        case TRUE:
+            return new TypePair(null, null);
+        case FALSE:
+        case UNKNOWN:
+            return new TypePair(this, that);
+    }
+        throw new IllegalStateException();
+}",1.3333333333333333,1.4198113207547165,2.0,1.0,2.0,0.0,-0.8007021650087768,-0.3333333333333333,-0.4,0.0
+camel,remotes/origin/bugs-dot-jar_CAMEL-6447_020c451a,1.0,"/**
+ * Ends the current block and returns back to the {@link ChoiceDefinition choice()} DSL.
+ *
+ * @return the builder
+ */
+public ChoiceDefinition endChoice() {
+    // are we already a choice?
+    ProcessorDefinition<?> def = this;
+    if (def instanceof ChoiceDefinition) {
+        return (ChoiceDefinition) def;
+    }
+    // okay end this and get back to the choice
+    def = end();
+    if (def instanceof WhenDefinition) {
+        return (ChoiceDefinition) def.getParent();
+    } else if (def instanceof OtherwiseDefinition) {
+        return (ChoiceDefinition) def.getParent();
+    } else {
+        return (ChoiceDefinition) def;
+    }
+}","/**
+ * Ends the current block and returns back to the {@link ChoiceDefinition choice()} DSL.
+ *
+ * @return the builder
+ */
+","public ChoiceDefinition endChoice() {
+        ProcessorDefinition<?> def = this;
+    if (def instanceof ChoiceDefinition) {
+        return (ChoiceDefinition) def;
+    }
+        def = end();
+    if (def instanceof WhenDefinition) {
+        return (ChoiceDefinition) def.getParent();
+    } else if (def instanceof OtherwiseDefinition) {
+        return (ChoiceDefinition) def.getParent();
+    } else {
+        return (ChoiceDefinition) def;
+    }
+}",1.3333333333333333,0.410377358490566,1.0,1.0,1.3333333333333333,0.0,-0.7061439438267993,0.0,-0.23750000000000002,0.0
+accumulo,remotes/origin/bugs-dot-jar_ACCUMULO-2494_0dc92ca1,1.0,"public long getSum() {
+    return sum;
+}","/**
+ * {@inheritDoc}
+ */
+","public long getSum() {
+    return sum;
+}",-0.5,-0.2216981132075472,-0.5,-1.0,0.0,0.0,1.190169689877121,-1.0,0.7875,0.0
+flink,remotes/origin/bugs-dot-jar_FLINK-3314_8fc7e7af,0.0,"@Override
+public final void cancel() throws Exception {
+    isRunning = false;
+    cancelTask();
+}","/**
+ * {@inheritDoc}
+ */
+","@Override
+public final void cancel() throws Exception {
+    isRunning = false;
+    cancelTask();
+}",-0.16666666666666666,-0.15566037735849056,-0.5,-1.0,0.0,0.0,0.4088940901111752,-0.6666666666666666,0.7375000000000002,0.0
+jackrabbit-oak,remotes/origin/bugs-dot-jar_OAK-1289_0c3e3d70,1.0,"/**
+ * Returns <code>true</code> if the given revision is within this range.
+ *
+ * @param r the revision to check.
+ * @return <code>true</code> if within this range; <code>false</code>
+ * otherwise.
+ */
+boolean includes(Revision r) {
+    return high.compareRevisionTime(r) >= 0 && low.compareRevisionTime(r) <= 0;
+}","/**
+ * Returns <code>true</code> if the given revision is within this range.
+ *
+ * @param r the revision to check.
+ * @return <code>true</code> if within this range; <code>false</code>
+ * otherwise.
+ */
+","boolean includes(Revision r) {
+    return high.compareRevisionTime(r) >= 0 && low.compareRevisionTime(r) <= 0;
+}",-0.5,-0.2216981132075472,-0.5,-1.0,0.0,1.0344827586206897,0.6087770626097128,-0.3333333333333333,0.6125000000000002,0.5570843248465764
+Closure,67.0,2.0,"private boolean isPrototypePropertyAssign(Node assign) {
+    Node n = assign.getFirstChild();
+    if (n != null && NodeUtil.isVarOrSimpleAssignLhs(n, assign) && n.getType() == Token.GETPROP) {
+        // We want to exclude the assignment itself from the usage list
+        boolean isChainedProperty = n.getFirstChild().getType() == Token.GETPROP;
+        if (isChainedProperty) {
+            Node child = n.getFirstChild().getFirstChild().getNext();
+            if (child.getType() == Token.STRING && child.getString().equals(""prototype"")) {
+                return true;
+            }
+        }
+    }
+    return false;
+}","/**
+ * {@inheritDoc}
+ */
+","private boolean isPrototypePropertyAssign(Node assign) {
+    Node n = assign.getFirstChild();
+    if (n != null && NodeUtil.isVarOrSimpleAssignLhs(n, assign) && n.getType() == Token.GETPROP) {
+                boolean isChainedProperty = n.getFirstChild().getType() == Token.GETPROP;
+        if (isChainedProperty) {
+            Node child = n.getFirstChild().getFirstChild().getNext();
+            if (child.getType() == Token.STRING && child.getString().equals(""prototype"")) {
+                return true;
+            }
+        }
+    }
+    return false;
+}",1.1666666666666667,2.476415094339622,1.0,2.0,4.333333333333333,2.689655172413793,-0.9050906963136336,2.6666666666666665,-0.28750000000000003,6.618525343973091
+wicket,remotes/origin/bugs-dot-jar_WICKET-5916_def03add,1.0,"/**
+ *  @see org.apache.wicket.model.IModel#getObject()
+ */
+@Override
+public final T getObject() {
+    if (!attached) {
+        transientModelObject = load();
+        if (log.isDebugEnabled()) {
+            log.debug(""loaded transient object "" + transientModelObject + "" for "" + this + "", requestCycle "" + RequestCycle.get());
+        }
+        attached = true;
+        onAttach();
+    }
+    return transientModelObject;
+}","/**
+ *  @see org.apache.wicket.model.IModel#getObject()
+ */
+","@Override
+public final T getObject() {
+    if (!attached) {
+        transientModelObject = load();
+        if (log.isDebugEnabled()) {
+            log.debug(""loaded transient object "" + transientModelObject + "" for "" + this + "", requestCycle "" + RequestCycle.get());
+        }
+        attached = true;
+        onAttach();
+    }
+    return transientModelObject;
+}",1.0,1.55188679245283,0.5,1.0,1.3333333333333333,0.8551724137931035,-0.6424809830310123,0.6666666666666666,0.17500000000000004,0.9552164033565334
+jackrabbit-oak,remotes/origin/bugs-dot-jar_OAK-1932_c215b267,1.0,"public SegmentNodeState compact(NodeState before, NodeState after) {
+    after.compareAgainstBaseState(before, new CompactDiff(builder));
+    return builder.getNodeState();
+}","/**
+ * {@inheritDoc}
+ */
+","public SegmentNodeState compact(NodeState before, NodeState after) {
+    after.compareAgainstBaseState(before, new CompactDiff(builder));
+    return builder.getNodeState();
+}",-0.3333333333333333,-0.11792452830188677,-0.5,-1.0,0.0,0.0,0.4173200702165003,-0.3333333333333333,-0.4,0.0
+wicket,remotes/origin/bugs-dot-jar_WICKET-4927_8c827e33,1.0,"@Override
+public void setStatus(int sc) {
+    bufferedResponse.setStatus(sc);
+}","/**
+ * {@inheritDoc}
+ */
+","@Override
+public void setStatus(int sc) {
+    bufferedResponse.setStatus(sc);
+}",-0.3333333333333333,-0.3726415094339622,-0.5,-1.0,0.0,0.0,0.6729081334113514,-0.6666666666666666,0.43750000000000006,0.0
+jackrabbit-oak,remotes/origin/bugs-dot-jar_OAK-621_00b4b8a0,1.0,"@Override
+public void removeProperty(String name) {
+    root.checkLive();
+    NodeBuilder builder = getNodeBuilder();
+    builder.removeProperty(name);
+    root.updated();
+}","/**
+ * {@inheritDoc}
+ */
+","@Override
+public void removeProperty(String name) {
+    root.checkLive();
+    NodeBuilder builder = getNodeBuilder();
+    builder.removeProperty(name);
+    root.updated();
+}",0.16666666666666666,-0.13679245283018865,-0.5,-1.0,0.0,0.0,-0.05827969572849638,0.3333333333333333,0.19999999999999998,0.0
+jackrabbit-oak,remotes/origin/bugs-dot-jar_OAK-43_668f08f2,1.0,"public void setProperties(String nodePath, Map<String, String> properties) throws Exception {
+    MutableNode node = getOrCreateStagedNode(nodePath);
+    node.getProperties().clear();
+    node.getProperties().putAll(properties);
+    // update change log
+    changeLog.add(new SetProperties(nodePath, properties));
+}","/**
+ * {@inheritDoc}
+ */
+","public void setProperties(String nodePath, Map<String, String> properties) throws Exception {
+    MutableNode node = getOrCreateStagedNode(nodePath);
+    node.getProperties().clear();
+    node.getProperties().putAll(properties);
+        changeLog.add(new SetProperties(nodePath, properties));
+}",0.0,-0.2216981132075472,-0.5,-1.0,0.0,0.0,-0.0915155061439437,1.0,-0.3375000000000001,0.0
+wicket,remotes/origin/bugs-dot-jar_WICKET-3715_557de7bc,3.0,"/**
+ *  Convenience method that copies the input stream returned by {@link #getInputStream()} into a
+ *  temporary file.
+ *  <p>
+ *  Only use this if you actually need a {@link File} to work with, in all other cases use
+ *  {@link #getInputStream()} or {@link #getBytes()}
+ *
+ *  @since 1.2
+ *
+ *  @return temporary file containing the contents of the uploaded file
+ *  @throws IOException
+ */
+public final File writeToTempFile() throws IOException {
+    File temp = File.createTempFile(Session.get().getId(), Files.cleanupFilename(item.getFieldName()));
+    writeTo(temp);
+    return temp;
+}","/**
+ *  Convenience method that copies the input stream returned by {@link #getInputStream()} into a
+ *  temporary file.
+ *  <p>
+ *  Only use this if you actually need a {@link File} to work with, in all other cases use
+ *  {@link #getInputStream()} or {@link #getBytes()}
+ *
+ *  @since 1.2
+ *
+ *  @return temporary file containing the contents of the uploaded file
+ *  @throws IOException
+ */
+","public final File writeToTempFile() throws IOException {
+    File temp = File.createTempFile(Session.get().getId(), Files.cleanupFilename(item.getFieldName()));
+    writeTo(temp);
+    return temp;
+}",-0.16666666666666666,-0.15566037735849056,-0.5,-1.0,0.0,0.0,0.13411351667641866,1.0,0.7500000000000002,0.0
+camel,remotes/origin/bugs-dot-jar_CAMEL-3433_e76d23b0,3.0,"public Object evaluate(Exchange exchange) {
+    return expression.evaluate(exchange, type);
+}","/**
+ * {@inheritDoc}
+ */
+","public Object evaluate(Exchange exchange) {
+    return expression.evaluate(exchange, type);
+}",-0.5,-0.2216981132075472,-0.5,-1.0,0.0,0.0,0.7838502047981274,-0.6666666666666666,-0.1125,0.0
+jackrabbit-oak,remotes/origin/bugs-dot-jar_OAK-4307_f303c916,1.0,"private RecordId writeStream(InputStream stream) throws IOException {
+    boolean threw = true;
+    try {
+        RecordId id = SegmentStream.getRecordIdIfAvailable(stream, store);
+        if (id == null || isOldGen(id)) {
+            id = internalWriteStream(stream);
+        }
+        threw = false;
+        return id;
+    } finally {
+        Closeables.close(stream, threw);
+    }
+}","/**
+ * {@inheritDoc}
+ */
+","private RecordId writeStream(InputStream stream) throws IOException {
+    boolean threw = true;
+    try {
+        RecordId id = SegmentStream.getRecordIdIfAvailable(stream, store);
+        if (id == null || isOldGen(id)) {
+            id = internalWriteStream(stream);
+        }
+        threw = false;
+        return id;
+    } finally {
+        Closeables.close(stream, threw);
+    }
+}",1.1666666666666667,1.1745283018867922,0.0,1.0,1.3333333333333333,1.0758620689655174,-0.7712112346401404,0.3333333333333333,-0.1625,1.6625216940115584
+wicket,remotes/origin/bugs-dot-jar_WICKET-5500_825da305,1.0,"/**
+ *  Loads page class with given name.
+ *
+ *  @param name
+ *  @return class
+ */
+protected Class<? extends IRequestablePage> getPageClass(String name) {
+    Args.notEmpty(name, ""name"");
+    return WicketObjects.resolveClass(name);
+}","/**
+ *  Loads page class with given name.
+ *
+ *  @param name
+ *  @return class
+ */
+","protected Class<? extends IRequestablePage> getPageClass(String name) {
+    Args.notEmpty(name, ""name"");
+    return WicketObjects.resolveClass(name);
+}",-0.3333333333333333,-0.11792452830188677,-0.5,-1.0,0.0,0.0,0.4351082504388523,-0.3333333333333333,0.7875,0.0
+Closure,106.0,2.0,"boolean canCollapseUnannotatedChildNames() {
+    if (type == Type.OTHER || globalSets != 1 || localSets != 0) {
+        return false;
+    }
+    if (isClassOrEnum) {
+        return true;
+    }
+    return (type == Type.FUNCTION || aliasingGets == 0) && (parent == null || parent.canCollapseUnannotatedChildNames());
+}","/**
+ * {@inheritDoc}
+ */
+","boolean canCollapseUnannotatedChildNames() {
+    if (type == Type.OTHER || globalSets != 1 || localSets != 0) {
+        return false;
+    }
+    if (isClassOrEnum) {
+        return true;
+    }
+    return (type == Type.FUNCTION || aliasingGets == 0) && (parent == null || parent.canCollapseUnannotatedChildNames());
+}",0.5,0.5141509433962262,0.5,0.0,2.6666666666666665,1.806896551724138,-0.4847279110590988,-0.6666666666666666,0.375,2.5982000679894797
+wicket,remotes/origin/bugs-dot-jar_WICKET-4309_b4274415,1.0,"/**
+ *  Convert to object types, returning null if text is null.
+ *
+ *  @return converted
+ *  @throws StringValueConversionException
+ */
+public final Long toOptionalLong() throws StringValueConversionException {
+    return (text == null) ? null : toLongObject();
+}","/**
+ *  Convert to object types, returning null if text is null.
+ *
+ *  @return converted
+ *  @throws StringValueConversionException
+ */
+","public final Long toOptionalLong() throws StringValueConversionException {
+    return (text == null) ? null : toLongObject();
+}",-0.5,-0.2216981132075472,0.0,-1.0,0.6666666666666666,0.0,0.7566998244587471,-0.6666666666666666,0.85,0.0
+wicket,remotes/origin/bugs-dot-jar_WICKET-5442_a382917f,1.0,"/**
+ *  Retrieves the hour field of the given <code>Calendar</code>.
+ *
+ *  @param calendar
+ *             the <code>Calendar</code> to get the field value from
+ *  @return the hour field value
+ */
+public int getHour(final Calendar calendar) {
+    return get(calendar, Calendar.HOUR);
+}","/**
+ *  Retrieves the hour field of the given <code>Calendar</code>.
+ *
+ *  @param calendar
+ *             the <code>Calendar</code> to get the field value from
+ *  @return the hour field value
+ */
+","public int getHour(final Calendar calendar) {
+    return get(calendar, Calendar.HOUR);
+}",-0.5,-0.2216981132075472,-0.5,-1.0,0.0,0.0,0.83253364540667,-0.6666666666666666,0.8125,0.0
+wicket,remotes/origin/bugs-dot-jar_WICKET-3838_97514205,1.0,"/**
+ *  @see org.apache.wicket.request.mapper.AbstractBookmarkableMapper#buildUrl(org.apache.wicket.request.mapper.AbstractBookmarkableMapper.UrlInfo)
+ */
+@Override
+protected Url buildUrl(UrlInfo info) {
+    Class<? extends IRequestablePage> pageClass = info.getPageClass();
+    if (PackageName.forClass(pageClass).equals(packageName)) {
+        Url url = new Url();
+        url.getSegments().add(pageClass.getSimpleName());
+        encodePageComponentInfo(url, info.getPageComponentInfo());
+        return encodePageParameters(url, info.getPageParameters(), pageParametersEncoder);
+    }
+    return null;
+}","/**
+ *  @see org.apache.wicket.request.mapper.AbstractBookmarkableMapper#buildUrl(org.apache.wicket.request.mapper.AbstractBookmarkableMapper.UrlInfo)
+ */
+","@Override
+protected Url buildUrl(UrlInfo info) {
+    Class<? extends IRequestablePage> pageClass = info.getPageClass();
+    if (PackageName.forClass(pageClass).equals(packageName)) {
+        Url url = new Url();
+        url.getSegments().add(pageClass.getSimpleName());
+        encodePageComponentInfo(url, info.getPageComponentInfo());
+        return encodePageParameters(url, info.getPageParameters(), pageParametersEncoder);
+    }
+    return null;
+}",0.8333333333333334,0.9858490566037733,0.0,0.0,1.0,0.0,-0.6724400234055004,2.3333333333333335,-0.4,0.0
+logging-log4j2,remotes/origin/bugs-dot-jar_LOG4J2-1008_0c20bfd8,1.0,"/**
+ * Provides access to the classes discovered so far. If no calls have been made to
+ * any of the {@code find()} methods, this set will be empty.
+ *
+ * @return the set of classes that have been discovered.
+ */
+public Set<Class<?>> getClasses() {
+    return classMatches;
+}","/**
+ * Provides access to the classes discovered so far. If no calls have been made to
+ * any of the {@code find()} methods, this set will be empty.
+ *
+ * @return the set of classes that have been discovered.
+ */
+","public Set<Class<?>> getClasses() {
+    return classMatches;
+}",-0.5,-0.2216981132075472,-0.5,-1.0,0.0,0.0,0.9729666471620824,-1.0,0.825,0.0
+camel,remotes/origin/bugs-dot-jar_CAMEL-3281_f7dd2fff,1.0,"/**
+ * Adds a route for an interceptor that intercepts every processing step.
+ *
+ * @return the builder
+ */
+public InterceptDefinition intercept() {
+    routeCollection.setCamelContext(getContext());
+    return routeCollection.intercept();
+}","/**
+ * Adds a route for an interceptor that intercepts every processing step.
+ *
+ * @return the builder
+ */
+","public InterceptDefinition intercept() {
+    routeCollection.setCamelContext(getContext());
+    return routeCollection.intercept();
+}",-0.3333333333333333,-0.11792452830188677,-0.5,-1.0,0.0,0.0,0.6143943826799294,0.0,0.8375,0.0
+wicket,remotes/origin/bugs-dot-jar_WICKET-2334_96330447,1.0,"private static void registerStandardContributors() {
+    registerContributor(VersionDebugContributor.DEBUG_BAR_CONTRIB);
+    registerContributor(InspectorDebugPanel.DEBUG_BAR_CONTRIB);
+    registerContributor(SessionSizeDebugPanel.DEBUG_BAR_CONTRIB);
+}","/**
+ * {@inheritDoc}
+ */
+","private static void registerStandardContributors() {
+    registerContributor(VersionDebugContributor.DEBUG_BAR_CONTRIB);
+    registerContributor(InspectorDebugPanel.DEBUG_BAR_CONTRIB);
+    registerContributor(SessionSizeDebugPanel.DEBUG_BAR_CONTRIB);
+}",-0.16666666666666666,-0.15566037735849056,-0.5,-1.0,0.0,0.0,0.34757167934464567,0.0,0.18749999999999997,0.0
+commons-math,remotes/origin/bugs-dot-jar_MATH-393_d4b02f6a,3.0,"/**
+ * {@inheritDoc}
+ */
+public double getFunctionValue() {
+    return optimizer.getFunctionValue();
+}","/**
+ * {@inheritDoc}
+ */
+","public double getFunctionValue() {
+    return optimizer.getFunctionValue();
+}",-0.5,-0.2216981132075472,-0.5,-1.0,0.0,0.0,1.1204212990052658,-0.6666666666666666,0.8375,0.0
+jackrabbit-oak,remotes/origin/bugs-dot-jar_OAK-4353_b0014b7d,1.0,"public int getGcGen() {
+    return getGcGen(data);
+}","/**
+ * {@inheritDoc}
+ */
+","public int getGcGen() {
+    return getGcGen(data);
+}",-0.5,-0.2216981132075472,-0.5,-1.0,0.0,0.0,1.1204212990052658,-0.6666666666666666,0.6875000000000001,0.0
+Closure,155.0,2.0,"/**
+ * For each node, update the block stack and reference collection
+ * as appropriate.
+ */
+public void visit(NodeTraversal t, Node n, Node parent) {
+    if (n.getType() == Token.NAME) {
+        Var v = t.getScope().getVar(n.getString());
+        if (v != null && varFilter.apply(v)) {
+            addReference(t, v, new Reference(n, parent, t, blockStack.peek()));
+        }
+    }
+    if (isBlockBoundary(n, parent)) {
+        blockStack.pop();
+    }
+}","/**
+ * For each node, update the block stack and reference collection
+ * as appropriate.
+ */
+","public void visit(NodeTraversal t, Node n, Node parent) {
+    if (n.getType() == Token.NAME) {
+        Var v = t.getScope().getVar(n.getString());
+        if (v != null && varFilter.apply(v)) {
+            addReference(t, v, new Reference(n, parent, t, blockStack.peek()));
+        }
+    }
+    if (isBlockBoundary(n, parent)) {
+        blockStack.pop();
+    }
+}",0.8333333333333334,1.325471698113207,1.0,1.0,3.3333333333333335,2.1862068965517243,-0.7398478642480982,2.0,-0.3125,4.575906675493371
+jackrabbit-oak,remotes/origin/bugs-dot-jar_OAK-2799_3979fa8d,1.0,"@Override
+public OakIndexInput clone() {
+    return new OakIndexInput(this);
+}","/**
+ * {@inheritDoc}
+ */
+","@Override
+public OakIndexInput clone() {
+    return new OakIndexInput(this);
+}",-0.3333333333333333,-0.3726415094339622,-0.5,-1.0,0.0,0.0,0.7913399648917492,-1.0,0.5125000000000001,0.0
+jackrabbit-oak,remotes/origin/bugs-dot-jar_OAK-1883_9c2421ed,1.0,"public void releaseRecoveryLock(int clusterId) {
+    UpdateOp update = new UpdateOp(Integer.toString(clusterId), true);
+    update.set(ClusterNodeInfo.REV_RECOVERY_LOCK, null);
+    store.createOrUpdate(Collection.CLUSTER_NODES, update);
+}","/**
+ * {@inheritDoc}
+ */
+","public void releaseRecoveryLock(int clusterId) {
+    UpdateOp update = new UpdateOp(Integer.toString(clusterId), true);
+    update.set(ClusterNodeInfo.REV_RECOVERY_LOCK, null);
+    store.createOrUpdate(Collection.CLUSTER_NODES, update);
+}",-0.16666666666666666,-0.15566037735849056,-0.5,-1.0,0.0,0.0,0.09853715623171459,0.0,-0.3875,0.0
+commons-math,remotes/origin/bugs-dot-jar_MATH-757_76b7413d,1.0,"/**
+ * The contraction criterion defines when the internal array will contract
+ * to store only the number of elements in the element array.
+ * If  the <code>expansionMode</code> is <code>MULTIPLICATIVE_MODE</code>,
+ * contraction is triggered when the ratio between storage array length
+ * and <code>numElements</code> exceeds <code>contractionFactor</code>.
+ * If the <code>expansionMode</code> is <code>ADDITIVE_MODE</code>, the
+ * number of excess storage locations is compared to
+ * <code>contractionFactor.</code>
+ *
+ * @return the contraction criterion used to reclaim memory.
+ * @since 3.1
+ */
+public double getContractionCriterion() {
+    return contractionCriterion;
+}","/**
+ * The contraction criterion defines when the internal array will contract
+ * to store only the number of elements in the element array.
+ * If  the <code>expansionMode</code> is <code>MULTIPLICATIVE_MODE</code>,
+ * contraction is triggered when the ratio between storage array length
+ * and <code>numElements</code> exceeds <code>contractionFactor</code>.
+ * If the <code>expansionMode</code> is <code>ADDITIVE_MODE</code>, the
+ * number of excess storage locations is compared to
+ * <code>contractionFactor.</code>
+ *
+ * @return the contraction criterion used to reclaim memory.
+ * @since 3.1
+ */
+","public double getContractionCriterion() {
+    return contractionCriterion;
+}",-0.5,-0.2216981132075472,-0.5,-1.0,0.0,0.0,1.190169689877121,-1.0,-0.3875,0.0
+Cli,19.0,1.0,"/**
+ * <p>If an {@link Option} exists for <code>token</code> then
+ * set the current option and add the token to the processed
+ * list.</p>
+ *
+ * <p>If an {@link Option} does not exist and <code>stopAtNonOption</code>
+ * is set then ignore the current token and add the remaining tokens
+ * to the processed tokens list directly.</p>
+ *
+ * @param token The current option token
+ * @param stopAtNonOption Specifies whether flattening should halt
+ * at the first non option.
+ */
+private void processOptionToken(String token, boolean stopAtNonOption) {
+    if (options.hasOption(token)) {
+        currentOption = options.getOption(token);
+        tokens.add(token);
+    } else if (stopAtNonOption) {
+        eatTheRest = true;
+        tokens.add(token);
+    }
+}","/**
+ * <p>If an {@link Option} exists for <code>token</code> then
+ * set the current option and add the token to the processed
+ * list.</p>
+ *
+ * <p>If an {@link Option} does not exist and <code>stopAtNonOption</code>
+ * is set then ignore the current token and add the remaining tokens
+ * to the processed tokens list directly.</p>
+ *
+ * @param token The current option token
+ * @param stopAtNonOption Specifies whether flattening should halt
+ * at the first non option.
+ */
+","private void processOptionToken(String token, boolean stopAtNonOption) {
+    if (options.hasOption(token)) {
+        currentOption = options.getOption(token);
+        tokens.add(token);
+    } else if (stopAtNonOption) {
+        eatTheRest = true;
+        tokens.add(token);
+    }
+}",0.5,0.9575471698113206,0.5,1.0,1.6666666666666667,0.0,-0.3733177296664718,0.3333333333333333,-0.3375000000000001,0.0
+commons-math,remotes/origin/bugs-dot-jar_MATH-482_6d6649ef,1.0,"/**
+ * Compute the maximum of two values
+ * @param a first value
+ * @param b second value
+ * @return b if a is lesser or equal to b, a otherwise
+ */
+public static float max(final float a, final float b) {
+    return (a <= b) ? b : (Float.isNaN(a + b) ? Float.NaN : b);
+}","/**
+ * Compute the maximum of two values
+ * @param a first value
+ * @param b second value
+ * @return b if a is lesser or equal to b, a otherwise
+ */
+","public static float max(final float a, final float b) {
+    return (a <= b) ? b : (Float.isNaN(a + b) ? Float.NaN : b);
+}",-0.5,-0.2216981132075472,0.5,-1.0,1.6666666666666667,1.3793103448275863,0.5928613224107658,-0.6666666666666666,0.8375,0.7259845055554561
+Closure,12.0,1.0,"private boolean hasExceptionHandler(Node cfgNode) {
+    return false;
+}","/**
+ * {@inheritDoc}
+ */
+","private boolean hasExceptionHandler(Node cfgNode) {
+    return false;
+}",-0.5,-0.2216981132075472,-0.5,-1.0,0.0,0.0,0.9729666471620824,-1.0,0.6875000000000001,0.0
+Lang,46.0,0.0,"/**
+ * <p>Escapes the characters in a <code>String</code> using Java String rules to
+ * a <code>Writer</code>.</p>
+ *
+ * <p>A <code>null</code> string input has no effect.</p>
+ *
+ * @see #escapeJava(java.lang.String)
+ * @param out  Writer to write escaped string into
+ * @param str  String to escape values in, may be null
+ * @throws IllegalArgumentException if the Writer is <code>null</code>
+ * @throws IOException if error occurs on underlying Writer
+ */
+public static void escapeJava(Writer out, String str) throws IOException {
+    escapeJavaStyleString(out, str, false);
+}","/**
+ * <p>Escapes the characters in a <code>String</code> using Java String rules to
+ * a <code>Writer</code>.</p>
+ *
+ * <p>A <code>null</code> string input has no effect.</p>
+ *
+ * @see #escapeJava(java.lang.String)
+ * @param out  Writer to write escaped string into
+ * @param str  String to escape values in, may be null
+ * @throws IllegalArgumentException if the Writer is <code>null</code>
+ * @throws IOException if error occurs on underlying Writer
+ */
+","public static void escapeJava(Writer out, String str) throws IOException {
+    escapeJavaStyleString(out, str, false);
+}",-0.5,-0.2216981132075472,-0.5,-1.0,0.0,0.0,0.7052077238150961,-0.6666666666666666,0.037499999999999964,0.0
+camel,remotes/origin/bugs-dot-jar_CAMEL-8626_d063f471,0.0,"@Override
+public void init(ManagementStrategy strategy) {
+    super.init(strategy);
+    exchangesInFlightStartTimestamps.clear();
+}","/**
+ * {@inheritDoc}
+ */
+","@Override
+public void init(ManagementStrategy strategy) {
+    super.init(strategy);
+    exchangesInFlightStartTimestamps.clear();
+}",-0.16666666666666666,-0.15566037735849056,-0.5,-1.0,0.0,0.0,0.39625511995318896,-0.3333333333333333,0.19999999999999998,0.0
+jackrabbit-oak,remotes/origin/bugs-dot-jar_OAK-2933_44585b0c,1.0,"private Validator visibleValidator(@Nonnull Tree source, @Nonnull Tree dest) {
+    // TODO improve: avoid calculating the 'before' permissions in case the current parent permissions already point to the correct tree.
+    ImmutableTree parent = (ImmutableTree) moveCtx.rootBefore.getTree(""/"");
+    TreePermission tp = getPermissionProvider().getTreePermission(parent, TreePermission.EMPTY);
+    for (String n : PathUtils.elements(source.getPath())) {
+        tp = tp.getChildPermission(n, parent.getChild(n).getNodeState());
+    }
+    Validator validator = createValidator(source, dest, tp, this);
+    return new VisibleValidator(validator, true, false);
+}","/**
+ * {@inheritDoc}
+ */
+","private Validator visibleValidator(@Nonnull Tree source, @Nonnull Tree dest) {
+        ImmutableTree parent = (ImmutableTree) moveCtx.rootBefore.getTree(""/"");
+    TreePermission tp = getPermissionProvider().getTreePermission(parent, TreePermission.EMPTY);
+    for (String n : PathUtils.elements(source.getPath())) {
+        tp = tp.getChildPermission(n, parent.getChild(n).getNodeState());
+    }
+    Validator validator = createValidator(source, dest, tp, this);
+    return new VisibleValidator(validator, true, false);
+}",0.5,0.13679245283018865,0.0,0.0,0.0,0.0,-0.6228203627852545,2.0,-0.4,0.0
+commons-math,remotes/origin/bugs-dot-jar_MATH-373_bfe4623c,1.0,"/**
+ * {@inheritDoc}
+ */
+@Override
+public void increment(final double d) {
+    if (n == 0) {
+        value = d * d;
+    } else {
+        value += d * d;
+    }
+    n++;
+}","/**
+ * {@inheritDoc}
+ */
+","@Override
+public void increment(final double d) {
+    if (n == 0) {
+        value = d * d;
+    } else {
+        value += d * d;
+    }
+    n++;
+}",0.5,0.7783018867924528,0.0,0.0,0.6666666666666666,2.5586206896551724,-0.3016968987712114,-1.0,0.8375,1.8106671914977368
+Closure,6.0,2.0,"/**
+ * Expect that the first type can be assigned to a symbol of the second
+ * type.
+ *
+ * @param t The node traversal.
+ * @param n The node to issue warnings on.
+ * @param rightType The type on the RHS of the assign.
+ * @param leftType The type of the symbol on the LHS of the assign.
+ * @param msg An extra message for the mismatch warning, if necessary.
+ * @return True if the types matched, false otherwise.
+ */
+boolean expectCanAssignTo(NodeTraversal t, Node n, JSType rightType, JSType leftType, String msg) {
+    if (!rightType.canAssignTo(leftType)) {
+        if ((leftType.isConstructor() || leftType.isEnumType()) && (rightType.isConstructor() || rightType.isEnumType())) {
+            registerMismatch(rightType, leftType, null);
+        } else {
+            mismatch(t, n, msg, rightType, leftType);
+        }
+        return false;
+    }
+    return true;
+}","/**
+ * Expect that the first type can be assigned to a symbol of the second
+ * type.
+ *
+ * @param t The node traversal.
+ * @param n The node to issue warnings on.
+ * @param rightType The type on the RHS of the assign.
+ * @param leftType The type of the symbol on the LHS of the assign.
+ * @param msg An extra message for the mismatch warning, if necessary.
+ * @return True if the types matched, false otherwise.
+ */
+","boolean expectCanAssignTo(NodeTraversal t, Node n, JSType rightType, JSType leftType, String msg) {
+    if (!rightType.canAssignTo(leftType)) {
+        if ((leftType.isConstructor() || leftType.isEnumType()) && (rightType.isConstructor() || rightType.isEnumType())) {
+            registerMismatch(rightType, leftType, null);
+        } else {
+            mismatch(t, n, msg, rightType, leftType);
+        }
+        return false;
+    }
+    return true;
+}",0.8333333333333334,1.7216981132075468,0.5,1.0,3.6666666666666665,1.2689655172413794,-0.6925687536571091,1.3333333333333333,-0.4,2.2928199531230433
+camel,remotes/origin/bugs-dot-jar_CAMEL-3433_e76d23b0,3.0,"@Override
+public String toString() {
+    return """" + expression + "".convertToEvaluatedType("" + type + "")"";
+}","/**
+ * {@inheritDoc}
+ */
+","@Override
+public String toString() {
+    return """" + expression + "".convertToEvaluatedType("" + type + "")"";
+}",-0.3333333333333333,-0.3726415094339622,-0.5,-1.0,0.0,0.0,0.49923932124049086,-1.0,0.7375000000000002,0.0
+jackrabbit-oak,remotes/origin/bugs-dot-jar_OAK-278_db19e70f,1.0,"private boolean isRemoved() {
+    return parent == this;
+}","/**
+ * {@inheritDoc}
+ */
+","private boolean isRemoved() {
+    return parent == this;
+}",-0.5,-0.2216981132075472,-0.5,-1.0,0.0,0.0,1.063779988297249,-1.0,0.7999999999999999,0.0
+Closure,143.0,2.0,"/**
+ * Attempts to replace the input node with a simpler but functionally
+ * equivalent set of nodes.
+ */
+private void trySimplify(Node parent, Node node) {
+    if (node.getType() != Token.EXPR_RESULT) {
+        return;
+    }
+    Node exprBody = node.getFirstChild();
+    if (!NodeUtil.nodeTypeMayHaveSideEffects(exprBody)) {
+        changeProxy.replaceWith(parent, node, getSideEffectNodes(exprBody));
+    }
+}","/**
+ * Attempts to replace the input node with a simpler but functionally
+ * equivalent set of nodes.
+ */
+","private void trySimplify(Node parent, Node node) {
+    if (node.getType() != Token.EXPR_RESULT) {
+        return;
+    }
+    Node exprBody = node.getFirstChild();
+    if (!NodeUtil.nodeTypeMayHaveSideEffects(exprBody)) {
+        changeProxy.replaceWith(parent, node, getSideEffectNodes(exprBody));
+    }
+}",0.5,0.5141509433962262,0.5,0.0,1.6666666666666667,1.0551724137931036,-0.4252779403159744,0.6666666666666666,-0.012500000000000013,1.1897443237730585
+logging-log4j2,remotes/origin/bugs-dot-jar_LOG4J2-260_9d817953,1.0,"@Override
+public /**
+ * @return The content type.
+ */
+String getContentType() {
+    return ""text/xml"";
+}","/**
+ * @return The content type.
+ */
+","@Override
+public String getContentType() {
+    return ""text/xml"";
+}",-0.16666666666666666,-0.4952830188679243,-0.5,-1.0,0.0,0.0,0.5858396723229949,-1.0,0.85,0.0
+jackrabbit-oak,remotes/origin/bugs-dot-jar_OAK-276_1bf5c550,1.0,"public Id readHead() throws Exception {
+    Connection con = cp.getConnection();
+    try {
+        PreparedStatement stmt = con.prepareStatement(""select * from HEAD"");
+        ResultSet rs = stmt.executeQuery();
+        byte[] rawId = null;
+        if (rs.next()) {
+            rawId = rs.getBytes(1);
+        }
+        stmt.close();
+        return rawId == null ? null : new Id(rawId);
+    } finally {
+        con.close();
+    }
+}","/**
+ * {@inheritDoc}
+ */
+","public Id readHead() throws Exception {
+    Connection con = cp.getConnection();
+    try {
+        PreparedStatement stmt = con.prepareStatement(""select * from HEAD"");
+        ResultSet rs = stmt.executeQuery();
+        byte[] rawId = null;
+        if (rs.next()) {
+            rawId = rs.getBytes(1);
+        }
+        stmt.close();
+        return rawId == null ? null : new Id(rawId);
+    } finally {
+        con.close();
+    }
+}",1.5,1.0330188679245282,0.5,1.0,1.3333333333333333,1.1172413793103448,-0.9373902867173783,1.3333333333333333,-0.04999999999999998,2.096580844858743
+wicket,remotes/origin/bugs-dot-jar_WICKET-1897_8ee095bf,1.0,"/**
+ *  @return The interface name
+ */
+public String getInterfaceName() {
+    return interfaceName;
+}","/**
+ *  @return The interface name
+ */
+","public String getInterfaceName() {
+    return interfaceName;
+}",-0.5,-0.2216981132075472,-0.5,-1.0,0.0,0.0,1.063779988297249,-1.0,0.85,0.0
+logging-log4j2,remotes/origin/bugs-dot-jar_LOG4J2-763_97203de8,1.0,"/**
+ * Returns the object formatted using its toString method.
+ * @return the String representation of the object.
+ */
+@Override
+public String getFormat() {
+    return obj.toString();
+}","/**
+ * Returns the object formatted using its toString method.
+ * @return the String representation of the object.
+ */
+","@Override
+public String getFormat() {
+    return obj.toString();
+}",-0.3333333333333333,-0.3726415094339622,-0.5,-1.0,0.0,0.0,0.6846108835576357,-0.6666666666666666,0.8125,0.0
+camel,remotes/origin/bugs-dot-jar_CAMEL-9269_62b2042b,1.0,"/**
+ * Optionally a <tt>from</tt> route which means that this expression should only be based
+ * on {@link Exchange} which is originated from the particular route(s).
+ *
+ * @param routeId id of route or pattern (see the EndpointHelper javadoc)
+ * @return the builder
+ * @see org.apache.camel.util.EndpointHelper#matchEndpoint(org.apache.camel.CamelContext, String, String)
+ */
+public NotifyBuilder fromRoute(final String routeId) {
+    stack.add(new EventPredicateSupport() {
+
+        @Override
+        public boolean isAbstract() {
+            // is abstract as its a filter
+            return true;
+        }
+
+        @Override
+        public boolean onExchange(Exchange exchange) {
+            String id = EndpointHelper.getRouteIdFromEndpoint(exchange.getFromEndpoint());
+            // filter non matching exchanges
+            return EndpointHelper.matchPattern(id, routeId);
+        }
+
+        public boolean matches() {
+            // should be true as we use the onExchange to filter
+            return true;
+        }
+
+        @Override
+        public String toString() {
+            return ""fromRoute("" + routeId + "")"";
+        }
+    });
+    return this;
+}","/**
+ * Optionally a <tt>from</tt> route which means that this expression should only be based
+ * on {@link Exchange} which is originated from the particular route(s).
+ *
+ * @param routeId id of route or pattern (see the EndpointHelper javadoc)
+ * @return the builder
+ * @see org.apache.camel.util.EndpointHelper#matchEndpoint(org.apache.camel.CamelContext, String, String)
+ */
+","public NotifyBuilder fromRoute(final String routeId) {
+    stack.add(new EventPredicateSupport() {
+
+        @Override
+        public boolean isAbstract() {
+                        return true;
+        }
+
+        @Override
+        public boolean onExchange(Exchange exchange) {
+            String id = EndpointHelper.getRouteIdFromEndpoint(exchange.getFromEndpoint());
+                        return EndpointHelper.matchPattern(id, routeId);
+        }
+
+        public boolean matches() {
+                        return true;
+        }
+
+        @Override
+        public String toString() {
+            return ""fromRoute("" + routeId + "")"";
+        }
+    });
+    return this;
+}",2.5,1.2688679245283017,-0.5,0.0,0.0,0.9862068965517241,-1.144763019309537,0.3333333333333333,-0.21250000000000002,1.6689628025979137
+Codec,11.0,1.0,"/**
+ * Return the byte at position <code>index</code> of the byte array and
+ * make sure it is unsigned.
+ *
+ * @param index
+ *                  position in the array
+ * @param bytes
+ *                  the byte array
+ * @return the unsigned octet at position <code>index</code> from the array
+ */
+/**
+ * Write a byte to the buffer.
+ *
+ * @param b
+ *                  byte to write
+ * @param encode
+ *                  indicates whether the octet shall be encoded
+ * @param buffer
+ *                  the buffer to write to
+ * @return the number of bytes that have been written to the buffer
+ */
+/**
+ * Checks whether the given byte is whitespace.
+ *
+ * @param b
+ *                  byte to be checked
+ * @return <code>true</code> if the byte is either a space or tab character
+ */
+/**
+ * Encodes an array of bytes into an array of quoted-printable 7-bit characters. Unsafe characters are escaped.
+ *
+ * <p>
+ * This function fully implements the quoted-printable encoding specification (rule #1 through rule #5)
+ * as defined in RFC 1521 and is suitable for encoding binary data and unformatted text.
+ * </p>
+ *
+ * @param printable
+ *                  bitset of characters deemed quoted-printable
+ * @param bytes
+ *                  array of bytes to be encoded
+ * @return array of bytes containing quoted-printable data
+ */
+public static final byte[] encodeQuotedPrintable(BitSet printable, byte[] bytes) {
+    if (bytes == null) {
+        return null;
+    }
+    if (printable == null) {
+        printable = PRINTABLE_CHARS;
+    }
+    ByteArrayOutputStream buffer = new ByteArrayOutputStream();
+    // up to this length it is safe to add any byte, encoded or not
+    for (byte c : bytes) {
+        int b = c;
+        if (b < 0) {
+            b = 256 + b;
+        }
+        if (printable.get(b)) {
+            buffer.write(b);
+        } else {
+            // rule #3: whitespace at the end of a line *must* be encoded
+            // rule #5: soft line break
+            encodeQuotedPrintable(b, buffer);
+        }
+    }
+    return buffer.toByteArray();
+}","/**
+ * Return the byte at position <code>index</code> of the byte array and
+ * make sure it is unsigned.
+ *
+ * @param index
+ *                  position in the array
+ * @param bytes
+ *                  the byte array
+ * @return the unsigned octet at position <code>index</code> from the array
+ */
+/**
+ * Write a byte to the buffer.
+ *
+ * @param b
+ *                  byte to write
+ * @param encode
+ *                  indicates whether the octet shall be encoded
+ * @param buffer
+ *                  the buffer to write to
+ * @return the number of bytes that have been written to the buffer
+ */
+/**
+ * Checks whether the given byte is whitespace.
+ *
+ * @param b
+ *                  byte to be checked
+ * @return <code>true</code> if the byte is either a space or tab character
+ */
+/**
+ * Encodes an array of bytes into an array of quoted-printable 7-bit characters. Unsafe characters are escaped.
+ *
+ * <p>
+ * This function fully implements the quoted-printable encoding specification (rule #1 through rule #5)
+ * as defined in RFC 1521 and is suitable for encoding binary data and unformatted text.
+ * </p>
+ *
+ * @param printable
+ *                  bitset of characters deemed quoted-printable
+ * @param bytes
+ *                  array of bytes to be encoded
+ * @return array of bytes containing quoted-printable data
+ */
+","public static final byte[] encodeQuotedPrintable(BitSet printable, byte[] bytes) {
+    if (bytes == null) {
+        return null;
+    }
+    if (printable == null) {
+        printable = PRINTABLE_CHARS;
+    }
+    ByteArrayOutputStream buffer = new ByteArrayOutputStream();
+        for (byte c : bytes) {
+        int b = c;
+        if (b < 0) {
+            b = 256 + b;
+        }
+        if (printable.get(b)) {
+            buffer.write(b);
+        } else {
+                                    encodeQuotedPrintable(b, buffer);
+        }
+    }
+    return buffer.toByteArray();
+}",2.5,1.202830188679245,2.0,1.0,2.6666666666666665,3.0206896551724136,-1.2313633703920417,0.3333333333333333,-0.4,5.818897496913635
+jackrabbit-oak,remotes/origin/bugs-dot-jar_OAK-2021_004db804,1.0,"@Override
+public String toString() {
+    return s1 + "" union "" + s2;
+}","/**
+ * {@inheritDoc}
+ */
+","@Override
+public String toString() {
+    return s1 + "" union "" + s2;
+}",-0.3333333333333333,-0.3726415094339622,-0.5,-1.0,0.0,0.0,0.5783499122293732,-1.0,0.7999999999999999,0.0
+accumulo,remotes/origin/bugs-dot-jar_ACCUMULO-334_9d8cc45d,1.0,"@Override
+public VersioningIterator deepCopy(IteratorEnvironment env) {
+    return new VersioningIterator(this, env);
+}","/**
+ * {@inheritDoc}
+ */
+","@Override
+public VersioningIterator deepCopy(IteratorEnvironment env) {
+    return new VersioningIterator(this, env);
+}",-0.3333333333333333,-0.3726415094339622,-0.5,-1.0,0.0,0.0,0.6143943826799294,-1.0,0.15,0.0
+Closure,148.0,2.0,"private void closeLine() throws IOException {
+    out.append(""]\n"");
+}","/**
+ * {@inheritDoc}
+ */
+","private void closeLine() throws IOException {
+    out.append(""]\n"");
+}",-0.5,-0.2216981132075472,-0.5,-1.0,0.0,0.0,0.9027501462843762,-0.6666666666666666,0.6875000000000001,0.0
+wicket,remotes/origin/bugs-dot-jar_WICKET-5960_03663750,1.0,"@Override
+protected void onDetach() {
+    super.onDetach();
+    renderedComponentsPerScope = null;
+    headerResponse = null;
+}","/**
+ * {@inheritDoc}
+ */
+","@Override
+protected void onDetach() {
+    super.onDetach();
+    renderedComponentsPerScope = null;
+    headerResponse = null;
+}",0.0,-0.11792452830188677,-0.5,-1.0,0.0,0.0,0.23241661790520776,-0.6666666666666666,0.2125,0.0
+jackrabbit-oak,remotes/origin/bugs-dot-jar_OAK-579_7d72e6ed,3.0,"@Override
+public void execute(NodeState rootState) {
+    cursor = index.query(createFilter(), rootState);
+}","/**
+ * {@inheritDoc}
+ */
+","@Override
+public void execute(NodeState rootState) {
+    cursor = index.query(createFilter(), rootState);
+}",-0.3333333333333333,-0.3726415094339622,-0.5,-1.0,0.0,0.0,0.47583382094792215,-0.3333333333333333,0.17500000000000004,0.0
+jackrabbit-oak,remotes/origin/bugs-dot-jar_OAK-4291_cdb34ffc,0.0,"private synchronized void returnWriter(Object key, SegmentBufferWriter writer) {
+    if (borrowed.remove(writer)) {
+        checkState(writers.put(key, writer) == null);
+    } else {
+        // Defer flush this writer as it was borrowed while flush() was called.
+        disposed.add(writer);
+    }
+}","/**
+ * {@inheritDoc}
+ */
+","private synchronized void returnWriter(Object key, SegmentBufferWriter writer) {
+    if (borrowed.remove(writer)) {
+        checkState(writers.put(key, writer) == null);
+    } else {
+                disposed.add(writer);
+    }
+}",0.16666666666666666,0.8443396226415092,0.0,0.0,1.0,0.0,-0.1317729666471619,0.3333333333333333,-0.325,0.0
+jackrabbit-oak,remotes/origin/bugs-dot-jar_OAK-369_4e245a76,3.0,"/**
+ * Get a property
+ * @param relPath  oak path
+ * @return  property at the path given by {@code relPath} or {@code null} if
+ * no such property exists
+ */
+@CheckForNull
+public PropertyDelegate getProperty(String relPath) throws InvalidItemStateException {
+    TreeLocation propertyLocation = getChildLocation(relPath);
+    PropertyState propertyState = propertyLocation.getProperty();
+    return propertyState == null ? null : new PropertyDelegate(sessionDelegate, propertyLocation);
+}","/**
+ * Get a property
+ * @param relPath  oak path
+ * @return  property at the path given by {@code relPath} or {@code null} if
+ * no such property exists
+ */
+","@CheckForNull
+public PropertyDelegate getProperty(String relPath) throws InvalidItemStateException {
+    TreeLocation propertyLocation = getChildLocation(relPath);
+    PropertyState propertyState = propertyLocation.getProperty();
+    return propertyState == null ? null : new PropertyDelegate(sessionDelegate, propertyLocation);
+}",0.0,-0.11792452830188677,0.0,-1.0,0.6666666666666666,1.0344827586206897,-0.07747220596840258,-0.3333333333333333,0.825,1.0305773738168937
+jackrabbit-oak,remotes/origin/bugs-dot-jar_OAK-1250_0c3b3306,1.0,"@Override
+@CheckForNull
+public synchronized NodeState retrieve(@Nonnull String checkpoint) {
+    // TODO: Verify validity of the checkpoint
+    RecordId id = RecordId.fromString(checkNotNull(checkpoint));
+    SegmentNodeState root = new SegmentNodeState(store.getWriter().getDummySegment(), id);
+    return root.getChildNode(ROOT);
+}","/**
+ * {@inheritDoc}
+ */
+","@Override
+@CheckForNull
+public synchronized NodeState retrieve(@Nonnull String checkpoint) {
+        RecordId id = RecordId.fromString(checkNotNull(checkpoint));
+    SegmentNodeState root = new SegmentNodeState(store.getWriter().getDummySegment(), id);
+    return root.getChildNode(ROOT);
+}",0.16666666666666666,-0.13679245283018865,-0.5,-1.0,0.0,0.0,-0.22211819777647757,0.6666666666666666,0.2125,0.0
+JxPath,14.0,1.0,"protected Object functionCeiling(EvalContext context) {
+    assertArgCount(1);
+    double v = InfoSetUtil.doubleValue(getArg1().computeValue(context));
+    return new Double(Math.ceil(v));
+}","/**
+ * {@inheritDoc}
+ */
+","protected Object functionCeiling(EvalContext context) {
+    assertArgCount(1);
+    double v = InfoSetUtil.doubleValue(getArg1().computeValue(context));
+    return new Double(Math.ceil(v));
+}",-0.16666666666666666,-0.15566037735849056,-0.5,-1.0,0.0,0.0,0.14160327677004048,0.6666666666666666,0.17500000000000004,0.0
+jackrabbit-oak,remotes/origin/bugs-dot-jar_OAK-43_668f08f2,1.0,"public void setProperty(String nodePath, String propName, String propValue) throws Exception {
+    MutableNode node = getOrCreateStagedNode(nodePath);
+    Map<String, String> properties = node.getProperties();
+    if (propValue == null) {
+        properties.remove(propName);
+    } else {
+        properties.put(propName, propValue);
+    }
+    // update change log
+    changeLog.add(new SetProperty(nodePath, propName, propValue));
+}","/**
+ * {@inheritDoc}
+ */
+","public void setProperty(String nodePath, String propName, String propValue) throws Exception {
+    MutableNode node = getOrCreateStagedNode(nodePath);
+    Map<String, String> properties = node.getProperties();
+    if (propValue == null) {
+        properties.remove(propName);
+    } else {
+        properties.put(propName, propValue);
+    }
+        changeLog.add(new SetProperty(nodePath, propName, propValue));
+}",0.6666666666666666,0.3820754716981129,0.0,0.0,0.6666666666666666,1.2344827586206897,-0.5928613224107665,0.6666666666666666,-0.3875,2.0813368878710348
+jackrabbit-oak,remotes/origin/bugs-dot-jar_OAK-1822_3e83a4c1,1.0,"/**
+ * Add a new or update an existing map entry.
+ * The property is a map of revisions / values.
+ *
+ * @param property the property
+ * @param revision the revision
+ * @param value the value
+ */
+void setMapEntry(@Nonnull String property, @Nonnull Revision revision, String value) {
+    Operation op = new Operation();
+    op.type = Operation.Type.SET_MAP_ENTRY;
+    op.value = value;
+    changes.put(new Key(property, checkNotNull(revision)), op);
+}","/**
+ * Add a new or update an existing map entry.
+ * The property is a map of revisions / values.
+ *
+ * @param property the property
+ * @param revision the revision
+ * @param value the value
+ */
+","void setMapEntry(@Nonnull String property, @Nonnull Revision revision, String value) {
+    Operation op = new Operation();
+    op.type = Operation.Type.SET_MAP_ENTRY;
+    op.value = value;
+    changes.put(new Key(property, checkNotNull(revision)), op);
+}",0.0,-0.2216981132075472,-0.5,-1.0,0.0,0.0,-0.1392627267407844,-0.3333333333333333,0.5625000000000001,0.0
+wicket,remotes/origin/bugs-dot-jar_WICKET-5853_b80f6640,3.0,"/**
+ *  @see org.apache.wicket.util.convert.converter.AbstractConverter#getTargetType()
+ */
+@Override
+protected Class<Integer> getTargetType() {
+    return Integer.class;
+}","/**
+ *  @see org.apache.wicket.util.convert.converter.AbstractConverter#getTargetType()
+ */
+","@Override
+protected Class<Integer> getTargetType() {
+    return Integer.class;
+}",-0.3333333333333333,-0.3726415094339622,-0.5,-1.0,0.0,0.0,0.7103569338794619,-1.0,0.6000000000000001,0.0
+Time,14.0,2.0,"// -----------------------------------------------------------------------
+public int[] add(ReadablePartial partial, int fieldIndex, int[] values, int valueToAdd) {
+    // 2004-02-29 + 48 months -> 2008-02-29 type dates
+    if (valueToAdd == 0) {
+        return values;
+    }
+    // month is largest field and being added to, such as month-day
+    if (DateTimeUtils.isContiguous(partial)) {
+        long instant = 0L;
+        for (int i = 0, isize = partial.size(); i < isize; i++) {
+            instant = partial.getFieldType(i).getField(iChronology).set(instant, values[i]);
+        }
+        instant = add(instant, valueToAdd);
+        return iChronology.get(partial, instant);
+    } else {
+        return super.add(partial, fieldIndex, values, valueToAdd);
+    }
+}","/**
+ * {@inheritDoc}
+ */
+","public int[] add(ReadablePartial partial, int fieldIndex, int[] values, int valueToAdd) {
+        if (valueToAdd == 0) {
+        return values;
+    }
+        if (DateTimeUtils.isContiguous(partial)) {
+        long instant = 0L;
+        for (int i = 0, isize = partial.size(); i < isize; i++) {
+            instant = partial.getFieldType(i).getField(iChronology).set(instant, values[i]);
+        }
+        instant = add(instant, valueToAdd);
+        return iChronology.get(partial, instant);
+    } else {
+        return super.add(partial, fieldIndex, values, valueToAdd);
+    }
+}",1.5,1.0330188679245282,1.0,1.0,2.6666666666666665,3.172413793103448,-1.024458747805734,1.6666666666666667,-0.3875,8.150865076667085
+jackrabbit-oak,remotes/origin/bugs-dot-jar_OAK-548_717186d6,1.0,"@Override
+public void childNodeAdded(String name, NodeState after) {
+    String p = PathUtils.concat(getCurrentPath(), name);
+    if (p.startsWith(pathFilter)) {
+        addedNodes.put(after, p);
+        buff.tag('+').key(p).object();
+        toJson(buff, after);
+        buff.endObject().newline();
+    }
+}","/**
+ * {@inheritDoc}
+ */
+","@Override
+public void childNodeAdded(String name, NodeState after) {
+    String p = PathUtils.concat(getCurrentPath(), name);
+    if (p.startsWith(pathFilter)) {
+        addedNodes.put(after, p);
+        buff.tag('+').key(p).object();
+        toJson(buff, after);
+        buff.endObject().newline();
+    }
+}",0.6666666666666666,1.1273584905660372,0.0,0.0,1.0,0.0,-0.5755412521942654,2.3333333333333335,-0.375,0.0
+accumulo,remotes/origin/bugs-dot-jar_ACCUMULO-1190_e29dc4f5,3.0,"@Override
+public void update(String writer, Map<ByteBuffer, List<ColumnUpdate>> cells) throws TException {
+    try {
+        BatchWriter batchwriter = writerCache.getIfPresent(UUID.fromString(writer));
+        if (batchwriter == null) {
+            throw new UnknownWriter(""Writer never existed or no longer exists"");
+        }
+        addCellsToWriter(cells, batchwriter);
+    } catch (Exception e) {
+        throw translateException(e);
+    }
+}","/**
+ * {@inheritDoc}
+ */
+","@Override
+public void update(String writer, Map<ByteBuffer, List<ColumnUpdate>> cells) throws TException {
+    try {
+        BatchWriter batchwriter = writerCache.getIfPresent(UUID.fromString(writer));
+        if (batchwriter == null) {
+            throw new UnknownWriter(""Writer never existed or no longer exists"");
+        }
+        addCellsToWriter(cells, batchwriter);
+    } catch (Exception e) {
+        throw translateException(e);
+    }
+}",1.0,1.55188679245283,1.5,1.0,0.6666666666666666,0.8344827586206897,-0.7370392042129899,0.3333333333333333,-0.25000000000000006,1.2600955431106977
+wicket,remotes/origin/bugs-dot-jar_WICKET-428_d906576c,3.0,"public Iterator iterator() {
+    return new Iterator() {
+
+        public boolean hasNext() {
+            return index < MicroMap.this.size();
+        }
+
+        public Object next() {
+            index++;
+            return key;
+        }
+
+        public void remove() {
+            MicroMap.this.clear();
+        }
+
+        int index;
+    };
+}","/**
+ * {@inheritDoc}
+ */
+","public Iterator iterator() {
+    return new Iterator() {
+
+        public boolean hasNext() {
+            return index < MicroMap.this.size();
+        }
+
+        public Object next() {
+            index++;
+            return key;
+        }
+
+        public void remove() {
+            MicroMap.this.clear();
+        }
+
+        int index;
+    };
+}",1.5,1.6084905660377355,-0.5,0.0,0.0,0.9172413793103449,-0.6794616734932706,-0.3333333333333333,0.6375000000000001,0.653987225134637
+jackrabbit-oak,remotes/origin/bugs-dot-jar_OAK-3028_89317b28,0.0,"static UpdateOp combine(String id, Iterable<UpdateOp> ops) {
+    Map<Key, Operation> changes = Maps.newHashMap();
+    for (UpdateOp op : ops) {
+        changes.putAll(op.getChanges());
+    }
+    return new UpdateOp(id, false, false, changes);
+}","/**
+ * {@inheritDoc}
+ */
+","static UpdateOp combine(String id, Iterable<UpdateOp> ops) {
+    Map<Key, Operation> changes = Maps.newHashMap();
+    for (UpdateOp op : ops) {
+        changes.putAll(op.getChanges());
+    }
+    return new UpdateOp(id, false, false, changes);
+}",0.16666666666666666,0.410377358490566,0.0,0.0,0.0,0.0,-0.23335283791691033,0.0,-0.4,0.0
+commons-math,remotes/origin/bugs-dot-jar_MATH-1096_faf99727,0.0,"/**
+ * {@inheritDoc}
+ */
+public EnclosingBall<S, P> enclose(final List<P> points) {
+    if (points == null || points.isEmpty()) {
+        // return an empty ball
+        return generator.ballOnSupport(new ArrayList<P>());
+    }
+    // Emo Welzl algorithm with Bernd Gärtner and Linus Källberg improvements
+    return pivotingBall(points);
+}","/**
+ * {@inheritDoc}
+ */
+","public EnclosingBall<S, P> enclose(final List<P> points) {
+    if (points == null || points.isEmpty()) {
+                return generator.ballOnSupport(new ArrayList<P>());
+    }
+        return pivotingBall(points);
+}",0.0,0.5896226415094338,0.0,0.0,1.3333333333333333,0.9517241379310344,-0.0273844353423058,0.0,0.7749999999999999,0.774292819953123
+accumulo,remotes/origin/bugs-dot-jar_ACCUMULO-414_116d5928,1.0,"@Override
+public SortedKeyValueIterator<Key, Value> deepCopy(IteratorEnvironment env) {
+    throw new UnsupportedOperationException();
+}","/**
+ * {@inheritDoc}
+ */
+","@Override
+public SortedKeyValueIterator<Key, Value> deepCopy(IteratorEnvironment env) {
+    throw new UnsupportedOperationException();
+}",-0.3333333333333333,-0.3726415094339622,0.0,-1.0,0.0,0.0,0.525453481568168,-1.0,0.11249999999999998,0.0
+jackrabbit-oak,remotes/origin/bugs-dot-jar_OAK-1369_ce0b0955,1.0,"@Override
+public String toString() {
+    StringBuilder buff = new StringBuilder(""contains"").append('(').append(left).append("", "").append(right).append(')');
+    return buff.toString();
+}","/**
+ * {@inheritDoc}
+ */
+","@Override
+public String toString() {
+    StringBuilder buff = new StringBuilder(""contains"").append('(').append(left).append("", "").append(right).append(')');
+    return buff.toString();
+}",-0.16666666666666666,-0.15566037735849056,-0.5,-1.0,0.0,0.0,0.115857226448215,1.0,-0.375,0.0
+accumulo,remotes/origin/bugs-dot-jar_ACCUMULO-1199_813109d7,3.0,"public void recv_removeConstraint() throws AccumuloException, AccumuloSecurityException, org.apache.thrift.TException {
+    removeConstraint_result result = new removeConstraint_result();
+    receiveBase(result, ""removeConstraint"");
+    if (result.ouch1 != null) {
+        throw result.ouch1;
+    }
+    if (result.ouch2 != null) {
+        throw result.ouch2;
+    }
+    return;
+}","/**
+ * {@inheritDoc}
+ */
+","public void recv_removeConstraint() throws AccumuloException, AccumuloSecurityException, org.apache.thrift.TException {
+    removeConstraint_result result = new removeConstraint_result();
+    receiveBase(result, ""removeConstraint"");
+    if (result.ouch1 != null) {
+        throw result.ouch1;
+    }
+    if (result.ouch2 != null) {
+        throw result.ouch2;
+    }
+    return;
+}",0.8333333333333334,0.26886792452830194,1.5,0.0,1.3333333333333333,1.103448275862069,-0.6036278525453477,-0.6666666666666666,-0.4,1.263745504642966
+commons-math,remotes/origin/bugs-dot-jar_MATH-434_133cbc2d,1.0,"/**
+ * Returns whether the problem is at an optimal state.
+ * @return whether the model has been solved
+ */
+boolean isOptimal() {
+    for (int i = getNumObjectiveFunctions(); i < getWidth() - 1; i++) {
+        if (MathUtils.compareTo(tableau.getEntry(0, i), 0, epsilon) < 0) {
+            return false;
+        }
+    }
+    return true;
+}","/**
+ * Returns whether the problem is at an optimal state.
+ * @return whether the model has been solved
+ */
+","boolean isOptimal() {
+    for (int i = getNumObjectiveFunctions(); i < getWidth() - 1; i++) {
+        if (MathUtils.compareTo(tableau.getEntry(0, i), 0, epsilon) < 0) {
+            return false;
+        }
+    }
+    return true;
+}",0.3333333333333333,1.6462264150943393,0.5,1.0,2.3333333333333335,1.8689655172413793,-0.3166764189584551,0.3333333333333333,0.4,1.944069707108479
+jackrabbit-oak,remotes/origin/bugs-dot-jar_OAK-43_668f08f2,1.0,"public void dispose() {
+    gate.commit(""end"");
+    if (rep != null) {
+        try {
+            rep.shutDown();
+        } catch (Exception ignore) {
+        // fail silently
+        }
+        rep = null;
+    }
+    diffCache.clear();
+}","/**
+ * {@inheritDoc}
+ */
+","public void dispose() {
+    gate.commit(""end"");
+    if (rep != null) {
+        try {
+            rep.shutDown();
+        } catch (Exception ignore) {
+                }
+        rep = null;
+    }
+    diffCache.clear();
+}",0.8333333333333334,1.325471698113207,0.5,1.0,0.6666666666666666,0.8620689655172414,-0.4519602106495024,0.0,0.6125000000000002,0.5790556619133671
+logging-log4j2,remotes/origin/bugs-dot-jar_LOG4J2-1061_86d8944f,1.0,"@Override
+public boolean remove(final Marker marker) {
+    return this.marker.remove(MarkerManager.getMarker(marker.getName()));
+}","/**
+ * {@inheritDoc}
+ */
+","@Override
+public boolean remove(final Marker marker) {
+    return this.marker.remove(MarkerManager.getMarker(marker.getName()));
+}",-0.3333333333333333,-0.3726415094339622,-0.5,-1.0,0.0,0.0,0.5006436512580451,0.0,-0.28750000000000003,0.0
+accumulo,remotes/origin/bugs-dot-jar_ACCUMULO-217_46f62443,1.0,"@Override
+public Iterable<Entry<String, String>> getProperties(String tableName) throws TableNotFoundException {
+    return acu.tables.get(tableName).settings.entrySet();
+}","/**
+ * {@inheritDoc}
+ */
+","@Override
+public Iterable<Entry<String, String>> getProperties(String tableName) throws TableNotFoundException {
+    return acu.tables.get(tableName).settings.entrySet();
+}",-0.3333333333333333,-0.3726415094339622,-0.5,-1.0,0.0,0.0,0.35833820947922745,-0.3333333333333333,-0.3875,0.0
+wicket,remotes/origin/bugs-dot-jar_WICKET-4030_5f69685d,3.0,"/**
+ *  @param location
+ *  @return relative path
+ */
+private String relative(final String location) {
+    Args.notEmpty(location, ""location"");
+    if (location.startsWith(""http://"") || location.startsWith(""https://"") || location.startsWith(""/"")) {
+        return location;
+    }
+    RequestCycle rc = RequestCycle.get();
+    return rc.getUrlRenderer().renderUrl(Url.parse(location, rc.getRequest().getCharset()));
+}","/**
+ *  @param location
+ *  @return relative path
+ */
+","private String relative(final String location) {
+    Args.notEmpty(location, ""location"");
+    if (location.startsWith(""http://"") || location.startsWith(""https://"") || location.startsWith(""/"")) {
+        return location;
+    }
+    RequestCycle rc = RequestCycle.get();
+    return rc.getUrlRenderer().renderUrl(Url.parse(location, rc.getRequest().getCharset()));
+}",0.3333333333333333,0.2594339622641508,0.0,0.0,2.0,1.1586206896551725,-0.40327677004095985,2.3333333333333335,-0.3625000000000001,1.800075146266841
+flink,remotes/origin/bugs-dot-jar_FLINK-1761_380ef878,1.0,"private void notifyAllChannelsOfErrorAndClose(Throwable cause) {
+    if (channelError.compareAndSet(false, true)) {
+        for (RemoteInputChannel inputChannel : inputChannels.values()) {
+            inputChannel.onError(cause);
+        }
+        inputChannels.clear();
+        ctx.close();
+    }
+}","/**
+ * {@inheritDoc}
+ */
+","private void notifyAllChannelsOfErrorAndClose(Throwable cause) {
+    if (channelError.compareAndSet(false, true)) {
+        for (RemoteInputChannel inputChannel : inputChannels.values()) {
+            inputChannel.onError(cause);
+        }
+        inputChannels.clear();
+        ctx.close();
+    }
+}",0.5,1.5990566037735843,0.5,1.0,0.6666666666666666,0.0,-0.33867758923346963,0.6666666666666666,-0.275,0.0
+Math,75.0,3.0,"// -------------------------------------------------------------
+/**
+ * Returns the percentage of values that are equal to v
+ * (as a proportion between 0 and 1).
+ * <p>
+ * Returns <code>Double.NaN</code> if no values have been added.</p>
+ *
+ * @param v the value to lookup
+ * @return the proportion of values equal to v
+ * @deprecated replaced by {@link #getPct(Comparable)} as of 2.0
+ */
+@Deprecated
+public double getPct(Object v) {
+    return getCumPct((Comparable<?>) v);
+}","/**
+ * Returns the percentage of values that are equal to v
+ * (as a proportion between 0 and 1).
+ * <p>
+ * Returns <code>Double.NaN</code> if no values have been added.</p>
+ *
+ * @param v the value to lookup
+ * @return the proportion of values equal to v
+ * @deprecated replaced by {@link #getPct(Comparable)} as of 2.0
+ */
+","@Deprecated
+public double getPct(Object v) {
+    return getCumPct((Comparable<?>) v);
+}",-0.3333333333333333,-0.3726415094339622,-0.5,-1.0,0.0,0.0,0.59426565242832,-0.6666666666666666,0.8375,0.0
+Closure,26.0,2.0,"/**
+ * Rewrite module.exports to moduleName.module$exports.
+ */
+private void visitModuleExports(Node prop) {
+    String moduleName = guessCJSModuleName(prop.getSourceFileName());
+    Node module = prop.getChildAtIndex(0);
+    module.putProp(Node.ORIGINALNAME_PROP, ""module"");
+    module.setString(moduleName);
+    Node exports = prop.getChildAtIndex(1);
+    exports.putProp(Node.ORIGINALNAME_PROP, ""exports"");
+    exports.setString(""module$exports"");
+}","/**
+ * Rewrite module.exports to moduleName.module$exports.
+ */
+","private void visitModuleExports(Node prop) {
+    String moduleName = guessCJSModuleName(prop.getSourceFileName());
+    Node module = prop.getChildAtIndex(0);
+    module.putProp(Node.ORIGINALNAME_PROP, ""module"");
+    module.setString(moduleName);
+    Node exports = prop.getChildAtIndex(1);
+    exports.putProp(Node.ORIGINALNAME_PROP, ""exports"");
+    exports.setString(""module$exports"");
+}",0.5,-0.4386792452830188,-0.5,-1.0,0.0,0.0,-0.4964306612053832,1.6666666666666667,-0.375,0.0
+camel,remotes/origin/bugs-dot-jar_CAMEL-5707_3f70d612,3.0,"@Override
+public boolean onExchangeCompleted(Exchange exchange) {
+    if (exchange.getExchangeId().equals(id)) {
+        done.set(false);
+    }
+    return true;
+}","/**
+ * {@inheritDoc}
+ */
+","@Override
+public boolean onExchangeCompleted(Exchange exchange) {
+    if (exchange.getExchangeId().equals(id)) {
+        done.set(false);
+    }
+    return true;
+}",0.16666666666666666,0.6367924528301884,0.0,0.0,1.0,0.0,-0.018490345231129118,0.0,0.11249999999999998,0.0
+Lang,26.0,1.0,"/**
+ * <p>Formats a <code>Date</code> object.</p>
+ *
+ * @param date  the date to format
+ * @return the formatted string
+ */
+public String format(Date date) {
+    Calendar c = new GregorianCalendar(mTimeZone);
+    c.setTime(date);
+    return applyRules(c, new StringBuffer(mMaxLengthEstimate)).toString();
+}","/**
+ * <p>Formats a <code>Date</code> object.</p>
+ *
+ * @param date  the date to format
+ * @return the formatted string
+ */
+","public String format(Date date) {
+    Calendar c = new GregorianCalendar(mTimeZone);
+    c.setTime(date);
+    return applyRules(c, new StringBuffer(mMaxLengthEstimate)).toString();
+}",-0.16666666666666666,-0.15566037735849056,-0.5,-1.0,0.0,0.0,0.1472205968402572,0.0,0.5375000000000001,0.0
+logging-log4j2,remotes/origin/bugs-dot-jar_LOG4J2-492_61ccbb95,3.0,"/**
+ * Unregisters all MBeans associated with the specified logger context
+ * (including MBeans for {@code LoggerConfig}s and {@code Appender}s from
+ * the platform MBean server.
+ *
+ * @param loggerContextName name of the logger context to unregister
+ * @param mbs the MBean Server to unregister the instrumented objects from
+ */
+public static void unregisterContext(String contextName, MBeanServer mbs) {
+    final String pattern = LoggerContextAdminMBean.PATTERN;
+    final String search = String.format(pattern, contextName, ""*"");
+    // unregister context mbean
+    unregisterAllMatching(search, mbs);
+    unregisterLoggerConfigs(contextName, mbs);
+    unregisterAppenders(contextName, mbs);
+    unregisterAsyncAppenders(contextName, mbs);
+    unregisterAsyncLoggerRingBufferAdmins(contextName, mbs);
+    unregisterAsyncLoggerConfigRingBufferAdmins(contextName, mbs);
+}","/**
+ * Unregisters all MBeans associated with the specified logger context
+ * (including MBeans for {@code LoggerConfig}s and {@code Appender}s from
+ * the platform MBean server.
+ *
+ * @param loggerContextName name of the logger context to unregister
+ * @param mbs the MBean Server to unregister the instrumented objects from
+ */
+","public static void unregisterContext(String contextName, MBeanServer mbs) {
+    final String pattern = LoggerContextAdminMBean.PATTERN;
+    final String search = String.format(pattern, contextName, ""*"");
+        unregisterAllMatching(search, mbs);
+    unregisterLoggerConfigs(contextName, mbs);
+    unregisterAppenders(contextName, mbs);
+    unregisterAsyncAppenders(contextName, mbs);
+    unregisterAsyncLoggerRingBufferAdmins(contextName, mbs);
+    unregisterAsyncLoggerConfigRingBufferAdmins(contextName, mbs);
+}",0.6666666666666666,-0.4952830188679243,-0.5,-1.0,0.0,0.0,-0.5741369221767112,1.3333333333333333,-0.375,0.0
+logging-log4j2,remotes/origin/bugs-dot-jar_LOG4J2-793_73400bfb,3.0,"private static org.apache.logging.log4j.Marker getMarker(final Marker marker) {
+    return marker != null ? ((org.apache.logging.slf4j.Log4jMarker) marker).getLog4jMarker() : null;
+}","/**
+ * {@inheritDoc}
+ */
+","private static org.apache.logging.log4j.Marker getMarker(final Marker marker) {
+    return marker != null ? ((org.apache.logging.slf4j.Log4jMarker) marker).getLog4jMarker() : null;
+}",-0.5,-0.2216981132075472,0.0,-1.0,0.6666666666666666,0.0,0.5114101813926275,-0.6666666666666666,-0.4,0.0
+logging-log4j2,remotes/origin/bugs-dot-jar_LOG4J2-763_97203de8,1.0,"/**
+ * Returns the formatted object message.
+ * @return the formatted object message.
+ */
+@Override
+public String getFormattedMessage() {
+    return obj.toString();
+}","/**
+ * Returns the formatted object message.
+ * @return the formatted object message.
+ */
+","@Override
+public String getFormattedMessage() {
+    return obj.toString();
+}",-0.3333333333333333,-0.3726415094339622,-0.5,-1.0,0.0,0.0,0.6846108835576357,-0.6666666666666666,0.8125,0.0
+logging-log4j2,remotes/origin/bugs-dot-jar_LOG4J2-210_aeb6fc9d,1.0,"public void asXML(final StringBuilder sb) {
+    sb.append(""<Map>\n"");
+    for (final Map.Entry<String, String> entry : data.entrySet()) {
+        sb.append(""  <Entry key="").append(entry.getKey()).append("">"").append(entry.getValue()).append(""</Entry>\n"");
+    }
+    sb.append(""</Map>"");
+}","/**
+ * {@inheritDoc}
+ */
+","public void asXML(final StringBuilder sb) {
+    sb.append(""<Map>\n"");
+    for (final Map.Entry<String, String> entry : data.entrySet()) {
+        sb.append(""  <Entry key="").append(entry.getKey()).append("">"").append(entry.getValue()).append(""</Entry>\n"");
+    }
+    sb.append(""</Map>"");
+}",0.16666666666666666,0.410377358490566,0.0,0.0,0.0,0.0,-0.2590988882387358,2.3333333333333335,-0.4,0.0
+JxPath,9.0,1.0,"public Object computeValue(EvalContext context) {
+    return equal(context, args[0], args[1]) ? Boolean.TRUE : Boolean.FALSE;
+}","/**
+ * {@inheritDoc}
+ */
+","public Object computeValue(EvalContext context) {
+    return equal(context, args[0], args[1]) ? Boolean.TRUE : Boolean.FALSE;
+}",-0.5,-0.2216981132075472,0.0,-1.0,1.0,0.0,0.5891164423639556,-0.6666666666666666,-0.3875,0.0
+jackrabbit-oak,remotes/origin/bugs-dot-jar_OAK-93_0be7e8f0,1.0,"@Override
+public NodeStateBuilder addNode(String name, NodeState nodeState) {
+    if (hasChild(name)) {
+        return null;
+    } else {
+        String targetPath = PathUtils.concat(path, name);
+        context.addNode(nodeState, targetPath);
+        return new KernelNodeStateBuilder(context, targetPath);
+    }
+}","/**
+ * {@inheritDoc}
+ */
+","@Override
+public NodeStateBuilder addNode(String name, NodeState nodeState) {
+    if (hasChild(name)) {
+        return null;
+    } else {
+        String targetPath = PathUtils.concat(path, name);
+        context.addNode(nodeState, targetPath);
+        return new KernelNodeStateBuilder(context, targetPath);
+    }
+}",0.6666666666666666,1.1273584905660372,0.0,0.0,1.0,0.0,-0.48004681100058466,0.0,-0.3,0.0
+Closure,141.0,2.0,"/**
+ * Query the DefinitionProvider for the list of definitions that
+ * correspond to a given qualified name subtree.  Return null if
+ * DefinitionProvider does not contain an entry for a given name,
+ * one or more of the values returned by getDeclarations is not
+ * callable, or the ""name"" node is not a GETPROP or NAME.
+ *
+ * @param definitionProvider The name reference graph
+ * @param name Query node
+ * @return non-empty definition list or null
+ */
+private static Collection<Definition> getCallableDefinitions(DefinitionProvider definitionProvider, Node name) {
+    List<Definition> result = Lists.newArrayList();
+    if (!NodeUtil.isGetProp(name) && !NodeUtil.isName(name)) {
+        return null;
+    }
+    Collection<Definition> decls = definitionProvider.getDefinitionsReferencedAt(name);
+    if (decls == null) {
+        return null;
+    }
+    for (Definition current : decls) {
+        Node rValue = current.getRValue();
+        if ((rValue != null) && NodeUtil.isFunction(rValue)) {
+            result.add(current);
+        } else {
+            return null;
+        }
+    }
+    return result;
+}","/**
+ * Query the DefinitionProvider for the list of definitions that
+ * correspond to a given qualified name subtree.  Return null if
+ * DefinitionProvider does not contain an entry for a given name,
+ * one or more of the values returned by getDeclarations is not
+ * callable, or the ""name"" node is not a GETPROP or NAME.
+ *
+ * @param definitionProvider The name reference graph
+ * @param name Query node
+ * @return non-empty definition list or null
+ */
+","private static Collection<Definition> getCallableDefinitions(DefinitionProvider definitionProvider, Node name) {
+    List<Definition> result = Lists.newArrayList();
+    if (!NodeUtil.isGetProp(name) && !NodeUtil.isName(name)) {
+        return null;
+    }
+    Collection<Definition> decls = definitionProvider.getDefinitionsReferencedAt(name);
+    if (decls == null) {
+        return null;
+    }
+    for (Definition current : decls) {
+        Node rValue = current.getRValue();
+        if ((rValue != null) && NodeUtil.isFunction(rValue)) {
+            result.add(current);
+        } else {
+            return null;
+        }
+    }
+    return result;
+}",2.1666666666666665,1.0707547169811316,1.5,1.0,3.6666666666666665,2.7586206896551726,-1.2304271503803386,1.3333333333333333,-0.4,7.569161403445992
+jackrabbit-oak,remotes/origin/bugs-dot-jar_OAK-2740_429baf4d,0.0,"@Override
+public boolean definesContextRoot(@Nonnull Tree tree) {
+    String name = tree.getName();
+    return POLICY_NODE_NAMES.contains(name) || REP_PERMISSION_STORE.equals(name);
+}","/**
+ * {@inheritDoc}
+ */
+","@Override
+public boolean definesContextRoot(@Nonnull Tree tree) {
+    String name = tree.getName();
+    return POLICY_NODE_NAMES.contains(name) || REP_PERMISSION_STORE.equals(name);
+}",-0.16666666666666666,-0.15566037735849056,-0.5,-1.0,0.0,0.8482758620689655,0.1472205968402572,0.0,0.13749999999999998,0.6194199423878621
+wicket,remotes/origin/bugs-dot-jar_WICKET-2506_0f8a2990,1.0,"@Override
+protected void onDetach() {
+    restoreOriginalChildVisibility();
+    super.onDetach();
+}","/**
+ * {@inheritDoc}
+ */
+","@Override
+protected void onDetach() {
+    restoreOriginalChildVisibility();
+    super.onDetach();
+}",-0.16666666666666666,-0.15566037735849056,-0.5,-1.0,0.0,0.0,0.6218841427735513,-0.3333333333333333,0.075,0.0
+wicket,remotes/origin/bugs-dot-jar_WICKET-3861_d1e0e411,3.0,"@Override
+public void onComponentTag(final Component component, final ComponentTag tag) {
+    tag.put(""xmlns:wicket"", ""http://wicket.apache.org"");
+}","/**
+ * {@inheritDoc}
+ */
+","@Override
+public void onComponentTag(final Component component, final ComponentTag tag) {
+    tag.put(""xmlns:wicket"", ""http://wicket.apache.org"");
+}",-0.3333333333333333,-0.3726415094339622,-0.5,-1.0,0.0,0.0,0.47583382094792215,-0.6666666666666666,-0.3375000000000001,0.0
+accumulo,remotes/origin/bugs-dot-jar_ACCUMULO-209_397f86f6,1.0,"private boolean matches(Matcher matcher, ByteSequence bs) {
+    if (matcher != null) {
+        babcs.set(bs);
+        matcher.reset(babcs);
+        return matcher.matches();
+    }
+    return !orFields;
+}","/**
+ * {@inheritDoc}
+ */
+","private boolean matches(Matcher matcher, ByteSequence bs) {
+    if (matcher != null) {
+        babcs.set(bs);
+        matcher.reset(babcs);
+        return matcher.matches();
+    }
+    return !orFields;
+}",0.3333333333333333,0.9386792452830187,0.0,0.0,0.6666666666666666,1.0689655172413794,-0.21977764774722083,0.0,-0.15,0.7776565099926643
+camel,remotes/origin/bugs-dot-jar_CAMEL-5261_55c2e2d8,1.0,"@Override
+protected void doShutdown() throws Exception {
+    // notify component we are shutting down this endpoint
+    if (getComponent() != null) {
+        getComponent().onShutdownEndpoint(this);
+    }
+    // shutdown thread pool if it was in use
+    if (multicastExecutor != null) {
+        getCamelContext().getExecutorServiceManager().shutdownNow(multicastExecutor);
+        multicastExecutor = null;
+    }
+    super.doShutdown();
+}","/**
+ * {@inheritDoc}
+ */
+","@Override
+protected void doShutdown() throws Exception {
+        if (getComponent() != null) {
+        getComponent().onShutdownEndpoint(this);
+    }
+        if (multicastExecutor != null) {
+        getCamelContext().getExecutorServiceManager().shutdownNow(multicastExecutor);
+        multicastExecutor = null;
+    }
+    super.doShutdown();
+}",0.8333333333333334,0.7783018867924528,0.5,0.0,1.3333333333333333,1.0689655172413794,-0.4847279110590988,1.3333333333333333,0.43750000000000006,0.8185933334526131
+Math,103.0,3.0,"/**
+ * For this disbution, X, this method returns P(X &lt; <code>x</code>).
+ * @param x the value at which the CDF is evaluated.
+ * @return CDF evaluted at <code>x</code>.
+ * @throws MathException if the algorithm fails to converge; unless
+ * x is more than 20 standard deviations from the mean, in which case the
+ * convergence exception is caught and 0 or 1 is returned.
+ */
+public double cumulativeProbability(double x) throws MathException {
+    return 0.5 * (1.0 + Erf.erf((x - mean) / (standardDeviation * Math.sqrt(2.0))));
+}","/**
+ * For this disbution, X, this method returns P(X &lt; <code>x</code>).
+ * @param x the value at which the CDF is evaluated.
+ * @return CDF evaluted at <code>x</code>.
+ * @throws MathException if the algorithm fails to converge; unless
+ * x is more than 20 standard deviations from the mean, in which case the
+ * convergence exception is caught and 0 or 1 is returned.
+ */
+","public double cumulativeProbability(double x) throws MathException {
+    return 0.5 * (1.0 + Erf.erf((x - mean) / (standardDeviation * Math.sqrt(2.0))));
+}",-0.5,-0.2216981132075472,-0.5,-1.0,0.0,1.4827586206896552,0.5104739613809243,-0.3333333333333333,-0.12500000000000003,1.1971158147107765
+jackrabbit-oak,remotes/origin/bugs-dot-jar_OAK-1216_e403e003,1.0,"/**
+ * Returns the Oak path for the given JCR path, or throws a
+ * {@link javax.jcr.RepositoryException} if the path can not be mapped.
+ *
+ * @param jcrPath JCR path
+ * @return Oak path
+ * @throws javax.jcr.RepositoryException if the path can not be mapped
+ */
+@Nonnull
+public String getOakPathOrThrow(String jcrPath) throws RepositoryException {
+    String oakPath = getOakPath(jcrPath);
+    if (oakPath != null) {
+        return oakPath;
+    } else {
+        throw new RepositoryException(""Invalid name or path: "" + jcrPath);
+    }
+}","/**
+ * Returns the Oak path for the given JCR path, or throws a
+ * {@link javax.jcr.RepositoryException} if the path can not be mapped.
+ *
+ * @param jcrPath JCR path
+ * @return Oak path
+ * @throws javax.jcr.RepositoryException if the path can not be mapped
+ */
+","@Nonnull
+public String getOakPathOrThrow(String jcrPath) throws RepositoryException {
+    String oakPath = getOakPath(jcrPath);
+    if (oakPath != null) {
+        return oakPath;
+    } else {
+        throw new RepositoryException(""Invalid name or path: "" + jcrPath);
+    }
+}",0.5,0.7783018867924528,0.5,0.0,0.6666666666666666,1.1724137931034482,-0.332592159157402,-0.6666666666666666,0.3875,0.9003954124993291
+Codec,11.0,1.0,"/**
+ * Encodes byte into its quoted-printable representation.
+ *
+ * @param b
+ *            byte to encode
+ * @param buffer
+ *            the buffer to write to
+ * @return The number of bytes written to the <code>buffer</code>
+ */
+private static final void encodeQuotedPrintable(int b, ByteArrayOutputStream buffer) {
+    buffer.write(ESCAPE_CHAR);
+    char hex1 = Character.toUpperCase(Character.forDigit((b >> 4) & 0xF, 16));
+    char hex2 = Character.toUpperCase(Character.forDigit(b & 0xF, 16));
+    buffer.write(hex1);
+    buffer.write(hex2);
+}","/**
+ * Encodes byte into its quoted-printable representation.
+ *
+ * @param b
+ *            byte to encode
+ * @param buffer
+ *            the buffer to write to
+ * @return The number of bytes written to the <code>buffer</code>
+ */
+","private static final void encodeQuotedPrintable(int b, ByteArrayOutputStream buffer) {
+    buffer.write(ESCAPE_CHAR);
+    char hex1 = Character.toUpperCase(Character.forDigit((b >> 4) & 0xF, 16));
+    char hex2 = Character.toUpperCase(Character.forDigit(b & 0xF, 16));
+    buffer.write(hex1);
+    buffer.write(hex2);
+}",0.16666666666666666,-0.2971698113207546,-0.5,-1.0,0.0,1.4275862068965517,-0.29233469865418377,1.3333333333333333,-0.1625,2.2203216975899522
+flink,remotes/origin/bugs-dot-jar_FLINK-2713_63d9800e,1.0,"public StateHandle<Serializable> snapshotState(long checkpointId, long checkpointTimestamp) throws Exception {
+    return provider.createStateHandle(checkpointer.snapshotState(value(), checkpointId, checkpointTimestamp));
+}","/**
+ * {@inheritDoc}
+ */
+","public StateHandle<Serializable> snapshotState(long checkpointId, long checkpointTimestamp) throws Exception {
+    return provider.createStateHandle(checkpointer.snapshotState(value(), checkpointId, checkpointTimestamp));
+}",-0.5,-0.2216981132075472,-0.5,-1.0,0.0,0.0,0.6256290228203629,0.0,-0.3875,0.0
+commons-math,remotes/origin/bugs-dot-jar_MATH-370_495f04bc,3.0,"/**
+ * Checks that the given array is sorted.
+ *
+ * @param val Values
+ * @param dir Order direction (-1 for decreasing, 1 for increasing)
+ * @param strict Whether the order should be strict
+ * @throws NonMonotonousSequenceException if the array is not sorted.
+ * @deprecated as of 2.2 (please use the new {@link #checkOrder(double[],OrderDirection,boolean)
+ * checkOrder} method). To be removed in 3.0.
+ */
+public static void checkOrder(double[] val, int dir, boolean strict) {
+    if (dir > 0) {
+        checkOrder(val, OrderDirection.INCREASING, strict);
+    } else {
+        checkOrder(val, OrderDirection.DECREASING, strict);
+    }
+}","/**
+ * Checks that the given array is sorted.
+ *
+ * @param val Values
+ * @param dir Order direction (-1 for decreasing, 1 for increasing)
+ * @param strict Whether the order should be strict
+ * @throws NonMonotonousSequenceException if the array is not sorted.
+ * @deprecated as of 2.2 (please use the new {@link #checkOrder(double[],OrderDirection,boolean)
+ * checkOrder} method). To be removed in 3.0.
+ */
+","public static void checkOrder(double[] val, int dir, boolean strict) {
+    if (dir > 0) {
+        checkOrder(val, OrderDirection.INCREASING, strict);
+    } else {
+        checkOrder(val, OrderDirection.DECREASING, strict);
+    }
+}",0.16666666666666666,0.8443396226415092,0.0,0.0,0.6666666666666666,0.0,-0.07934464599180838,-0.3333333333333333,-0.28750000000000003,0.0
+jackrabbit-oak,remotes/origin/bugs-dot-jar_OAK-3324_5f863af6,1.0,"@Nonnull
+@Override
+public RepositoryPermission getRepositoryPermission() {
+    return new RepositoryPermission() {
+
+        @Override
+        public boolean isGranted(long repositoryPermissions) {
+            return hasPermissions(getEntryIterator(new EntryPredicate()), repositoryPermissions, null);
+        }
+    };
+}","/**
+ * {@inheritDoc}
+ */
+","@Nonnull
+@Override
+public RepositoryPermission getRepositoryPermission() {
+    return new RepositoryPermission() {
+
+        @Override
+        public boolean isGranted(long repositoryPermissions) {
+            return hasPermissions(getEntryIterator(new EntryPredicate()), repositoryPermissions, null);
+        }
+    };
+}",0.6666666666666666,1.9386792452830182,-0.5,0.0,0.0,0.0,-0.28765359859566964,-0.3333333333333333,-0.06249999999999999,0.0
+jackrabbit-oak,remotes/origin/bugs-dot-jar_OAK-1348_bc7b7e8c,1.0,"@Override
+public boolean apply(@Nullable ACE ace) {
+    return (ace != null) && ace.getPrincipal().equals(principal);
+}","/**
+ * {@inheritDoc}
+ */
+","@Override
+public boolean apply(@Nullable ACE ace) {
+    return (ace != null) && ace.getPrincipal().equals(principal);
+}",-0.3333333333333333,-0.3726415094339622,-0.5,-1.0,0.0,0.8275862068965517,0.39859566998244567,-0.3333333333333333,0.4,0.4310533001735521
+wicket,remotes/origin/bugs-dot-jar_WICKET-2033_420ac965,3.0,"/**
+ *  @see org.apache.wicket.behavior.AbstractAjaxBehavior#onComponentTag(org.apache.wicket.markup.ComponentTag)
+ */
+@Override
+protected void onComponentTag(final ComponentTag tag) {
+    super.onComponentTag(tag);
+    // only add the event handler when the component is enabled.
+    Component myComponent = getComponent();
+    if (myComponent.isEnabledInHierarchy()) {
+        tag.put(event, getEventHandler());
+    }
+}","/**
+ *  @see org.apache.wicket.behavior.AbstractAjaxBehavior#onComponentTag(org.apache.wicket.markup.ComponentTag)
+ */
+","@Override
+protected void onComponentTag(final ComponentTag tag) {
+    super.onComponentTag(tag);
+        Component myComponent = getComponent();
+    if (myComponent.isEnabledInHierarchy()) {
+        tag.put(event, getEventHandler());
+    }
+}",0.3333333333333333,0.4952830188679243,0.0,0.0,0.6666666666666666,0.0,-0.19262726740784117,0.6666666666666666,0.11249999999999998,0.0
+Closure,169.0,2.0,"boolean checkArrowEquivalenceHelper(ArrowType that, boolean tolerateUnknowns) {
+    // Please keep this method in sync with the hashCode() method below.
+    if (!returnType.checkEquivalenceHelper(that.returnType, tolerateUnknowns)) {
+        return false;
+    }
+    return hasEqualParameters(that, tolerateUnknowns);
+}","/**
+ * {@inheritDoc}
+ */
+","boolean checkArrowEquivalenceHelper(ArrowType that, boolean tolerateUnknowns) {
+        if (!returnType.checkEquivalenceHelper(that.returnType, tolerateUnknowns)) {
+        return false;
+    }
+    return hasEqualParameters(that, tolerateUnknowns);
+}",0.0,0.5896226415094338,0.0,0.0,1.3333333333333333,0.0,0.08215330602691606,-0.3333333333333333,-0.2,0.0
+wicket,remotes/origin/bugs-dot-jar_WICKET-442_246d53c5,1.0,"/**
+ *  @return Any feedback message for this component
+ */
+public final FeedbackMessage getFeedbackMessage() {
+    return getPage().getFeedbackMessages().messageForComponent(this);
+}","/**
+ *  @return Any feedback message for this component
+ */
+","public final FeedbackMessage getFeedbackMessage() {
+    return getPage().getFeedbackMessages().messageForComponent(this);
+}",-0.5,-0.2216981132075472,-0.5,-1.0,0.0,0.0,0.9027501462843762,0.0,0.7999999999999999,0.0
+wicket,remotes/origin/bugs-dot-jar_WICKET-5770_cf6172bd,1.0,"@Override
+public PageParameters decodePageParameters(final Url url) {
+    PageParameters parameters = new PageParameters();
+    int i = 0;
+    for (String s : url.getSegments()) {
+        parameters.set(i, s);
+        ++i;
+    }
+    for (QueryParameter p : url.getQueryParameters()) {
+        parameters.add(p.getName(), p.getValue(), INamedParameters.Type.QUERY_STRING);
+    }
+    return parameters.isEmpty() ? null : parameters;
+}","/**
+ * {@inheritDoc}
+ */
+","@Override
+public PageParameters decodePageParameters(final Url url) {
+    PageParameters parameters = new PageParameters();
+    int i = 0;
+    for (String s : url.getSegments()) {
+        parameters.set(i, s);
+        ++i;
+    }
+    for (QueryParameter p : url.getQueryParameters()) {
+        parameters.add(p.getName(), p.getValue(), INamedParameters.Type.QUERY_STRING);
+    }
+    return parameters.isEmpty() ? null : parameters;
+}",1.1666666666666667,0.5613207547169812,1.0,0.0,0.6666666666666666,1.0620689655172415,-0.8489174956114685,1.3333333333333333,-0.4,2.074466372045589
+wicket,remotes/origin/bugs-dot-jar_WICKET-5265_0eb596df,1.0,"@Override
+protected boolean shouldRecurseInto(Component component) {
+    return component.getMetaData(FENCE_KEY) == null;
+}","/**
+ * {@inheritDoc}
+ */
+","@Override
+protected boolean shouldRecurseInto(Component component) {
+    return component.getMetaData(FENCE_KEY) == null;
+}",-0.3333333333333333,-0.3726415094339622,-0.5,-1.0,0.0,0.0,0.5104739613809243,-0.6666666666666666,0.6375000000000001,0.0
+camel,remotes/origin/bugs-dot-jar_CAMEL-3395_8433e6db,3.0,"/**
+ * Creates a new instance and copies from the current message exchange so that it can be
+ * forwarded to another destination as a new instance. Unlike regular copy this operation
+ * will not share the same {@link org.apache.camel.spi.UnitOfWork} so its should be used
+ * for async messaging, where the original and copied exchange are independent.
+ *
+ * @param exchange original copy of the exchange
+ * @param handover whether the on completion callbacks should be handed over to the new copy.
+ */
+public static Exchange createCorrelatedCopy(Exchange exchange, boolean handover) {
+    Exchange copy = exchange.copy();
+    // do not share the unit of work
+    copy.setUnitOfWork(null);
+    // hand over on completion to the copy if we got any
+    UnitOfWork uow = exchange.getUnitOfWork();
+    if (handover && uow != null) {
+        uow.handoverSynchronization(copy);
+    }
+    // set a correlation id so we can track back the original exchange
+    copy.setProperty(Exchange.CORRELATION_ID, exchange.getExchangeId());
+    return copy;
+}","/**
+ * Creates a new instance and copies from the current message exchange so that it can be
+ * forwarded to another destination as a new instance. Unlike regular copy this operation
+ * will not share the same {@link org.apache.camel.spi.UnitOfWork} so its should be used
+ * for async messaging, where the original and copied exchange are independent.
+ *
+ * @param exchange original copy of the exchange
+ * @param handover whether the on completion callbacks should be handed over to the new copy.
+ */
+","public static Exchange createCorrelatedCopy(Exchange exchange, boolean handover) {
+    Exchange copy = exchange.copy();
+        copy.setUnitOfWork(null);
+        UnitOfWork uow = exchange.getUnitOfWork();
+    if (handover && uow != null) {
+        uow.handoverSynchronization(copy);
+    }
+        copy.setProperty(Exchange.CORRELATION_ID, exchange.getExchangeId());
+    return copy;
+}",0.6666666666666666,0.02358490566037727,0.0,0.0,1.3333333333333333,1.3793103448275863,-0.5596255119953185,1.0,-0.3875,2.029307044067918
+accumulo,remotes/origin/bugs-dot-jar_ACCUMULO-4138_50db442b,1.0,"@Override
+public Options getOptions() {
+    final Options o = new Options();
+    forceOpt = new Option(""f"", ""force"", false, ""delete data even if start or end are not specified"");
+    startRowOptExclusive = new Option(OptUtil.START_ROW_OPT, ""begin-row"", true, ""begin row (exclusive)"");
+    startRowOptExclusive.setArgName(""begin-row"");
+    o.addOption(startRowOptExclusive);
+    o.addOption(OptUtil.endRowOpt());
+    o.addOption(OptUtil.tableOpt(""table to delete a row range from""));
+    o.addOption(forceOpt);
+    return o;
+}","/**
+ * {@inheritDoc}
+ */
+","@Override
+public Options getOptions() {
+    final Options o = new Options();
+    forceOpt = new Option(""f"", ""force"", false, ""delete data even if start or end are not specified"");
+    startRowOptExclusive = new Option(OptUtil.START_ROW_OPT, ""begin-row"", true, ""begin row (exclusive)"");
+    startRowOptExclusive.setArgName(""begin-row"");
+    o.addOption(startRowOptExclusive);
+    o.addOption(OptUtil.endRowOpt());
+    o.addOption(OptUtil.tableOpt(""table to delete a row range from""));
+    o.addOption(forceOpt);
+    return o;
+}",1.0,-0.3726415094339622,-0.5,-1.0,0.0,0.0,-0.7585722644821529,1.3333333333333333,-0.4,0.0
+wicket,remotes/origin/bugs-dot-jar_WICKET-4932_f20b2d70,1.0,"/**
+ *  Cleans the original parameters from entries used by Wicket internals.
+ *
+ *  @param originalParameters
+ *             the current request's non-modified parameters
+ *  @return all parameters but Wicket internal ones
+ */
+private PageParameters cleanPageParameters(final PageParameters originalParameters) {
+    PageParameters cleanParameters = null;
+    if (originalParameters != null) {
+        cleanParameters = new PageParameters(originalParameters);
+        // WICKET-4038: Ajax related parameters are set by wicket-ajax.js when needed.
+        // They shouldn't be propagated to the next requests
+        cleanParameters.remove(WebRequest.PARAM_AJAX);
+        cleanParameters.remove(WebRequest.PARAM_AJAX_BASE_URL);
+        cleanParameters.remove(WebRequest.PARAM_AJAX_REQUEST_ANTI_CACHE);
+        if (cleanParameters.isEmpty()) {
+            cleanParameters = null;
+        }
+    }
+    return cleanParameters;
+}","/**
+ *  Cleans the original parameters from entries used by Wicket internals.
+ *
+ *  @param originalParameters
+ *             the current request's non-modified parameters
+ *  @return all parameters but Wicket internal ones
+ */
+","private PageParameters cleanPageParameters(final PageParameters originalParameters) {
+    PageParameters cleanParameters = null;
+    if (originalParameters != null) {
+        cleanParameters = new PageParameters(originalParameters);
+                        cleanParameters.remove(WebRequest.PARAM_AJAX);
+        cleanParameters.remove(WebRequest.PARAM_AJAX_BASE_URL);
+        cleanParameters.remove(WebRequest.PARAM_AJAX_REQUEST_ANTI_CACHE);
+        if (cleanParameters.isEmpty()) {
+            cleanParameters = null;
+        }
+    }
+    return cleanParameters;
+}",1.1666666666666667,1.1745283018867922,0.5,1.0,1.3333333333333333,1.7241379310344829,-0.74733762434172,0.3333333333333333,-0.3625000000000001,2.316151079780287
+accumulo,remotes/origin/bugs-dot-jar_ACCUMULO-366_db4a291f,1.0,"long getFlushID() {
+    try {
+        String zTablePath = Constants.ZROOT + ""/"" + HdfsZooInstance.getInstance().getInstanceID() + Constants.ZTABLES + ""/"" + extent.getTableId() + Constants.ZTABLE_FLUSH_ID;
+        return Long.parseLong(new String(ZooReaderWriter.getRetryingInstance().getData(zTablePath, null)));
+    } catch (Exception e) {
+        throw new RuntimeException(e);
+    }
+}","/**
+ * {@inheritDoc}
+ */
+","long getFlushID() {
+    try {
+        String zTablePath = Constants.ZROOT + ""/"" + HdfsZooInstance.getInstance().getInstanceID() + Constants.ZTABLES + ""/"" + extent.getTableId() + Constants.ZTABLE_FLUSH_ID;
+        return Long.parseLong(new String(ZooReaderWriter.getRetryingInstance().getData(zTablePath, null)));
+    } catch (Exception e) {
+        throw new RuntimeException(e);
+    }
+}",0.3333333333333333,0.9386792452830187,0.5,0.0,0.0,0.8689655172413794,-0.40514921006436494,1.0,-0.3125,1.299028466121558
+accumulo,remotes/origin/bugs-dot-jar_ACCUMULO-1190_e29dc4f5,3.0,"public void recv_update() throws UnknownWriter, MutationsRejectedException, org.apache.thrift.TException {
+    update_result result = new update_result();
+    receiveBase(result, ""update"");
+    if (result.ouch1 != null) {
+        throw result.ouch1;
+    }
+    if (result.ouch2 != null) {
+        throw result.ouch2;
+    }
+    return;
+}","/**
+ * {@inheritDoc}
+ */
+","public void recv_update() throws UnknownWriter, MutationsRejectedException, org.apache.thrift.TException {
+    update_result result = new update_result();
+    receiveBase(result, ""update"");
+    if (result.ouch1 != null) {
+        throw result.ouch1;
+    }
+    if (result.ouch2 != null) {
+        throw result.ouch2;
+    }
+    return;
+}",0.8333333333333334,0.26886792452830194,1.5,0.0,1.3333333333333333,1.103448275862069,-0.6036278525453477,-0.6666666666666666,-0.3875,1.263745504642966
+wicket,remotes/origin/bugs-dot-jar_WICKET-5853_b80f6640,3.0,"/**
+ *  @see org.apache.wicket.util.convert.IConverter#convertToObject(java.lang.String,Locale)
+ */
+@Override
+public Long convertToObject(final String value, final Locale locale) {
+    final Number number = parse(value, Long.MIN_VALUE, Long.MAX_VALUE, locale);
+    if (number == null) {
+        return null;
+    }
+    return number.longValue();
+}","/**
+ *  @see org.apache.wicket.util.convert.IConverter#convertToObject(java.lang.String,Locale)
+ */
+","@Override
+public Long convertToObject(final String value, final Locale locale) {
+    final Number number = parse(value, Long.MIN_VALUE, Long.MAX_VALUE, locale);
+    if (number == null) {
+        return null;
+    }
+    return number.longValue();
+}",0.3333333333333333,0.4952830188679243,0.0,0.0,0.6666666666666666,1.013793103448276,-0.3007606787595082,-0.3333333333333333,-0.26250000000000007,1.0297185593387128
+accumulo,remotes/origin/bugs-dot-jar_ACCUMULO-217_add180fb,1.0,"@Override
+public Collection<Text> getSplits(String tableName) {
+    return Collections.emptyList();
+}","/**
+ * {@inheritDoc}
+ */
+","@Override
+public Collection<Text> getSplits(String tableName) {
+    return Collections.emptyList();
+}",-0.3333333333333333,-0.3726415094339622,-0.5,-1.0,0.0,0.0,0.5362200117027491,-0.6666666666666666,0.3875,0.0
+Lang,34.0,1.0,"/**
+ * <p>
+ * Returns the registry of objects being traversed by the <code>reflectionToString</code>
+ * methods in the current thread.
+ * </p>
+ *
+ * @return Set the registry of objects being traversed
+ */
+static Map<Object, Object> getRegistry() {
+    return REGISTRY.get() != null ? REGISTRY.get() : Collections.<Object, Object>emptyMap();
+}","/**
+ * <p>
+ * Returns the registry of objects being traversed by the <code>reflectionToString</code>
+ * methods in the current thread.
+ * </p>
+ *
+ * @return Set the registry of objects being traversed
+ */
+","static Map<Object, Object> getRegistry() {
+    return REGISTRY.get() != null ? REGISTRY.get() : Collections.<Object, Object>emptyMap();
+}",-0.5,-0.2216981132075472,0.0,-1.0,0.6666666666666666,0.0,0.6078408425980095,0.0,0.7749999999999999,0.0
+Math,49.0,1.0,"/**
+ * {@inheritDoc}
+ */
+@Override
+public OpenMapRealVector ebeMultiply(double[] v) {
+    checkVectorDimensions(v.length);
+    OpenMapRealVector res = new OpenMapRealVector(this);
+    Iterator iter = res.entries.iterator();
+    while (iter.hasNext()) {
+        iter.advance();
+        res.setEntry(iter.key(), iter.value() * v[iter.key()]);
+    }
+    return res;
+}","/**
+ * {@inheritDoc}
+ */
+","@Override
+public OpenMapRealVector ebeMultiply(double[] v) {
+    checkVectorDimensions(v.length);
+    OpenMapRealVector res = new OpenMapRealVector(this);
+    Iterator iter = res.entries.iterator();
+    while (iter.hasNext()) {
+        iter.advance();
+        res.setEntry(iter.key(), iter.value() * v[iter.key()]);
+    }
+    return res;
+}",0.8333333333333334,0.5141509433962262,0.0,0.0,0.6666666666666666,1.2137931034482758,-0.6293739028671738,1.6666666666666667,-0.3,1.7704460467696053
+wicket,remotes/origin/bugs-dot-jar_WICKET-5916_def03add,1.0,"/**
+ *  Gets the attached status of this model instance
+ *
+ *  @return true if the model is attached, false otherwise
+ */
+public final boolean isAttached() {
+    return attached;
+}","/**
+ *  Gets the attached status of this model instance
+ *
+ *  @return true if the model is attached, false otherwise
+ */
+","public final boolean isAttached() {
+    return attached;
+}",-0.5,-0.2216981132075472,-0.5,-1.0,0.0,0.0,1.190169689877121,-1.0,0.85,0.0
+jackrabbit-oak,remotes/origin/bugs-dot-jar_OAK-2430_be3a9114,1.0,"@Override
+public boolean childNodeAdded(String name, NodeState after) {
+    if (!loader.isRunning()) {
+        return false;
+    }
+    NodeBuilder child = EmptyNodeState.EMPTY_NODE.builder();
+    boolean success = EmptyNodeState.compareAgainstEmptyState(after, new StandbyApplyDiff(child, store, loader, path + name + ""/""));
+    if (success) {
+        builder.setChildNode(name, child.getNodeState());
+    }
+    return success;
+}","/**
+ * {@inheritDoc}
+ */
+","@Override
+public boolean childNodeAdded(String name, NodeState after) {
+    if (!loader.isRunning()) {
+        return false;
+    }
+    NodeBuilder child = EmptyNodeState.EMPTY_NODE.builder();
+    boolean success = EmptyNodeState.compareAgainstEmptyState(after, new StandbyApplyDiff(child, store, loader, path + name + ""/""));
+    if (success) {
+        builder.setChildNode(name, child.getNodeState());
+    }
+    return success;
+}",1.0,0.410377358490566,0.5,0.0,1.3333333333333333,0.9862068965517241,-0.7585722644821529,0.6666666666666666,-0.375,1.7858331395036768
+flink,remotes/origin/bugs-dot-jar_FLINK-1705_5308ac83,1.0,"public String getHostname() {
+    if (hostName == null) {
+        String fqdn = getFQDNHostname();
+        if (this.fqdnHostNameIsIP) {
+            // fqdn to hostname translation is pointless if FQDN is an ip address.
+            hostName = fqdn;
+        } else {
+            hostName = NetUtils.getHostnameFromFQDN(fqdn);
+        }
+    }
+    return hostName;
+}","/**
+ * {@inheritDoc}
+ */
+","public String getHostname() {
+    if (hostName == null) {
+        String fqdn = getFQDNHostname();
+        if (this.fqdnHostNameIsIP) {
+                        hostName = fqdn;
+        } else {
+            hostName = NetUtils.getHostnameFromFQDN(fqdn);
+        }
+    }
+    return hostName;
+}",0.8333333333333334,1.7216981132075468,0.5,1.0,1.3333333333333333,1.103448275862069,-0.4767700409596254,-0.3333333333333333,0.43750000000000006,0.8210266411407919
+Compress,22.0,3.0,"private int setupRandPartC() throws IOException {
+    if (this.su_j2 < this.su_z) {
+        this.currentChar = this.su_ch2;
+        this.crc.updateCRC(this.su_ch2);
+        this.su_j2++;
+        return this.su_ch2;
+    } else {
+        this.currentState = RAND_PART_A_STATE;
+        this.su_i2++;
+        this.su_count = 0;
+        return setupRandPartA();
+    }
+}","/**
+ * {@inheritDoc}
+ */
+","private int setupRandPartC() throws IOException {
+    if (this.su_j2 < this.su_z) {
+        this.currentChar = this.su_ch2;
+        this.crc.updateCRC(this.su_ch2);
+        this.su_j2++;
+        return this.su_ch2;
+    } else {
+        this.currentState = RAND_PART_A_STATE;
+        this.su_i2++;
+        this.su_count = 0;
+        return setupRandPartA();
+    }
+}",1.1666666666666667,0.8066037735849054,0.0,0.0,1.0,0.8275862068965517,-0.6738443534230538,-0.3333333333333333,-0.4,0.8594585890393803
+jackrabbit-oak,remotes/origin/bugs-dot-jar_OAK-1250_0c3b3306,1.0,"@Override
+@Nonnull
+public synchronized String checkpoint(long lifetime) {
+    checkArgument(lifetime > 0);
+    // TODO: Guard the checkpoint from garbage collection
+    return head.getRecordId().toString();
+}","/**
+ * {@inheritDoc}
+ */
+","@Override
+@Nonnull
+public synchronized String checkpoint(long lifetime) {
+    checkArgument(lifetime > 0);
+        return head.getRecordId().toString();
+}",0.0,-0.2216981132075472,-0.5,-1.0,0.0,0.0,0.10930368636629573,0.0,0.6125000000000002,0.0
+logging-log4j2,remotes/origin/bugs-dot-jar_LOG4J2-523_837dcd89,1.0,"private void writeObject(final ObjectOutputStream out) throws IOException {
+    out.defaultWriteObject();
+    getFormattedMessage();
+    out.writeUTF(formattedMessage);
+    out.writeUTF(messagePattern);
+    out.writeUTF(baseName);
+    out.writeInt(argArray.length);
+    stringArgs = new String[argArray.length];
+    int i = 0;
+    for (final Object obj : argArray) {
+        stringArgs[i] = obj.toString();
+        ++i;
+    }
+}","/**
+ * {@inheritDoc}
+ */
+","private void writeObject(final ObjectOutputStream out) throws IOException {
+    out.defaultWriteObject();
+    getFormattedMessage();
+    out.writeUTF(formattedMessage);
+    out.writeUTF(messagePattern);
+    out.writeUTF(baseName);
+    out.writeInt(argArray.length);
+    stringArgs = new String[argArray.length];
+    int i = 0;
+    for (final Object obj : argArray) {
+        stringArgs[i] = obj.toString();
+        ++i;
+    }
+}",1.3333333333333333,0.014150943396226528,0.0,0.0,0.0,1.1517241379310346,-0.8681100058513747,1.3333333333333333,-0.3875,2.1043101751623694
+Cli,31.0,3.0,"/**
+ * Resets the member variables to their default values.
+ */
+private static void reset() {
+    description = null;
+    argName = ""arg"";
+    longopt = null;
+    type = null;
+    required = false;
+    numberOfArgs = Option.UNINITIALIZED;
+    optionalArg = false;
+    valuesep = (char) 0;
+}","/**
+ * Resets the member variables to their default values.
+ */
+","private static void reset() {
+    description = null;
+    argName = ""arg"";
+    longopt = null;
+    type = null;
+    required = false;
+    numberOfArgs = Option.UNINITIALIZED;
+    optionalArg = false;
+    valuesep = (char) 0;
+}",0.6666666666666666,-0.4952830188679243,-0.5,-1.0,0.0,0.0,-0.4880046811000581,-1.0,0.7999999999999999,0.0
+wicket,remotes/origin/bugs-dot-jar_WICKET-4927_8c827e33,1.0,"@Override
+public void write(byte[] array, int offset, int length) {
+    writeBuffered();
+    originalResponse.write(array, offset, length);
+}","/**
+ * {@inheritDoc}
+ */
+","@Override
+public void write(byte[] array, int offset, int length) {
+    writeBuffered();
+    originalResponse.write(array, offset, length);
+}",-0.16666666666666666,-0.15566037735849056,-0.5,-1.0,0.0,0.0,0.31012287887653583,-0.3333333333333333,-0.3625000000000001,0.0
+logging-log4j2,remotes/origin/bugs-dot-jar_LOG4J2-914_f8a42197,3.0,"/**
+ * Format the stack trace including packaging information.
+ *
+ * @param ignorePackages
+ *        List of packages to be ignored in the trace.
+ * @return The formatted stack trace including packaging information.
+ */
+public String getExtendedStackTraceAsString(final List<String> ignorePackages) {
+    final StringBuilder sb = new StringBuilder(this.name);
+    final String msg = this.message;
+    if (msg != null) {
+        sb.append("": "").append(msg);
+    }
+    sb.append(EOL);
+    this.formatElements(sb, 0, this.throwable.getStackTrace(), this.extendedStackTrace, ignorePackages);
+    this.formatCause(sb, this.causeProxy, ignorePackages);
+    return sb.toString();
+}","/**
+ * Format the stack trace including packaging information.
+ *
+ * @param ignorePackages
+ *        List of packages to be ignored in the trace.
+ * @return The formatted stack trace including packaging information.
+ */
+","public String getExtendedStackTraceAsString(final List<String> ignorePackages) {
+    final StringBuilder sb = new StringBuilder(this.name);
+    final String msg = this.message;
+    if (msg != null) {
+        sb.append("": "").append(msg);
+    }
+    sb.append(EOL);
+    this.formatElements(sb, 0, this.throwable.getStackTrace(), this.extendedStackTrace, ignorePackages);
+    this.formatCause(sb, this.causeProxy, ignorePackages);
+    return sb.toString();
+}",0.8333333333333334,-0.06132075471698106,0.0,0.0,0.6666666666666666,1.1310344827586207,-0.6883557636044466,1.3333333333333333,-0.3875,2.0940759692973825
+camel,remotes/origin/bugs-dot-jar_CAMEL-3395_8433e6db,3.0,"public Object next() {
+    Object part = iterator.next();
+    Exchange newExchange = exchange.copy();
+    if (part instanceof Message) {
+        newExchange.setIn((Message) part);
+    } else {
+        Message in = newExchange.getIn();
+        in.setBody(part);
+    }
+    return createProcessorExchangePair(index++, getProcessors().iterator().next(), newExchange);
+}","/**
+ * {@inheritDoc}
+ */
+","public Object next() {
+    Object part = iterator.next();
+    Exchange newExchange = exchange.copy();
+    if (part instanceof Message) {
+        newExchange.setIn((Message) part);
+    } else {
+        Message in = newExchange.getIn();
+        in.setBody(part);
+    }
+    return createProcessorExchangePair(index++, getProcessors().iterator().next(), newExchange);
+}",0.8333333333333334,0.5141509433962262,0.0,0.0,0.6666666666666666,1.2137931034482758,-0.636395552954944,2.0,-0.325,1.8241219516559017
+jackrabbit-oak,remotes/origin/bugs-dot-jar_OAK-1178_f2bb1a17,1.0,"@Override
+protected boolean isNew() {
+    return !getBase().exists();
+}","/**
+ * {@inheritDoc}
+ */
+","@Override
+protected boolean isNew() {
+    return !getBase().exists();
+}",-0.3333333333333333,-0.3726415094339622,-0.5,-1.0,0.0,0.0,0.6846108835576357,-0.3333333333333333,0.65,0.0
+Closure,98.0,1.0,"/**
+ * @return Whether the variable is only assigned a value once for its
+ *     lifetime.
+ */
+boolean isAssignedOnceInLifetime() {
+    Reference ref = getOneAndOnlyAssignment();
+    if (ref == null) {
+        return false;
+    }
+    return true;
+}","/**
+ * @return Whether the variable is only assigned a value once for its
+ *     lifetime.
+ */
+","boolean isAssignedOnceInLifetime() {
+    Reference ref = getOneAndOnlyAssignment();
+    if (ref == null) {
+        return false;
+    }
+    return true;
+}",0.16666666666666666,0.410377358490566,0.0,0.0,0.6666666666666666,0.7724137931034484,0.04049151550614368,-0.6666666666666666,0.7999999999999999,0.29421552665008677
+wicket,remotes/origin/bugs-dot-jar_WICKET-3965_6051019b,1.0,"public void touchPage(IManageablePage page) {
+    pages.put(page.getPageId(), page);
+}","/**
+ * {@inheritDoc}
+ */
+","public void touchPage(IManageablePage page) {
+    pages.put(page.getPageId(), page);
+}",-0.5,-0.2216981132075472,-0.5,-1.0,0.0,0.0,0.7838502047981274,-0.3333333333333333,-0.3125,0.0
+jackrabbit-oak,remotes/origin/bugs-dot-jar_OAK-4420_d645112f,1.0,"@Override
+public NodeStore create(BlobStore blobStore, Closer closer) throws IOException {
+    Builder builder = FileStore.builder(new File(dir, ""segmentstore""));
+    if (blobStore != null) {
+        builder.withBlobStore(blobStore);
+    }
+    builder.withMaxFileSize(256).withMemoryMapping(mmap);
+    FileStore fs = builder.build();
+    closer.register(asCloseable(fs));
+    return SegmentNodeStore.builder(fs).build();
+}","/**
+ * {@inheritDoc}
+ */
+","@Override
+public NodeStore create(BlobStore blobStore, Closer closer) throws IOException {
+    Builder builder = FileStore.builder(new File(dir, ""segmentstore""));
+    if (blobStore != null) {
+        builder.withBlobStore(blobStore);
+    }
+    builder.withMaxFileSize(256).withMemoryMapping(mmap);
+    FileStore fs = builder.build();
+    closer.register(asCloseable(fs));
+    return SegmentNodeStore.builder(fs).build();
+}",0.8333333333333334,0.1650943396226413,0.0,0.0,0.6666666666666666,1.006896551724138,-0.712229373902867,2.0,-0.3875,2.0616557227460595
+Lang,14.0,1.0,"// Equals
+// -----------------------------------------------------------------------
+/**
+ * <p>Compares two CharSequences, returning {@code true} if they represent
+ * equal sequences of characters.</p>
+ *
+ * <p>{@code null}s are handled without exceptions. Two {@code null}
+ * references are considered to be equal. The comparison is case sensitive.</p>
+ *
+ * <pre>
+ * StringUtils.equals(null, null)   = true
+ * StringUtils.equals(null, ""abc"")  = false
+ * StringUtils.equals(""abc"", null)  = false
+ * StringUtils.equals(""abc"", ""abc"") = true
+ * StringUtils.equals(""abc"", ""ABC"") = false
+ * </pre>
+ *
+ * @see java.lang.CharSequence#equals(Object)
+ * @param cs1  the first CharSequence, may be {@code null}
+ * @param cs2  the second CharSequence, may be {@code null}
+ * @return {@code true} if the CharSequences are equal (case-sensitive), or both {@code null}
+ * @since 3.0 Changed signature from equals(String, String) to equals(CharSequence, CharSequence)
+ */
+public static boolean equals(CharSequence cs1, CharSequence cs2) {
+    if (cs1 == cs2) {
+        return true;
+    }
+    if (cs1 == null || cs2 == null) {
+        return false;
+    }
+    return cs1.equals(cs2);
+}","/**
+ * <p>Compares two CharSequences, returning {@code true} if they represent
+ * equal sequences of characters.</p>
+ *
+ * <p>{@code null}s are handled without exceptions. Two {@code null}
+ * references are considered to be equal. The comparison is case sensitive.</p>
+ *
+ * <pre>
+ * StringUtils.equals(null, null)   = true
+ * StringUtils.equals(null, ""abc"")  = false
+ * StringUtils.equals(""abc"", null)  = false
+ * StringUtils.equals(""abc"", ""abc"") = true
+ * StringUtils.equals(""abc"", ""ABC"") = false
+ * </pre>
+ *
+ * @see java.lang.CharSequence#equals(Object)
+ * @param cs1  the first CharSequence, may be {@code null}
+ * @param cs2  the second CharSequence, may be {@code null}
+ * @return {@code true} if the CharSequences are equal (case-sensitive), or both {@code null}
+ * @since 3.0 Changed signature from equals(String, String) to equals(CharSequence, CharSequence)
+ */
+","public static boolean equals(CharSequence cs1, CharSequence cs2) {
+    if (cs1 == cs2) {
+        return true;
+    }
+    if (cs1 == null || cs2 == null) {
+        return false;
+    }
+    return cs1.equals(cs2);
+}",0.5,0.5141509433962262,0.5,0.0,1.6666666666666667,1.4620689655172414,-0.3180807489760093,-0.6666666666666666,-0.375,1.0609221520459466
+Math,79.0,1.0,"/**
+ * Calculates the L<sub>2</sub> (Euclidean) distance between two points.
+ *
+ * @param p1 the first point
+ * @param p2 the second point
+ * @return the L<sub>2</sub> distance between the two points
+ */
+public static double distance(int[] p1, int[] p2) {
+    int sum = 0;
+    for (int i = 0; i < p1.length; i++) {
+        final int dp = p1[i] - p2[i];
+        sum += dp * dp;
+    }
+    return Math.sqrt(sum);
+}","/**
+ * Calculates the L<sub>2</sub> (Euclidean) distance between two points.
+ *
+ * @param p1 the first point
+ * @param p2 the second point
+ * @return the L<sub>2</sub> distance between the two points
+ */
+","public static double distance(int[] p1, int[] p2) {
+    int sum = 0;
+    for (int i = 0; i < p1.length; i++) {
+        final int dp = p1[i] - p2[i];
+        sum += dp * dp;
+    }
+    return Math.sqrt(sum);
+}",0.3333333333333333,0.6650943396226414,0.0,0.0,1.0,4.324137931034483,-0.363019309537741,-0.6666666666666666,0.55,5.688429264103345
+jackrabbit-oak,remotes/origin/bugs-dot-jar_OAK-1662_3efb5cbf,0.0,"@Nonnull
+@Override
+public NodeState merge(@Nonnull NodeBuilder builder, @Nonnull CommitHook commitHook, @Nullable CommitInfo info) throws CommitFailedException {
+    return asDocumentRootBuilder(builder).merge(commitHook, info);
+}","/**
+ * {@inheritDoc}
+ */
+","@Nonnull
+@Override
+public NodeState merge(@Nonnull NodeBuilder builder, @Nonnull CommitHook commitHook, @Nullable CommitInfo info) throws CommitFailedException {
+    return asDocumentRootBuilder(builder).merge(commitHook, info);
+}",-0.16666666666666666,-0.4952830188679243,-0.5,-1.0,0.0,0.0,0.12802808660035098,-0.3333333333333333,-0.28750000000000003,0.0
+camel,remotes/origin/bugs-dot-jar_CAMEL-6667_1fc7bd7a,1.0,"/**
+ * Prepares the exchange for the next iteration
+ *
+ * @param exchange the exchange
+ * @param index the index of the next iteration
+ * @return the exchange to use
+ */
+protected Exchange prepareExchange(Exchange exchange, int index) {
+    if (copy) {
+        // use a copy but let it reuse the same exchange id so it appear as one exchange
+        return ExchangeHelper.createCopy(exchange, true);
+    } else {
+        ExchangeHelper.prepareOutToIn(exchange);
+        return exchange;
+    }
+}","/**
+ * Prepares the exchange for the next iteration
+ *
+ * @param exchange the exchange
+ * @param index the index of the next iteration
+ * @return the exchange to use
+ */
+","protected Exchange prepareExchange(Exchange exchange, int index) {
+    if (copy) {
+                return ExchangeHelper.createCopy(exchange, true);
+    } else {
+        ExchangeHelper.prepareOutToIn(exchange);
+        return exchange;
+    }
+}",0.3333333333333333,0.9386792452830187,0.0,0.0,0.6666666666666666,0.0,-0.13598595669982444,-0.3333333333333333,-0.3,0.0
+camel,remotes/origin/bugs-dot-jar_CAMEL-6604_55751402,1.0,"protected Exchange prepareExchangeForRoutingSlip(Exchange current, Endpoint endpoint) {
+    Exchange copy = new DefaultExchange(current);
+    // we must use the same id as this is a snapshot strategy where Camel copies a snapshot
+    // before processing the next step in the pipeline, so we have a snapshot of the exchange
+    // just before. This snapshot is used if Camel should do redeliveries (re try) using
+    // DeadLetterChannel. That is why it's important the id is the same, as it is the *same*
+    // exchange being routed.
+    copy.setExchangeId(current.getExchangeId());
+    copyOutToIn(copy, current);
+    return copy;
+}","/**
+ * {@inheritDoc}
+ */
+","protected Exchange prepareExchangeForRoutingSlip(Exchange current, Endpoint endpoint) {
+    Exchange copy = new DefaultExchange(current);
+                        copy.setExchangeId(current.getExchangeId());
+    copyOutToIn(copy, current);
+    return copy;
+}",0.0,-0.2216981132075472,-0.5,-1.0,0.0,0.0,0.0044470450555880075,0.0,-0.375,0.0
+jackrabbit-oak,remotes/origin/bugs-dot-jar_OAK-1977_4bfbfcdd,1.0,"public double getCost(Filter filter, String propertyName, PropertyValue value) {
+    NodeState indexMeta = getIndexNode(root, propertyName, filter);
+    if (indexMeta == null) {
+        return Double.POSITIVE_INFINITY;
+    }
+    return COST_OVERHEAD + getStrategy(indexMeta).count(indexMeta, encode(value), MAX_COST);
+}","/**
+ * {@inheritDoc}
+ */
+","public double getCost(Filter filter, String propertyName, PropertyValue value) {
+    NodeState indexMeta = getIndexNode(root, propertyName, filter);
+    if (indexMeta == null) {
+        return Double.POSITIVE_INFINITY;
+    }
+    return COST_OVERHEAD + getStrategy(indexMeta).count(indexMeta, encode(value), MAX_COST);
+}",0.16666666666666666,0.410377358490566,0.0,0.0,0.6666666666666666,0.896551724137931,-0.27033352837916924,0.3333333333333333,-0.3875,1.2205185092412016
+wicket,remotes/origin/bugs-dot-jar_WICKET-3510_292a2582,1.0,"/**
+ *  create a new {@link DateTextField} instance to be added to this panel.
+ *
+ *  @param id
+ *             the component id
+ *  @param dateFieldModel
+ *             model that should be used by the {@link DateTextField}
+ *  @return a new date text field instance
+ */
+protected DateTextField newDateTextField(String id, PropertyModel<Date> dateFieldModel) {
+    return DateTextField.forShortStyle(id, dateFieldModel);
+}","/**
+ *  create a new {@link DateTextField} instance to be added to this panel.
+ *
+ *  @param id
+ *             the component id
+ *  @param dateFieldModel
+ *             model that should be used by the {@link DateTextField}
+ *  @return a new date text field instance
+ */
+","protected DateTextField newDateTextField(String id, PropertyModel<Date> dateFieldModel) {
+    return DateTextField.forShortStyle(id, dateFieldModel);
+}",-0.5,-0.2216981132075472,-0.5,-1.0,0.0,0.0,0.6841427735517848,-0.6666666666666666,0.825,0.0
+wicket,remotes/origin/bugs-dot-jar_WICKET-1619_b154d12f,1.0,"/**
+ *  Create a new PagingNavigation. May be subclassed to make us of specialized PagingNavigation.
+ *
+ *  @param pageable
+ *             the pageable component
+ *  @param labelProvider
+ *             The label provider for the link text.
+ *  @return the navigation object
+ */
+protected PagingNavigation newNavigation(final IPageable pageable, final IPagingLabelProvider labelProvider) {
+    return new PagingNavigation(""navigation"", pageable, labelProvider) {
+
+        private static final long serialVersionUID = 1L;
+
+        @Override
+        public boolean isEnabled() {
+            return PagingNavigator.this.isEnabled() && PagingNavigator.this.isEnableAllowed();
+        }
+    };
+}","/**
+ *  Create a new PagingNavigation. May be subclassed to make us of specialized PagingNavigation.
+ *
+ *  @param pageable
+ *             the pageable component
+ *  @param labelProvider
+ *             The label provider for the link text.
+ *  @return the navigation object
+ */
+","protected PagingNavigation newNavigation(final IPageable pageable, final IPagingLabelProvider labelProvider) {
+    return new PagingNavigation(""navigation"", pageable, labelProvider) {
+
+        private static final long serialVersionUID = 1L;
+
+        @Override
+        public boolean isEnabled() {
+            return PagingNavigator.this.isEnabled() && PagingNavigator.this.isEnableAllowed();
+        }
+    };
+}",0.5,1.5990566037735843,-0.5,0.0,0.0,0.9379310344827587,-0.34195435927442963,-0.3333333333333333,0.625,0.8158737542717075
+wicket,remotes/origin/bugs-dot-jar_WICKET-4483_53442bb4,1.0,"/**
+ *  Sets the given model.
+ *  <p>
+ *  WARNING: DO NOT OVERRIDE THIS METHOD UNLESS YOU HAVE A VERY GOOD REASON FOR IT. OVERRIDING
+ *  THIS MIGHT OPEN UP SECURITY LEAKS AND BREAK BACK-BUTTON SUPPORT.
+ *  </p>
+ *
+ *  @param model
+ *             The model
+ *  @return This
+ */
+public Component setDefaultModel(final IModel<?> model) {
+    IModel<?> prevModel = getModelImpl();
+    // Detach current model
+    if (prevModel != null) {
+        prevModel.detach();
+    }
+    IModel<?> wrappedModel = prevModel;
+    if (prevModel instanceof IWrapModel) {
+        wrappedModel = ((IWrapModel<?>) prevModel).getWrappedModel();
+    }
+    // Change model
+    if (wrappedModel != model) {
+        if (wrappedModel != null) {
+            addStateChange();
+        }
+        setModelImpl(wrap(model));
+    }
+    modelChanged();
+    return this;
+}","/**
+ *  Sets the given model.
+ *  <p>
+ *  WARNING: DO NOT OVERRIDE THIS METHOD UNLESS YOU HAVE A VERY GOOD REASON FOR IT. OVERRIDING
+ *  THIS MIGHT OPEN UP SECURITY LEAKS AND BREAK BACK-BUTTON SUPPORT.
+ *  </p>
+ *
+ *  @param model
+ *             The model
+ *  @return This
+ */
+","public Component setDefaultModel(final IModel<?> model) {
+    IModel<?> prevModel = getModelImpl();
+        if (prevModel != null) {
+        prevModel.detach();
+    }
+    IModel<?> wrappedModel = prevModel;
+    if (prevModel instanceof IWrapModel) {
+        wrappedModel = ((IWrapModel<?>) prevModel).getWrappedModel();
+    }
+        if (wrappedModel != model) {
+        if (wrappedModel != null) {
+            addStateChange();
+        }
+        setModelImpl(wrap(model));
+    }
+    modelChanged();
+    return this;
+}",2.0,0.7499999999999998,1.5,1.0,2.3333333333333335,1.296551724137931,-1.0516091281451136,1.3333333333333333,-0.025000000000000026,2.014420926446119
+wicket,remotes/origin/bugs-dot-jar_WICKET-2172_ea4a3f8a,3.0,"/**
+ *  @see IValueMap#getAsLong(String)
+ */
+public Long getAsLong(String key) {
+    if (!containsKey(key))
+        return null;
+    try {
+        return getLong(key);
+    } catch (StringValueConversionException ignored) {
+        return null;
+    }
+}","/**
+ *  @see IValueMap#getAsLong(String)
+ */
+","public Long getAsLong(String key) {
+    if (!containsKey(key))
+        return null;
+    try {
+        return getLong(key);
+    } catch (StringValueConversionException ignored) {
+        return null;
+    }
+}",0.5,0.7783018867924528,0.5,0.0,1.0,0.0,-0.2291398478642478,-0.3333333333333333,0.7999999999999999,0.0
+jackrabbit-oak,remotes/origin/bugs-dot-jar_OAK-1822_016df669,1.0,"/**
+ * Set the property to the given value.
+ *
+ * @param property the property name
+ * @param value the value
+ */
+void set(String property, Object value) {
+    Operation op = new Operation();
+    op.type = Operation.Type.SET;
+    op.value = value;
+    changes.put(new Key(property, null), op);
+}","/**
+ * Set the property to the given value.
+ *
+ * @param property the property name
+ * @param value the value
+ */
+","void set(String property, Object value) {
+    Operation op = new Operation();
+    op.type = Operation.Type.SET;
+    op.value = value;
+    changes.put(new Key(property, null), op);
+}",0.0,-0.2216981132075472,-0.5,-1.0,0.0,0.0,-0.0863662960795786,-0.6666666666666666,0.3875,0.0
+camel,remotes/origin/bugs-dot-jar_CAMEL-8954_7b1253db,3.0,"@Override
+public boolean acquireExclusiveReadLock(GenericFileOperations<File> operations, GenericFile<File> file, Exchange exchange) throws Exception {
+    if (!markerFile) {
+        // if not using marker file then we assume acquired
+        return true;
+    }
+    String lockFileName = getLockFileName(file);
+    LOG.trace(""Locking the file: {} using the lock file name: {}"", file, lockFileName);
+    // create a plain file as marker filer for locking (do not use FileLock)
+    boolean acquired = FileUtil.createNewFile(new File(lockFileName));
+    exchange.setProperty(Exchange.FILE_LOCK_FILE_ACQUIRED, acquired);
+    exchange.setProperty(Exchange.FILE_LOCK_FILE_NAME, lockFileName);
+    return acquired;
+}","/**
+ * {@inheritDoc}
+ */
+","@Override
+public boolean acquireExclusiveReadLock(GenericFileOperations<File> operations, GenericFile<File> file, Exchange exchange) throws Exception {
+    if (!markerFile) {
+                return true;
+    }
+    String lockFileName = getLockFileName(file);
+    LOG.trace(""Locking the file: {} using the lock file name: {}"", file, lockFileName);
+        boolean acquired = FileUtil.createNewFile(new File(lockFileName));
+    exchange.setProperty(Exchange.FILE_LOCK_FILE_ACQUIRED, acquired);
+    exchange.setProperty(Exchange.FILE_LOCK_FILE_NAME, lockFileName);
+    return acquired;
+}",1.0,0.08018867924528296,0.0,0.0,0.6666666666666666,1.0758620689655174,-0.7815096547688706,0.6666666666666666,-0.4,2.2296255211035767
+camel,remotes/origin/bugs-dot-jar_CAMEL-3428_320545cd,3.0,"public <T extends Endpoint> T getEndpoint(String name, Class<T> endpointType) {
+    Endpoint endpoint = getEndpoint(name);
+    if (endpoint instanceof InterceptSendToEndpoint) {
+        endpoint = ((InterceptSendToEndpoint) endpoint).getDelegate();
+    }
+    if (endpointType.isInstance(endpoint)) {
+        return endpointType.cast(endpoint);
+    } else {
+        throw new IllegalArgumentException(""The endpoint is not of type: "" + endpointType + "" but is: "" + endpoint.getClass().getCanonicalName());
+    }
+}","/**
+ * {@inheritDoc}
+ */
+","public <T extends Endpoint> T getEndpoint(String name, Class<T> endpointType) {
+    Endpoint endpoint = getEndpoint(name);
+    if (endpoint instanceof InterceptSendToEndpoint) {
+        endpoint = ((InterceptSendToEndpoint) endpoint).getDelegate();
+    }
+    if (endpointType.isInstance(endpoint)) {
+        return endpointType.cast(endpoint);
+    } else {
+        throw new IllegalArgumentException(""The endpoint is not of type: "" + endpointType + "" but is: "" + endpoint.getClass().getCanonicalName());
+    }
+}",0.8333333333333334,0.5141509433962262,1.0,0.0,1.3333333333333333,1.2620689655172415,-0.6761849034523113,1.0,-0.3875,2.0414735825088117
+Math,67.0,3.0,"/**
+ * {@inheritDoc}
+ */
+public double getResult() {
+    return optimizer.getResult();
+}","/**
+ * {@inheritDoc}
+ */
+","public double getResult() {
+    return optimizer.getResult();
+}",-0.5,-0.2216981132075472,-0.5,-1.0,0.0,0.0,1.1204212990052658,-0.6666666666666666,0.8375,0.0
+wicket,remotes/origin/bugs-dot-jar_WICKET-4370_7ca927c1,3.0,"/**
+ *  Get the sessions.
+ *
+ *  @return The session
+ */
+@Override
+public HttpSession getSession() {
+    if (session instanceof MockHttpSession && ((MockHttpSession) session).isTemporary()) {
+        return null;
+    }
+    return session;
+}","/**
+ *  Get the sessions.
+ *
+ *  @return The session
+ */
+","@Override
+public HttpSession getSession() {
+    if (session instanceof MockHttpSession && ((MockHttpSession) session).isTemporary()) {
+        return null;
+    }
+    return session;
+}",0.16666666666666666,0.6367924528301884,0.0,0.0,1.3333333333333333,0.0,0.031129315389116053,-0.6666666666666666,0.7875,0.0
+camel,remotes/origin/bugs-dot-jar_CAMEL-7018_3244c1e5,1.0,"public boolean isSingleton() {
+    return true;
+}","/**
+ * {@inheritDoc}
+ */
+","public boolean isSingleton() {
+    return true;
+}",-0.5,-0.2216981132075472,-0.5,-1.0,0.0,0.0,1.190169689877121,-1.0,0.525,0.0
+jackrabbit-oak,remotes/origin/bugs-dot-jar_OAK-3324_5f863af6,1.0,"@Override
+public boolean isGranted(@Nonnull String path, long permissions) {
+    Iterator<PermissionEntry> it = getEntryIterator(new EntryPredicate(path, Permissions.respectParentPermissions(permissions)));
+    return hasPermissions(it, permissions, path);
+}","/**
+ * {@inheritDoc}
+ */
+","@Override
+public boolean isGranted(@Nonnull String path, long permissions) {
+    Iterator<PermissionEntry> it = getEntryIterator(new EntryPredicate(path, Permissions.respectParentPermissions(permissions)));
+    return hasPermissions(it, permissions, path);
+}",-0.16666666666666666,-0.15566037735849056,-0.5,-1.0,0.0,0.0,0.10415447630193063,0.0,-0.3625000000000001,0.0
+Compress,4.0,1.0,"/**
+ * Closes the underlying OutputStream.
+ * @throws IOException on error
+ */
+public void close() throws IOException {
+    if (!closed) {
+        finish();
+        buffer.close();
+        out.close();
+        closed = true;
+    }
+}","/**
+ * Closes the underlying OutputStream.
+ * @throws IOException on error
+ */
+","public void close() throws IOException {
+    if (!closed) {
+        finish();
+        buffer.close();
+        out.close();
+        closed = true;
+    }
+}",0.3333333333333333,1.1273584905660372,0.0,0.0,0.6666666666666666,0.9517241379310344,-0.10134581626682294,0.0,0.8125,0.4249700309531052
+wicket,remotes/origin/bugs-dot-jar_WICKET-4932_f20b2d70,1.0,"/**
+ *  Creates a {@code IRequestHandler} that processes a hybrid request. When the page identified
+ *  by {@code pageInfo} was not available, the request should be treated as a bookmarkable
+ *  request.
+ *
+ *  @param pageInfo
+ *  @param pageClass
+ *  @param pageParameters
+ *  @param renderCount
+ *  @return a {@code IRequestHandler} capable of processing the hybrid request.
+ */
+protected IRequestHandler processHybrid(PageInfo pageInfo, Class<? extends IRequestablePage> pageClass, PageParameters pageParameters, Integer renderCount) {
+    PageProvider provider = new PageProvider(pageInfo.getPageId(), pageClass, pageParameters, renderCount);
+    provider.setPageSource(getContext());
+    return new RenderPageRequestHandler(provider);
+}","/**
+ *  Creates a {@code IRequestHandler} that processes a hybrid request. When the page identified
+ *  by {@code pageInfo} was not available, the request should be treated as a bookmarkable
+ *  request.
+ *
+ *  @param pageInfo
+ *  @param pageClass
+ *  @param pageParameters
+ *  @param renderCount
+ *  @return a {@code IRequestHandler} capable of processing the hybrid request.
+ */
+","protected IRequestHandler processHybrid(PageInfo pageInfo, Class<? extends IRequestablePage> pageClass, PageParameters pageParameters, Integer renderCount) {
+    PageProvider provider = new PageProvider(pageInfo.getPageId(), pageClass, pageParameters, renderCount);
+    provider.setPageSource(getContext());
+    return new RenderPageRequestHandler(provider);
+}",-0.16666666666666666,-0.15566037735849056,-0.5,-1.0,0.0,0.0,0.03721474546518438,0.0,0.15,0.0
+commons-math,remotes/origin/bugs-dot-jar_MATH-757_76b7413d,1.0,"/**
+ * Contracts the storage array to the (size of the element set) + 1 - to
+ * avoid a zero length array. This function also resets the startIndex to
+ * zero.
+ */
+public synchronized void contract() {
+    final double[] tempArray = new double[numElements + 1];
+    // Copy and swap - copy only the element array from the src array.
+    System.arraycopy(internalArray, startIndex, tempArray, 0, numElements);
+    internalArray = tempArray;
+    // Reset the start index to zero
+    startIndex = 0;
+}","/**
+ * Contracts the storage array to the (size of the element set) + 1 - to
+ * avoid a zero length array. This function also resets the startIndex to
+ * zero.
+ */
+","public synchronized void contract() {
+    final double[] tempArray = new double[numElements + 1];
+        System.arraycopy(internalArray, startIndex, tempArray, 0, numElements);
+    internalArray = tempArray;
+        startIndex = 0;
+}",0.0,-0.2216981132075472,-0.5,-1.0,0.0,1.103448275862069,0.0044470450555880075,-0.6666666666666666,0.225,0.8210266411407919
+wicket,remotes/origin/bugs-dot-jar_WICKET-5043_2b1ce91d,1.0,"/**
+ *  @see org.apache.wicket.core.request.mapper.AbstractBookmarkableMapper#pageMustHaveBeenCreatedBookmarkable()
+ */
+@Override
+protected boolean pageMustHaveBeenCreatedBookmarkable() {
+    return true;
+}","/**
+ *  @see org.apache.wicket.core.request.mapper.AbstractBookmarkableMapper#pageMustHaveBeenCreatedBookmarkable()
+ */
+","@Override
+protected boolean pageMustHaveBeenCreatedBookmarkable() {
+    return true;
+}",-0.3333333333333333,-0.3726415094339622,-0.5,-1.0,0.0,0.0,0.8456407255705085,-1.0,0.625,0.0
+jackrabbit-oak,remotes/origin/bugs-dot-jar_OAK-606_f0fbacab,1.0,"// ------------------------------------------------------------< private >---
+/**
+ * The underlying {@link org.apache.jackrabbit.oak.api.TreeLocation} of this item.
+ * The location is only re-resolved when the revision of this item does not match
+ * the revision of the session.
+ * @return  tree location of the underlying item.
+ */
+@Nonnull
+private synchronized TreeLocation getLocationOrNull() {
+    if (location.exists() && sessionDelegate.getRevision() != revision) {
+        location = sessionDelegate.getLocation(location.getPath());
+        revision = sessionDelegate.getRevision();
+    }
+    return location;
+}","/**
+ * The underlying {@link org.apache.jackrabbit.oak.api.TreeLocation} of this item.
+ * The location is only re-resolved when the revision of this item does not match
+ * the revision of the session.
+ * @return  tree location of the underlying item.
+ */
+","@Nonnull
+private synchronized TreeLocation getLocationOrNull() {
+    if (location.exists() && sessionDelegate.getRevision() != revision) {
+        location = sessionDelegate.getLocation(location.getPath());
+        revision = sessionDelegate.getRevision();
+    }
+    return location;
+}",0.3333333333333333,0.9386792452830187,0.0,0.0,1.6666666666666667,1.1310344827586207,-0.2623756582796958,0.6666666666666666,0.5750000000000001,0.9809092698287739
+jackrabbit-oak,remotes/origin/bugs-dot-jar_OAK-621_00b4b8a0,1.0,"@Override
+public <T> void setProperty(String name, T value, Type<T> type) {
+    root.checkLive();
+    NodeBuilder builder = getNodeBuilder();
+    builder.setProperty(name, value, type);
+    root.updated();
+}","/**
+ * {@inheritDoc}
+ */
+","@Override
+public <T> void setProperty(String name, T value, Type<T> type) {
+    root.checkLive();
+    NodeBuilder builder = getNodeBuilder();
+    builder.setProperty(name, value, type);
+    root.updated();
+}",0.16666666666666666,-0.13679245283018865,-0.5,-1.0,0.0,0.0,-0.1837331772966645,0.3333333333333333,-0.375,0.0
+camel,remotes/origin/bugs-dot-jar_CAMEL-8964_ea8ee025,1.0,"public synchronized void resumeRoute(String routeId) throws Exception {
+    if (!routeSupportsSuspension(routeId)) {
+        // start route if suspension is not supported
+        startRoute(routeId);
+        return;
+    }
+    RouteService routeService = routeServices.get(routeId);
+    if (routeService != null) {
+        resumeRouteService(routeService);
+    }
+}","/**
+ * {@inheritDoc}
+ */
+","public synchronized void resumeRoute(String routeId) throws Exception {
+    if (!routeSupportsSuspension(routeId)) {
+                startRoute(routeId);
+        return;
+    }
+    RouteService routeService = routeServices.get(routeId);
+    if (routeService != null) {
+        resumeRouteService(routeService);
+    }
+}",0.6666666666666666,0.6367924528301884,0.5,0.0,1.6666666666666667,0.9517241379310344,-0.44306612053832645,0.3333333333333333,0.2750000000000001,0.8324059329766869
+camel,remotes/origin/bugs-dot-jar_CAMEL-6593_7f8a295a,3.0,"/**
+ * Returns some descriptive text to describe this node
+ */
+public String getLabel() {
+    String language = getExpression();
+    if (ObjectHelper.isEmpty(language)) {
+        Predicate predicate = getPredicate();
+        if (predicate != null) {
+            return predicate.toString();
+        }
+        Expression expressionValue = getExpressionValue();
+        if (expressionValue != null) {
+            return expressionValue.toString();
+        }
+    } else {
+        return language;
+    }
+    return """";
+}","/**
+ * Returns some descriptive text to describe this node
+ */
+","public String getLabel() {
+    String language = getExpression();
+    if (ObjectHelper.isEmpty(language)) {
+        Predicate predicate = getPredicate();
+        if (predicate != null) {
+            return predicate.toString();
+        }
+        Expression expressionValue = getExpressionValue();
+        if (expressionValue != null) {
+            return expressionValue.toString();
+        }
+    } else {
+        return language;
+    }
+    return """";
+}",1.6666666666666667,1.2594339622641506,1.0,1.0,2.3333333333333335,1.0758620689655174,-0.9074312463428903,1.0,0.13749999999999998,1.3989372170832515
+accumulo,remotes/origin/bugs-dot-jar_ACCUMULO-1199_813109d7,3.0,"public void removeTableProperty(ByteBuffer login, String tableName, String property) throws AccumuloException, AccumuloSecurityException, org.apache.thrift.TException {
+    send_removeTableProperty(login, tableName, property);
+    recv_removeTableProperty();
+}","/**
+ * {@inheritDoc}
+ */
+","public void removeTableProperty(ByteBuffer login, String tableName, String property) throws AccumuloException, AccumuloSecurityException, org.apache.thrift.TException {
+    send_removeTableProperty(login, tableName, property);
+    recv_removeTableProperty();
+}",-0.3333333333333333,-0.11792452830188677,-0.5,-1.0,0.0,0.0,0.30310122878876494,-0.3333333333333333,-0.4,0.0
+commons-math,remotes/origin/bugs-dot-jar_MATH-939_49444ee6,1.0,"/**
+ * Throws MathIllegalArgumentException if the matrix does not have at least
+ * two columns and two rows.
+ * @param matrix matrix to check
+ * @throws MathIllegalArgumentException if the matrix does not contain sufficient data
+ * to compute covariance
+ */
+private void checkSufficientData(final RealMatrix matrix) throws MathIllegalArgumentException {
+    int nRows = matrix.getRowDimension();
+    int nCols = matrix.getColumnDimension();
+    if (nRows < 2 || nCols < 2) {
+        throw new MathIllegalArgumentException(LocalizedFormats.INSUFFICIENT_ROWS_AND_COLUMNS, nRows, nCols);
+    }
+}","/**
+ * Throws MathIllegalArgumentException if the matrix does not have at least
+ * two columns and two rows.
+ * @param matrix matrix to check
+ * @throws MathIllegalArgumentException if the matrix does not contain sufficient data
+ * to compute covariance
+ */
+","private void checkSufficientData(final RealMatrix matrix) throws MathIllegalArgumentException {
+    int nRows = matrix.getRowDimension();
+    int nCols = matrix.getColumnDimension();
+    if (nRows < 2 || nCols < 2) {
+        throw new MathIllegalArgumentException(LocalizedFormats.INSUFFICIENT_ROWS_AND_COLUMNS, nRows, nCols);
+    }
+}",0.16666666666666666,0.410377358490566,0.5,0.0,1.3333333333333333,1.1517241379310346,-0.20947922761849064,-0.3333333333333333,0.42500000000000004,1.1650534075253618
+accumulo,remotes/origin/bugs-dot-jar_ACCUMULO-1190_e29dc4f5,3.0,"@Override
+public void closeWriter(String writer) throws TException {
+    try {
+        BatchWriter batchwriter = writerCache.getIfPresent(UUID.fromString(writer));
+        if (batchwriter == null) {
+            throw new UnknownWriter(""Writer never existed or no longer exists"");
+        }
+        batchwriter.close();
+        writerCache.invalidate(UUID.fromString(writer));
+    } catch (Exception e) {
+        throw translateException(e);
+    }
+}","/**
+ * {@inheritDoc}
+ */
+","@Override
+public void closeWriter(String writer) throws TException {
+    try {
+        BatchWriter batchwriter = writerCache.getIfPresent(UUID.fromString(writer));
+        if (batchwriter == null) {
+            throw new UnknownWriter(""Writer never existed or no longer exists"");
+        }
+        batchwriter.close();
+        writerCache.invalidate(UUID.fromString(writer));
+    } catch (Exception e) {
+        throw translateException(e);
+    }
+}",1.1666666666666667,1.4764150943396221,1.5,1.0,0.6666666666666666,0.9655172413793103,-0.7768285547103565,1.0,-0.1125,1.340466264693779
+wicket,remotes/origin/bugs-dot-jar_WICKET-4572_dfc56674,0.0,"/**
+ *  @param pageId
+ *  @param windowIndex
+ */
+private void putWindowIndex(int pageId, int windowIndex) {
+    if (idToWindowIndex != null && pageId != -1 && windowIndex != -1) {
+        idToWindowIndex.put(pageId, windowIndex);
+    }
+}","/**
+ *  @param pageId
+ *  @param windowIndex
+ */
+","private void putWindowIndex(int pageId, int windowIndex) {
+    if (idToWindowIndex != null && pageId != -1 && windowIndex != -1) {
+        idToWindowIndex.put(pageId, windowIndex);
+    }
+}",-0.16666666666666666,0.8160377358490566,0.0,0.0,2.0,1.206896551724138,0.1284961966062026,-0.6666666666666666,0.7875,0.9098423717593173
+camel,remotes/origin/bugs-dot-jar_CAMEL-8964_ea8ee025,1.0,"/**
+ * Suspends the given {@code service}.
+ * <p/>
+ * If {@code service} is a {@link org.apache.camel.SuspendableService} then
+ * it's {@link org.apache.camel.SuspendableService#suspend()} is called but
+ * <b>only</b> if {@code service} is <b>not</b> already
+ * {@link #isSuspended(Object) suspended}.
+ * <p/>
+ * If {@code service} is <b>not</b> a
+ * {@link org.apache.camel.SuspendableService} then it's
+ * {@link org.apache.camel.Service#stop()} is called.
+ * <p/>
+ * Calling this method has no effect if {@code service} is {@code null}.
+ *
+ * @param service the service
+ * @return <tt>true</tt> if either the <tt>suspend</tt> method or
+ *         {@link #stopService(Object)} was called, <tt>false</tt>
+ *         otherwise.
+ * @throws Exception is thrown if error occurred
+ * @see #stopService(Object)
+ */
+public static boolean suspendService(Service service) throws Exception {
+    if (service instanceof SuspendableService) {
+        SuspendableService ss = (SuspendableService) service;
+        if (!ss.isSuspended()) {
+            LOG.trace(""Suspending service {}"", service);
+            ss.suspend();
+            return true;
+        } else {
+            return false;
+        }
+    } else {
+        stopService(service);
+        return true;
+    }
+}","/**
+ * Suspends the given {@code service}.
+ * <p/>
+ * If {@code service} is a {@link org.apache.camel.SuspendableService} then
+ * it's {@link org.apache.camel.SuspendableService#suspend()} is called but
+ * <b>only</b> if {@code service} is <b>not</b> already
+ * {@link #isSuspended(Object) suspended}.
+ * <p/>
+ * If {@code service} is <b>not</b> a
+ * {@link org.apache.camel.SuspendableService} then it's
+ * {@link org.apache.camel.Service#stop()} is called.
+ * <p/>
+ * Calling this method has no effect if {@code service} is {@code null}.
+ *
+ * @param service the service
+ * @return <tt>true</tt> if either the <tt>suspend</tt> method or
+ *         {@link #stopService(Object)} was called, <tt>false</tt>
+ *         otherwise.
+ * @throws Exception is thrown if error occurred
+ * @see #stopService(Object)
+ */
+","public static boolean suspendService(Service service) throws Exception {
+    if (service instanceof SuspendableService) {
+        SuspendableService ss = (SuspendableService) service;
+        if (!ss.isSuspended()) {
+            LOG.trace(""Suspending service {}"", service);
+            ss.suspend();
+            return true;
+        } else {
+            return false;
+        }
+    } else {
+        stopService(service);
+        return true;
+    }
+}",1.5,1.693396226415094,0.5,1.0,1.3333333333333333,1.103448275862069,-0.807723815096547,0.3333333333333333,-0.4,1.2169401155821151
+Lang,33.0,1.0,"/**
+ * <p>Converts an array of <code>Object</code> in to an array of <code>Class</code> objects.
+ * If any of these objects is null, a null element will be inserted into the array.</p>
+ *
+ * <p>This method returns <code>null</code> for a <code>null</code> input array.</p>
+ *
+ * @param array an <code>Object</code> array
+ * @return a <code>Class</code> array, <code>null</code> if null array input
+ * @since 2.4
+ */
+public static Class<?>[] toClass(Object[] array) {
+    if (array == null) {
+        return null;
+    } else if (array.length == 0) {
+        return ArrayUtils.EMPTY_CLASS_ARRAY;
+    }
+    Class<?>[] classes = new Class[array.length];
+    for (int i = 0; i < array.length; i++) {
+        classes[i] = array[i].getClass();
+    }
+    return classes;
+}","/**
+ * <p>Converts an array of <code>Object</code> in to an array of <code>Class</code> objects.
+ * If any of these objects is null, a null element will be inserted into the array.</p>
+ *
+ * <p>This method returns <code>null</code> for a <code>null</code> input array.</p>
+ *
+ * @param array an <code>Object</code> array
+ * @return a <code>Class</code> array, <code>null</code> if null array input
+ * @since 2.4
+ */
+","public static Class<?>[] toClass(Object[] array) {
+    if (array == null) {
+        return null;
+    } else if (array.length == 0) {
+        return ArrayUtils.EMPTY_CLASS_ARRAY;
+    }
+    Class<?>[] classes = new Class[array.length];
+    for (int i = 0; i < array.length; i++) {
+        classes[i] = array[i].getClass();
+    }
+    return classes;
+}",1.0,0.410377358490566,1.0,1.0,2.0,3.1862068965517243,-0.735166764189584,-0.6666666666666666,-0.4,4.995509115957847
+logging-log4j2,remotes/origin/bugs-dot-jar_LOG4J2-581_bb02fa15,1.0,"/**
+ * Default hook to write footer during close.
+ */
+@Override
+public void releaseSub() {
+    byte[] footer = layout.getFooter();
+    if (footer != null) {
+        write(footer);
+    }
+    close();
+}","/**
+ * Default hook to write footer during close.
+ */
+","@Override
+public void releaseSub() {
+    byte[] footer = layout.getFooter();
+    if (footer != null) {
+        write(footer);
+    }
+    close();
+}",0.3333333333333333,0.4952830188679243,0.0,0.0,0.6666666666666666,0.8413793103448276,-0.11117612638970152,0.0,0.7625000000000002,0.3934085988799628
+jackrabbit-oak,remotes/origin/bugs-dot-jar_OAK-43_668f08f2,1.0,"void apply() throws Exception {
+    addNode(parentNodePath, nodeName, properties);
+}","/**
+ * {@inheritDoc}
+ */
+","void apply() throws Exception {
+    addNode(parentNodePath, nodeName, properties);
+}",-0.5,-0.2216981132075472,-0.5,-1.0,0.0,0.0,0.8451726155646576,-0.6666666666666666,-0.13750000000000004,0.0
+accumulo,remotes/origin/bugs-dot-jar_ACCUMULO-776_dc9f23d9,3.0,"/**
+ * A convenience method for setting the end timestamp accepted by the timestamp filter.
+ *
+ * @param is
+ *          the iterator setting object to configure
+ * @param end
+ *          the end timestamp
+ * @param endInclusive
+ *          boolean indicating whether the end is inclusive
+ */
+public static void setEnd(IteratorSetting is, long end, boolean endInclusive) {
+    SimpleDateFormat dateParser = initDateParser();
+    is.addOption(END, dateParser.format(new Date(end)));
+    is.addOption(END_INCL, Boolean.toString(endInclusive));
+}","/**
+ * A convenience method for setting the end timestamp accepted by the timestamp filter.
+ *
+ * @param is
+ *          the iterator setting object to configure
+ * @param end
+ *          the end timestamp
+ * @param endInclusive
+ *          boolean indicating whether the end is inclusive
+ */
+","public static void setEnd(IteratorSetting is, long end, boolean endInclusive) {
+    SimpleDateFormat dateParser = initDateParser();
+    is.addOption(END, dateParser.format(new Date(end)));
+    is.addOption(END_INCL, Boolean.toString(endInclusive));
+}",-0.16666666666666666,-0.15566037735849056,-0.5,-1.0,0.0,0.0,0.07653598595669936,0.6666666666666666,0.4875,0.0
+Math,66.0,1.0,"/**
+ * Perform the optimization.
+ *
+ * @return the optimum.
+ */
+protected double doOptimize() throws MaxIterationsExceededException, FunctionEvaluationException {
+    throw new UnsupportedOperationException();
+}","/**
+ * Perform the optimization.
+ *
+ * @return the optimum.
+ */
+","protected double doOptimize() throws MaxIterationsExceededException, FunctionEvaluationException {
+    throw new UnsupportedOperationException();
+}",-0.5,-0.2216981132075472,0.0,-1.0,0.0,0.0,0.9622001170275013,-1.0,0.8125,0.0
+accumulo,remotes/origin/bugs-dot-jar_ACCUMULO-2494_0dc92ca1,1.0,"public double getAverage() {
+    return ((double) sum) / count;
+}","/**
+ * {@inheritDoc}
+ */
+","public double getAverage() {
+    return ((double) sum) / count;
+}",-0.5,-0.2216981132075472,-0.5,-1.0,0.0,0.0,0.9729666471620824,-1.0,0.7749999999999999,0.0
+commons-math,remotes/origin/bugs-dot-jar_MATH-957_9aabf587,1.0,"/**
+ * {@inheritDoc}
+ */
+@Override
+protected double getSolverAbsoluteAccuracy() {
+    return solverAbsoluteAccuracy;
+}","/**
+ * {@inheritDoc}
+ */
+","@Override
+protected double getSolverAbsoluteAccuracy() {
+    return solverAbsoluteAccuracy;
+}",-0.3333333333333333,-0.3726415094339622,-0.5,-1.0,0.0,0.0,0.8456407255705085,-1.0,0.8125,0.0
+jackrabbit-oak,remotes/origin/bugs-dot-jar_OAK-926_e1ae968c,1.0,"/**
+ * Returns <code>true</code> if the given <code>revision</code> is marked
+ * committed in <strong>this</strong> document including previous documents.
+ *
+ * @param revision the revision.
+ * @return <code>true</code> if committed; <code>false</code> otherwise.
+ */
+public boolean isCommitted(@Nonnull Revision revision) {
+    String rev = checkNotNull(revision).toString();
+    String value = getLocalRevisions().get(rev);
+    if (value != null) {
+        return Utils.isCommitted(value);
+    }
+    // check previous docs
+    for (NodeDocument prev : getPreviousDocs(revision, REVISIONS)) {
+        if (prev.containsRevision(revision)) {
+            return prev.isCommitted(revision);
+        }
+    }
+    return false;
+}","/**
+ * Returns <code>true</code> if the given <code>revision</code> is marked
+ * committed in <strong>this</strong> document including previous documents.
+ *
+ * @param revision the revision.
+ * @return <code>true</code> if committed; <code>false</code> otherwise.
+ */
+","public boolean isCommitted(@Nonnull Revision revision) {
+    String rev = checkNotNull(revision).toString();
+    String value = getLocalRevisions().get(rev);
+    if (value != null) {
+        return Utils.isCommitted(value);
+    }
+        for (NodeDocument prev : getPreviousDocs(revision, REVISIONS)) {
+        if (prev.containsRevision(revision)) {
+            return prev.isCommitted(revision);
+        }
+    }
+    return false;
+}",1.1666666666666667,1.0141509433962264,1.0,1.0,1.6666666666666667,1.103448275862069,-0.8035108250438852,1.6666666666666667,-0.3625000000000001,1.7872644969673115
+flink,remotes/origin/bugs-dot-jar_FLINK-1496_0a4c7694,1.0,"// TODO This is a work-around for the union reader
+boolean hasInputChannelWithData() {
+    return !inputChannelsWithData.isEmpty();
+}","/**
+ * {@inheritDoc}
+ */
+","boolean hasInputChannelWithData() {
+    return !inputChannelsWithData.isEmpty();
+}",-0.5,-0.2216981132075472,-0.5,-1.0,0.0,0.0,0.9729666471620824,-0.6666666666666666,0.7875,0.0
+jackrabbit-oak,remotes/origin/bugs-dot-jar_OAK-2695_0598498e,0.0,"@Nonnull
+@Override
+public NodeState getChildNode(@Nonnull String name) {
+    if (!hasChildren) {
+        checkValidName(name);
+        return EmptyNodeState.MISSING_NODE;
+    }
+    String p = PathUtils.concat(getPath(), name);
+    DocumentNodeState child = store.getNode(p, lastRevision);
+    if (child == null) {
+        checkValidName(name);
+        return EmptyNodeState.MISSING_NODE;
+    } else {
+        return child;
+    }
+}","/**
+ * {@inheritDoc}
+ */
+","@Nonnull
+@Override
+public NodeState getChildNode(@Nonnull String name) {
+    if (!hasChildren) {
+        checkValidName(name);
+        return EmptyNodeState.MISSING_NODE;
+    }
+    String p = PathUtils.concat(getPath(), name);
+    DocumentNodeState child = store.getNode(p, lastRevision);
+    if (child == null) {
+        checkValidName(name);
+        return EmptyNodeState.MISSING_NODE;
+    } else {
+        return child;
+    }
+}",1.6666666666666667,0.8160377358490566,0.5,0.0,1.3333333333333333,1.0482758620689656,-0.9640725570509064,0.6666666666666666,-0.21250000000000002,1.800075146266841
+wicket,remotes/origin/bugs-dot-jar_WICKET-2172_ea4a3f8a,3.0,"/**
+ *  @see IValueMap#getAsDuration(String)
+ */
+public Duration getAsDuration(String key) {
+    return getAsDuration(key, null);
+}","/**
+ *  @see IValueMap#getAsDuration(String)
+ */
+","public Duration getAsDuration(String key) {
+    return getAsDuration(key, null);
+}",-0.5,-0.2216981132075472,-0.5,-1.0,0.0,0.0,0.83253364540667,-0.6666666666666666,0.8375,0.0
+accumulo,remotes/origin/bugs-dot-jar_ACCUMULO-2899_31aea2ad,0.0,"@Override
+public Path getFullPath(FileType fileType, String path) {
+    if (path.contains("":""))
+        return new Path(path);
+    // normalize the path
+    Path fullPath = new Path(defaultVolume.getBasePath(), fileType.getDirectory());
+    if (path.startsWith(""/""))
+        path = path.substring(1);
+    fullPath = new Path(fullPath, path);
+    FileSystem fs = getVolumeByPath(fullPath).getFileSystem();
+    return fs.makeQualified(fullPath);
+}","/**
+ * {@inheritDoc}
+ */
+","@Override
+public Path getFullPath(FileType fileType, String path) {
+    if (path.contains("":""))
+        return new Path(path);
+        Path fullPath = new Path(defaultVolume.getBasePath(), fileType.getDirectory());
+    if (path.startsWith(""/""))
+        path = path.substring(1);
+    fullPath = new Path(fullPath, path);
+    FileSystem fs = getVolumeByPath(fullPath).getFileSystem();
+    return fs.makeQualified(fullPath);
+}",0.8333333333333334,0.5141509433962262,0.5,-1.0,1.3333333333333333,0.0,-0.7229959040374487,1.6666666666666667,-0.3875,0.0
+wicket,remotes/origin/bugs-dot-jar_WICKET-2882_ebe56869,1.0,"/**
+ *  @see org.apache.wicket.application.IComponentOnBeforeRenderListener#onBeforeRender(org.apache.wicket.Component)
+ */
+public void onAfterRender(final Component component) {
+    if (log.isWarnEnabled()) {
+        if ((component instanceof FormComponent) || (component instanceof IFormSubmittingComponent) || (component instanceof Form)) {
+            log.warn(""Please note that onBeforeRender() and validate() might be called on invisible components inside an Enclosure. "" + ""Please see EnclosureContainer for an alternative. Enclosure: "" + enclosure.toString());
+        }
+    }
+}","/**
+ *  @see org.apache.wicket.application.IComponentOnBeforeRenderListener#onBeforeRender(org.apache.wicket.Component)
+ */
+","public void onAfterRender(final Component component) {
+    if (log.isWarnEnabled()) {
+        if ((component instanceof FormComponent) || (component instanceof IFormSubmittingComponent) || (component instanceof Form)) {
+            log.warn(""Please note that onBeforeRender() and validate() might be called on invisible components inside an Enclosure. "" + ""Please see EnclosureContainer for an alternative. Enclosure: "" + enclosure.toString());
+        }
+    }
+}",0.16666666666666666,1.8820754716981127,0.5,1.0,2.0,0.8896551724137931,-0.16079578700994737,0.0,-0.3625000000000001,0.7361471435472616
+Closure,154.0,2.0,"/**
+ * Expect that the peroperty in an interface that this type implements is
+ * implemented and correctly typed.
+ */
+private void expectInterfaceProperty(NodeTraversal t, Node n, ObjectType instance, ObjectType implementedInterface, String prop) {
+    if (!instance.hasProperty(prop)) {
+        // Not implemented
+        String sourceName = (String) n.getProp(Node.SOURCENAME_PROP);
+        sourceName = sourceName == null ? """" : sourceName;
+        if (shouldReport) {
+            compiler.report(JSError.make(sourceName, n, INTERFACE_METHOD_NOT_IMPLEMENTED, prop, implementedInterface.toString(), instance.toString()));
+        }
+        registerMismatch(instance, implementedInterface);
+    // Implemented, but not correctly typed
+    }
+}","/**
+ * Expect that the peroperty in an interface that this type implements is
+ * implemented and correctly typed.
+ */
+","private void expectInterfaceProperty(NodeTraversal t, Node n, ObjectType instance, ObjectType implementedInterface, String prop) {
+    if (!instance.hasProperty(prop)) {
+                String sourceName = (String) n.getProp(Node.SOURCENAME_PROP);
+        sourceName = sourceName == null ? """" : sourceName;
+        if (shouldReport) {
+            compiler.report(JSError.make(sourceName, n, INTERFACE_METHOD_NOT_IMPLEMENTED, prop, implementedInterface.toString(), instance.toString()));
+        }
+        registerMismatch(instance, implementedInterface);
+        }
+}",0.6666666666666666,1.4764150943396221,1.0,1.0,2.3333333333333335,1.186206896551724,-0.6949093036863658,1.3333333333333333,-0.375,2.7813422554615235
+Closure,144.0,2.0,"FunctionType cloneWithNewReturnType(JSType newReturnType, boolean inferred) {
+    return new FunctionType(registry, null, null, new ArrowType(registry, call.parameters, newReturnType, inferred), typeOfThis, null, false, false);
+}","/**
+ * {@inheritDoc}
+ */
+","FunctionType cloneWithNewReturnType(JSType newReturnType, boolean inferred) {
+    return new FunctionType(registry, null, null, new ArrowType(registry, call.parameters, newReturnType, inferred), typeOfThis, null, false, false);
+}",-0.5,-0.2216981132075472,-0.5,-1.0,0.0,0.0,0.5221767115272087,-1.0,-0.4,0.0
+jackrabbit-oak,remotes/origin/bugs-dot-jar_OAK-3324_5f863af6,1.0,"@Override
+public boolean isGranted(long repositoryPermissions) {
+    return hasPermissions(getEntryIterator(new EntryPredicate()), repositoryPermissions, null);
+}","/**
+ * {@inheritDoc}
+ */
+","@Override
+public boolean isGranted(long repositoryPermissions) {
+    return hasPermissions(getEntryIterator(new EntryPredicate()), repositoryPermissions, null);
+}",-0.3333333333333333,-0.3726415094339622,-0.5,-1.0,0.0,0.0,0.5493270918665877,-0.3333333333333333,-0.23750000000000002,0.0
+wicket,remotes/origin/bugs-dot-jar_WICKET-2057_e2d88568,1.0,"/**
+ *  @see org.apache.wicket.ajax.IAjaxCallDecorator#decorateScript(CharSequence)
+ */
+public CharSequence decorateScript(CharSequence script) {
+    CharSequence s = (delegate == null) ? script : delegate.decorateScript(script);
+    return preDecorateScript(s);
+}","/**
+ *  @see org.apache.wicket.ajax.IAjaxCallDecorator#decorateScript(CharSequence)
+ */
+","public CharSequence decorateScript(CharSequence script) {
+    CharSequence s = (delegate == null) ? script : delegate.decorateScript(script);
+    return preDecorateScript(s);
+}",-0.3333333333333333,-0.11792452830188677,0.0,-1.0,0.6666666666666666,1.296551724137931,0.35927442949093,-0.3333333333333333,0.7500000000000002,0.7578322091213255
+jackrabbit-oak,remotes/origin/bugs-dot-jar_OAK-93_0be7e8f0,1.0,"@Override
+public String getPath() {
+    if (parent == null) {
+        return name;
+    } else {
+        String path = parent.getPath();
+        return path.isEmpty() ? name : path + '/' + name;
+    }
+}","/**
+ * {@inheritDoc}
+ */
+","@Override
+public String getPath() {
+    if (parent == null) {
+        return name;
+    } else {
+        String path = parent.getPath();
+        return path.isEmpty() ? name : path + '/' + name;
+    }
+}",0.5,1.0801886792452828,0.5,0.0,1.3333333333333333,1.1724137931034482,-0.332592159157402,-0.3333333333333333,0.5375000000000001,0.9003954124993291
+jackrabbit-oak,remotes/origin/bugs-dot-jar_OAK-1822_3e83a4c1,1.0,"/**
+ * Set the property to the given value.
+ *
+ * @param property the property name
+ * @param value the value
+ */
+void set(String property, Object value) {
+    Operation op = new Operation();
+    op.type = Operation.Type.SET;
+    op.value = value;
+    changes.put(new Key(property, null), op);
+}","/**
+ * Set the property to the given value.
+ *
+ * @param property the property name
+ * @param value the value
+ */
+","void set(String property, Object value) {
+    Operation op = new Operation();
+    op.type = Operation.Type.SET;
+    op.value = value;
+    changes.put(new Key(property, null), op);
+}",0.0,-0.2216981132075472,-0.5,-1.0,0.0,0.0,-0.0863662960795786,-0.6666666666666666,0.3875,0.0
+commons-math,remotes/origin/bugs-dot-jar_MATH-757_76b7413d,1.0,"/**
+ * Performs an operation on the addressable elements of the array.
+ *
+ * @param f Function to be applied on this array.
+ * @return the result.
+ * @since 3.1
+ */
+public double compute(MathArrays.Function f) {
+    final double[] array;
+    final int start;
+    final int num;
+    synchronized (this) {
+        array = internalArray;
+        start = startIndex;
+        num = numElements;
+    }
+    return f.evaluate(array, start, num);
+}","/**
+ * Performs an operation on the addressable elements of the array.
+ *
+ * @param f Function to be applied on this array.
+ * @return the result.
+ * @since 3.1
+ */
+","public double compute(MathArrays.Function f) {
+    final double[] array;
+    final int start;
+    final int num;
+    synchronized (this) {
+        array = internalArray;
+        start = startIndex;
+        num = numElements;
+    }
+    return f.evaluate(array, start, num);
+}",0.8333333333333334,0.5141509433962262,-0.5,0.0,0.0,0.0,-0.486132241076653,-0.6666666666666666,0.5,0.0
+jackrabbit-oak,remotes/origin/bugs-dot-jar_OAK-395_4ed7bc8e,1.0,"@Override
+public PropertyImpl perform() throws RepositoryException {
+    String oakName = sessionDelegate.getOakPathOrThrow(jcrName);
+    if (value == null) {
+        dlg.removeProperty(oakName);
+        return null;
+    } else {
+        int targetType = getTargetType(value, type);
+        Value targetValue = ValueHelper.convert(value, targetType, getValueFactory());
+        return new PropertyImpl(dlg.setProperty(oakName, targetValue));
+    }
+}","/**
+ * {@inheritDoc}
+ */
+","@Override
+public PropertyImpl perform() throws RepositoryException {
+    String oakName = sessionDelegate.getOakPathOrThrow(jcrName);
+    if (value == null) {
+        dlg.removeProperty(oakName);
+        return null;
+    } else {
+        int targetType = getTargetType(value, type);
+        Value targetValue = ValueHelper.convert(value, targetType, getValueFactory());
+        return new PropertyImpl(dlg.setProperty(oakName, targetValue));
+    }
+}",1.0,1.0141509433962264,0.0,0.0,0.6666666666666666,0.9586206896551723,-0.7379754242246924,1.0,-0.3625000000000001,1.6646687302070102
+jackrabbit-oak,remotes/origin/bugs-dot-jar_OAK-644_55a4f738,3.0,"@Nonnull
+@Override
+public CommitHookProvider getSecurityHooks() {
+    return new CommitHookProvider() {
+
+        @Override
+        public CommitHook getCommitHook(String workspaceName) {
+            return new CompositeHook(new PermissionHook(workspaceName), new VersionablePathHook(workspaceName));
+        }
+    };
+}","/**
+ * {@inheritDoc}
+ */
+","@Nonnull
+@Override
+public CommitHookProvider getSecurityHooks() {
+    return new CommitHookProvider() {
+
+        @Override
+        public CommitHook getCommitHook(String workspaceName) {
+            return new CompositeHook(new PermissionHook(workspaceName), new VersionablePathHook(workspaceName));
+        }
+    };
+}",0.6666666666666666,1.9386792452830182,-0.5,0.0,0.0,0.0,-0.3288472791105911,-1.0,-0.075,0.0
+Compress,3.0,1.0,"/**
+ * Ends the TAR archive without closing the underlying OutputStream.
+ *
+ * An archive consists of a series of file entries terminated by an
+ * end-of-archive entry, which consists of two 512 blocks of zero bytes.
+ * POSIX.1 requires two EOF records, like some other implementations.
+ *
+ * @throws IOException on error
+ */
+public void finish() throws IOException {
+    writeEOFRecord();
+    writeEOFRecord();
+}","/**
+ * Ends the TAR archive without closing the underlying OutputStream.
+ *
+ * An archive consists of a series of file entries terminated by an
+ * end-of-archive entry, which consists of two 512 blocks of zero bytes.
+ * POSIX.1 requires two EOF records, like some other implementations.
+ *
+ * @throws IOException on error
+ */
+","public void finish() throws IOException {
+    writeEOFRecord();
+    writeEOFRecord();
+}",-0.3333333333333333,-0.11792452830188677,-0.5,-1.0,0.0,0.0,0.7913399648917492,-0.3333333333333333,0.8125,0.0
+Csv,9.0,1.0,"/**
+ * Puts all values of this record into the given Map.
+ *
+ * @param map The Map to populate.
+ * @return the given map.
+ */
+<M extends Map<String, String>> M putIn(final M map) {
+    for (final Entry<String, Integer> entry : mapping.entrySet()) {
+        final int col = entry.getValue().intValue();
+        if (col < values.length) {
+            map.put(entry.getKey(), values[col]);
+        }
+    }
+    return map;
+}","/**
+ * Puts all values of this record into the given Map.
+ *
+ * @param map The Map to populate.
+ * @return the given map.
+ */
+","<M extends Map<String, String>> M putIn(final M map) {
+    for (final Entry<String, Integer> entry : mapping.entrySet()) {
+        final int col = entry.getValue().intValue();
+        if (col < values.length) {
+            map.put(entry.getKey(), values[col]);
+        }
+    }
+    return map;
+}",0.5,1.55188679245283,0.5,1.0,1.0,1.110344827586207,-0.4767700409596254,0.6666666666666666,-0.1125,1.5448641105007963
+wicket,remotes/origin/bugs-dot-jar_WICKET-4259_1f128536,3.0,"/**
+ *  Gets the label component.
+ *
+ *  @return The label component
+ */
+protected final Component getLabel() {
+    if (label == null) {
+        initLabelAndEditor(getDelegatingParentModel());
+    }
+    return label;
+}","/**
+ *  Gets the label component.
+ *
+ *  @return The label component
+ */
+","protected final Component getLabel() {
+    if (label == null) {
+        initLabelAndEditor(getDelegatingParentModel());
+    }
+    return label;
+}",0.0,0.5896226415094338,0.0,0.0,0.6666666666666666,0.0,0.23148039789350452,-0.3333333333333333,0.825,0.0
+commons-math,remotes/origin/bugs-dot-jar_MATH-924_b07ecae3,0.0,"/**
+ * Computes the square-root of the weight matrix.
+ *
+ * @param m Symmetric, positive-definite (weight) matrix.
+ * @return the square-root of the weight matrix.
+ */
+private RealMatrix squareRoot(RealMatrix m) {
+    final EigenDecomposition dec = new EigenDecomposition(m);
+    return dec.getSquareRoot();
+}","/**
+ * Computes the square-root of the weight matrix.
+ *
+ * @param m Symmetric, positive-definite (weight) matrix.
+ * @return the square-root of the weight matrix.
+ */
+","private RealMatrix squareRoot(RealMatrix m) {
+    final EigenDecomposition dec = new EigenDecomposition(m);
+    return dec.getSquareRoot();
+}",-0.3333333333333333,-0.11792452830188677,-0.5,-1.0,0.0,0.0,0.4795787009947337,-0.6666666666666666,0.825,0.0
