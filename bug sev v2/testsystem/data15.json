@@ -1,0 +1,18 @@
+{
+    "project_name": "Codec",
+    "project_version": "11",
+    "label": 1,
+    "code": "public static final byte[] encodeQuotedPrintable(BitSet printable, byte[] bytes) {\n    if (bytes == null) {\n        return null;\n    }\n    if (printable == null) {\n        printable = PRINTABLE_CHARS;\n    }\n    ByteArrayOutputStream buffer = new ByteArrayOutputStream();\n    for (byte c : bytes) {\n        int b = c;\n        if (b < 0) {\n            b = 256 + b;\n        }\n        if (printable.get(b)) {\n            buffer.write(b);\n        } else {\n            encodeQuotedPrintable(b, buffer);\n        }\n    }\n    return buffer.toByteArray();\n}",
+    "code_comment": "/**\n * Return the byte at position <code>index</code> of the byte array and\n * make sure it is unsigned.\n *\n * @param index\n *                  position in the array\n * @param bytes\n *                  the byte array\n * @return the unsigned octet at position <code>index</code> from the array\n */\n/**\n * Write a byte to the buffer.\n *\n * @param b\n *                  byte to write\n * @param encode\n *                  indicates whether the octet shall be encoded\n * @param buffer\n *                  the buffer to write to\n * @return the number of bytes that have been written to the buffer\n */\n/**\n * Checks whether the given byte is whitespace.\n *\n * @param b\n *                  byte to be checked\n * @return <code>true</code> if the byte is either a space or tab character\n */\n/**\n * Encodes an array of bytes into an array of quoted-printable 7-bit characters. Unsafe characters are escaped.\n *\n * <p>\n * This function fully implements the quoted-printable encoding specification (rule #1 through rule #5)\n * as defined in RFC 1521 and is suitable for encoding binary data and unformatted text.\n * </p>\n *\n * @param printable\n *                  bitset of characters deemed quoted-printable\n * @param bytes\n *                  array of bytes to be encoded\n * @return array of bytes containing quoted-printable data\n */",
+    "code_no_comment": "public static final byte[] encodeQuotedPrintable(BitSet printable, byte[] bytes) {\n    if (bytes == null) {\n        return null;\n    }\n    if (printable == null) {\n        printable = PRINTABLE_CHARS;\n    }\n    ByteArrayOutputStream buffer = new ByteArrayOutputStream();\n    for (byte c : bytes) {\n        int b = c;\n        if (b < 0) {\n            b = 256 + b;\n        }\n        if (printable.get(b)) {\n            buffer.write(b);\n        } else {\n            encodeQuotedPrintable(b, buffer);\n        }\n    }\n    return buffer.toByteArray();\n}",
+    "lc": 2.5,
+    "pi": 1.202830189,
+    "ma": 2,
+    "nbd": 1,
+    "ml": 2.666666667,
+    "d": 3.020689655,
+    "mi": -1.23136337,
+    "fo": 0.333333333,
+    "r": -0.4,
+    "e": 5.818897497
+}

@@ -1,0 +1,3 @@
+{"project_name": "accumulo", "project_version": "remotes/origin/bugs-dot-jar_ACCUMULO-4113_27300d81", "label": 0, "code": "public static List<byte[]> toBytesList(Collection<ByteBuffer> bytesList) {\n    if (bytesList == null)\n        return null;\n    ArrayList<byte[]> result = new ArrayList<byte[]>();\n    for (ByteBuffer bytes : bytesList) {\n        result.add(toBytes(bytes));\n    }\n    return result;\n}", "code_comment": "public", "code_no_comment": "public", "lc": -0.227272727, "pi": -0.153110048, "ma": -0.2, "nbd": -0.5, "ml": -0.25, "d": -0.033730159, "mi": 0.305708245, "fo": -0.333333333, "r": 0.315789474, "e": -0.098433061}
+
+

@@ -1,0 +1,18 @@
+{
+    "project_name": "wicket",
+    "project_version": "remotes/origin/bugs-dot-jar_WICKET-3861_d1e0e411",
+    "label": 3,
+    "code": "@Override\npublic void onComponentTag(final Component component, final ComponentTag tag) {\n    tag.put(\"xmlns:wicket\", \"http://wicket.apache.org\");\n}",
+    "code_comment": "/**\n * {@inheritDoc}\n */",
+    "code_no_comment": "@Override\npublic void onComponentTag(final Component component, final ComponentTag tag) {\n    tag.put(\"xmlns:wicket\", \"http://wicket.apache.org\");\n}",
+    "lc": -0.333333333,
+    "pi": -0.372641509,
+    "ma": -0.5,
+    "nbd": -1,
+    "ml": 0,
+    "d": 0,
+    "mi": 0.475833821,
+    "fo": -0.666666667,
+    "r": -0.3375,
+    "e": 0
+}

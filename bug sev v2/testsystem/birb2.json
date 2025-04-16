@@ -1,0 +1,18 @@
+{
+    "project_name": "example_project_high",
+    "project_version": "v1.0.1",
+    "label": 1,
+    "code": "public class HighSeverityExample { public static void main(String[] args) { try { int result = 10 / 0; } catch (ArithmeticException e) { System.out.println(\"Error: Division by zero\"); } } }",
+    "code_comment": "public class HighSeverityExample",
+    "code_no_comment": "public class HighSeverityExample { public static void main(String[] args) { try { int result = 10 / 0; } catch (ArithmeticException e) { System.out.println(\"Error: Division by zero\"); } } }",
+    "lc": 12,
+    "pi": 0.8,
+    "ma": 0.9,
+    "nbd": 2,
+    "ml": 0.7,
+    "d": 0.3,
+    "mi": 0.9,
+    "fo": 1,
+    "r": 0.7,
+    "e": 0.5
+}
