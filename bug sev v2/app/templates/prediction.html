@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bug Prediction System - Prediction Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .top-links {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            padding: 10px 0;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+        .top-links a {
+            text-decoration: none;
+            color: black;
+            padding: 0 20px;
+            font-size: 18px;
+        }
+        .main-title {
+            font-size: 48px;
+            margin: 20px 0;
+            text-align: center;
+            font-weight: bold;
+        }
+        .result-card {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 16px;
+            margin-bottom: 16px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            max-width: 900px;
+            width: 100%;
+        }
+        .result-card h3 {
+            margin-top: 0;
+        }
+        .result-card img {
+            width: 100%;
+            height: auto;
+            margin-top: 10px;
+        }
+        .action-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+            margin-bottom: 50px;
+        }
+        .action-button {
+            background-color: #ddd;
+            color: black;
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+        }
+        .action-button:hover {
+            opacity: 0.85;
+        }
+    </style>
+</head>
+<body>
+
+<div class="top-links">
+    <a href="/">Home</a>
+    <a href="/about">About Us</a>
+    <a href="/contact">Contact</a>
+    <a href="/dataset">Dataset</a>
+    <a href="/classifier">Ensemble Classifier</a>
+    <a href="/how-to-use">How to Use?</a>
+</div>
+
+<h1 class="main-title">Prediction Results</h1>
+<div id="predictionResult"></div>
+<div class="action-buttons">
+    <button type="button" class="action-button" onclick="goBackToForm()">Back</button>
+    <button type="button" class="action-button" onclick="goBackToHome()">Home</button>
+    <button type="button" class="action-button" onclick="downloadPDF()">Download PDF</button>
+</div>
+
+<script src="{{ url_for('static', filename='js/prediction.js') }}"></script>
+</body>
+</html>
+
+
+
+
+
+

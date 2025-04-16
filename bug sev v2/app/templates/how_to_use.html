@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bug Prediction System - How to Use?</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .container {
+            max-width: 800px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+        h1 {
+            font-size: 36px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        ul {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="top-links">
+        <a href="/">Home</a>
+        <a href="/about">About Us</a>
+        <a href="/contact">Contact</a>
+        <a href="/dataset">Dataset</a>
+        <a href="/classifier">Ensemble Classifier</a>
+        <a href="/how-to-use">How to Use?</a>
+    </div>
+    <h1 class="main-title">How to Use?</h1>
+    <p>This is the How to Use page.</p>
+
+<div class="container">
+    <h1>How to Use?</h1>
+    <ul>
+        <li><strong>Step 1:</strong> Choose your input method on the homepage. You can either enter the data manually, upload a CSV file, or upload a JSONL file.</li>
+        <li><strong>Step 2:</strong> If you choose manual input, fill out the form with the project details and code metrics. If you upload a file, ensure it contains the necessary data in the correct format.</li>
+        <li><strong>Step 3:</strong> Click "Next" to review your input. Make sure all information is correct before proceeding.</li>
+        <li><strong>Step 4:</strong> Click "Run" to submit your data for prediction. The system will process your input and provide the results.</li>
+        <li><strong>Step 5:</strong> View the prediction results, including the severity and probabilities of each bug class. Analyze the results to identify and address potential issues in your project.</li>
+    </ul>
+</div>
+
+</body>
+</html>

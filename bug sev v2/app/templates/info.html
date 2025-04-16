@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bug Prediction System - Info</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <style>
+        .info-card {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 16px;
+            margin-bottom: 16px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            max-width: 900px;
+            width: 100%;
+        }
+        .info-card h3 {
+            margin-top: 0;
+        }
+        .info-card pre {
+            background-color: #f7f7f7;
+            padding: 10px;
+            border-radius: 4px;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+        .action-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+            margin-bottom: 50px;
+        }
+        .action-button {
+            background-color: #ddd;
+            color: black;
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+        }
+        .action-button:hover {
+            opacity: 0.85;
+        }
+        .info-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+        .bold-metrics {
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+        .model-selection {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: -80px;
+            margin-bottom: 50px;
+        }
+        .code-metrics-container {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .code-metrics-table {
+            width: 80%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        .code-metrics-table th, .code-metrics-table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+
+        .code-metrics-table th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+
+        .code-metrics-table td {
+            background-color: #fff;
+        }
+
+        .code-metrics-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        .code-metrics-table tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        .code-metrics-table th, .code-metrics-table td {
+            padding: 12px 15px;
+        }
+
+        .code-metrics-table th {
+            background-color: #4CAF50;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="top-links">
+        <a href="/">Home</a>
+        <a href="/about">About Us</a>
+        <a href="/contact">Contact</a>
+        <a href="/dataset">Dataset</a>
+        <a href="/classifier">Ensemble Classifier</a>
+        <a href="/how-to-use">How to Use?</a>
+    </div>
+
+<h1 class="main-title">Review Your Details</h1>
+<h2 class="sub-title">Make sure all information is correct</h2>
+
+<div class="code-metrics-container">
+    <h2 class="sub-title">Code Metrics</h2>
+    <table class="code-metrics-table">
+        <tr>
+            <th>Metric</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td>LC (Lines of Code)</td>
+            <td>The number of lines in the code.</td>
+        </tr>
+        <tr>
+            <td>PI (Programming Index)</td>
+            <td>A derived metric combining various aspects of the code's complexity, readability, and maintainability.</td>
+        </tr>
+        <tr>
+            <td>MA (Maintainability Index)</td>
+            <td>Evaluates how easy it is to maintain the code. Higher values indicate easier maintenance.</td>
+        </tr>
+        <tr>
+            <td>NBD (Nested Block Depth)</td>
+            <td>Measures the maximum depth of nested blocks in the code, indicating complexity.</td>
+        </tr>
+        <tr>
+            <td>ML (McCabe's Cyclomatic Complexity)</td>
+            <td>Measures the complexity of a program's control flow by counting linearly independent paths.</td>
+        </tr>
+        <tr>
+            <td>D (Design Complexity)</td>
+            <td>Quantifies the complexity of the code's design, including architecture and structure.</td>
+        </tr>
+        <tr>
+            <td>MI (Maintainability Index)</td>
+            <td>Evaluates how easy it is to maintain the code. Higher values indicate easier maintenance.</td>
+        </tr>
+        <tr>
+            <td>FO (Fan-Out Complexity)</td>
+            <td>Measures the number of other modules or functions a particular module or function calls.</td>
+        </tr>
+        <tr>
+            <td>R (Reusability Index)</td>
+            <td>Assesses how reusable the code is. Higher values suggest easier reuse in other projects.</td>
+        </tr>
+        <tr>
+            <td>E (Effort Estimate)</td>
+            <td>Estimates the effort required to develop or maintain the code based on various factors.</td>
+        </tr>
+    </table>
+</div>
+
+<div class="info-container">
+    <div id="infoContent" class="info-content"></div>
+    <div class="action-buttons">
+        <button type="button" class="action-button" onclick="goBackToForm()">Back</button>
+    </div>
+    <div class="model-selection">
+        <button id="predictVotingBtn" class="action-button" onclick="predictWithModel('voting')">Predict with Voting Classifier</button>
+        <button id="predictStackingBtn" class="action-button" onclick="predictWithModel('stacking')">Predict with Stacking Classifier</button>
+    </div>
+</div>
+
+<script src="{{ url_for('static', filename='js/info.js') }}"></script>
+</body>
+</html>
+
+
+
+

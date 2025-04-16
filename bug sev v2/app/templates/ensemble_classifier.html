@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bug Prediction System - Ensemble Classifier</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .top-links {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            padding: 10px 0;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+        .top-links a {
+            text-decoration: none;
+            color: black;
+            padding: 0 20px;
+            font-size: 18px;
+        }
+        .main-title, .sub-title {
+            text-align: center;
+            font-weight: bold;
+        }
+        .main-title {
+            font-size: 48px;
+            margin: 20px 0;
+        }
+        .sub-title {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .card-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 80%;
+            max-width: 600px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-top: 20px;
+        }
+        .card-title {
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .card-content {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        .card-button {
+            background-color: #ddd;
+            color: black;
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+            text-align: center;
+            text-decoration: none;
+        }
+        .card-button:hover {
+            opacity: 0.85;
+        }
+    </style>
+</head>
+<body>
+
+<div class="top-links">
+    <a href="/">Home</a>
+    <a href="/about">About Us</a>
+    <a href="/contact">Contact</a>
+    <a href="/dataset">Dataset</a>
+    <a href="/classifier">Ensemble Classifier</a>
+    <a href="/how-to-use">How to Use?</a>
+</div>
+
+<h1 class="main-title">Bug Prediction System</h1>
+<h2 class="sub-title">Ensemble Classifier</h2>
+
+<div class="card-container">
+    <div class="card-title">Stacking, Voting (Soft), and Boosting</div>
+    <div class="card-content">
+        Our bug prediction system uses advanced ensemble techniques like stacking, voting (soft), and boosting to improve the accuracy and reliability of predictions. These methods combine multiple machine learning models to create a stronger and more robust classifier.
+    </div>
+    <a class="card-button" href="https://github.com/FernandoLpz/Stacking-Blending-Voting-Ensembles?tab=readme-ov-file#how-to-use" target="_blank">Learn More</a>
+</div>
+
+</body>
+</html>

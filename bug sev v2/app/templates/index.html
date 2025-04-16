@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bug Prediction System - Choose Input Method</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            overflow-y: auto; /* Allow vertical scrolling on the entire page */
+            margin-bottom: 20px; /* Add bottom margin */
+        }
+        .top-links {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            padding: 10px 0;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+        .top-links a {
+            text-decoration: none;
+            color: black;
+            padding: 0 20px;
+            font-size: 18px;
+        }
+        .main-title, .sub-title {
+            text-align: center;
+            font-weight: bold;
+        }
+        .main-title {
+            font-size: 48px;
+            margin: 20px 0;
+        }
+        .sub-title {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .content-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 20px;
+            flex-wrap: wrap; /* Allow buttons to wrap if they don't fit in one row */
+        }
+        .choice-button {
+            background-color: #ddd;
+            color: black;
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+            margin: 10px 0;
+            width: 200px;
+            text-align: center;
+        }
+        .choice-button:hover {
+            opacity: 0.85;
+        }
+        .form-container, .upload-container {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            max-width: 1000px;
+            padding: 40px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+        .form-group {
+            margin-bottom: 25px; /* Adjusted for spacing */
+            width: 100%;
+        }
+        .centered-form-group {
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* Center the content vertically */
+            align-items: center; /* Center the content horizontally */
+            min-height: 0px; /* Ensure the form group has a minimum height */
+            height: 50%; /* Make sure the form group takes full height of its container */
+        }
+        .form-group label {
+            display: flex;
+            justify-content: center; /* Center the content vertically */
+            text-align: center; /* Ensure text is centered within the label */
+            margin-bottom: 5px;
+        }
+        .form-group input, .form-group textarea, .centered-form-group input, .centered-form-group textarea {
+            width: 100%;
+            padding: 8px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            margin-bottom: 5px; /* Add some margin to separate from description */
+        }
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px; /* Adjusted for spacing */
+            width: 100%;
+        }
+        .full-width {
+            grid-column: span 3;
+        }
+        .description, .centered-form-group .description {
+            font-size: 12px;
+            color: #666;
+            margin-top: auto; /* Push the description to the bottom */
+        }
+        .next-button {
+            background-color: #ddd;
+            color: black;
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+            margin-top: 10px;
+            grid-column: span 3; /* Make the button span across the entire form */
+        }
+        .next-button:hover {
+            opacity: 0.85;
+        }
+        .accuracy-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .accuracy-card {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 16px;
+            width: 200px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .accuracy-card h4 {
+            margin-top: 0;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .accuracy-card p {
+            margin: 10px 0;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="top-links">
+    <a href="/">Home</a>
+    <a href="/about">About Us</a>
+    <a href="/contact">Contact</a>
+    <a href="/dataset">Dataset</a>
+    <a href="/classifier">Ensemble Classifier</a>
+    <a href="/how-to-use">How to Use?</a>
+</div>
+
+<h1 class="main-title">Bug Prediction System using Ensemble Based Classifier</h1>
+<h3>"Empowering developers and delighting project managers—one bug prediction at a time."</h3>
+
+<div class="accuracy-container">
+    <div class="accuracy-card">
+        <h4>Voting:</h4>
+        <p id="votingAccuracy">Overall Accuracy (Voting): 0.59%</p>
+    </div>
+    <div class="accuracy-card">
+        <h4>Stacking:</h4>
+        <p id="stackingAccuracy">Overall Accuracy (Stacking): 0.63%</p>
+    </div>
+</div>
+
+<h2 class="sub-title">Choose Input Method</h2>
+
+
+<div class="content-container">
+    <button class="choice-button" onclick="showManualInput()">Enter Manually</button>
+    <button class="choice-button" onclick="showUploadInput('csv')">Upload CSV</button>
+    <button class="choice-button" onclick="showUploadInput('jsonl')">Upload JSONL</button>
+    <button class="choice-button" onclick="showUploadInput('json')">Upload JSON</button>
+</div>
+
+<div id="manualInputContainer" class="form-container">
+    <h2 class="sub-title">Manual Input</h2>
+    <form id="manualInputForm" class="form-grid">
+        <div class="form-group">
+            <label for="projectName">Project Name</label>
+            <input type="text" id="projectName" name="project_name" required>
+        </div>
+        <div class="form-group">
+            <label for="projectVersion">Project Version</label>
+            <input type="text" id="projectVersion" name="project_version" required>
+        </div>
+        <div class="form-group">
+            <label for="label">Label</label>
+            <input type="number" id="label" name="label" required>
+        </div>
+        <div class="form-group full-width">
+            <label for="code">Code</label>
+            <textarea id="code" name="code" rows="10" required></textarea>
+        </div>
+        <div class="form-group">
+            <label for="lc">LC (Lines of Code)</label>
+            <input type="number" id="lc" name="lc" step="any" required>
+            <div class="description">The number of lines in the code.</div>
+        </div>
+        <div class="form-group">
+            <label for="pi">PI (Programming Index)</label>
+            <input type="number" id="pi" name="pi" step="any" required>
+            <div class="description">A derived metric combining various aspects of the code's complexity, readability, and maintainability.</div>
+        </div>
+        <div class="form-group">
+            <label for="ma">MA (Maintainability Index)</label>
+            <input type="number" id="ma" name="ma" step="any" required>
+            <div class="description">Evaluates how easy it is to maintain the code. Higher values indicate easier maintenance.</div>
+        </div>
+        <div class="form-group">
+            <label for="nbd">NBD (Nested Block Depth)</label>
+            <input type="number" id="nbd" name="nbd" step="any" required>
+            <div class="description">Measures the maximum depth of nested blocks in the code, indicating complexity.</div>
+        </div>
+        <div class="form-group">
+            <label for="ml">ML (McCabe's Cyclomatic Complexity)</label>
+            <input type="number" id="ml" name="ml" step="any" required>
+            <div class="description">Measures the complexity of a program's control flow by counting linearly independent paths.</div>
+        </div>
+        <div class="form-group">
+            <label for="d">D (Design Complexity)</label>
+            <input type="number" id="d" name="d" step="any" required>
+            <div class="description">Quantifies the complexity of the code's design, including architecture and structure.</div>
+        </div>
+        <div class="form-group">
+            <label for="mi">MI (Maintainability Index)</label>
+            <input type="number" id="mi" name="mi" step="any" required>
+            <div class="description">Evaluates how easy it is to maintain the code. Higher values indicate easier maintenance.</div>
+        </div>
+        <div class="form-group">
+            <label for="fo">FO (Fan-Out Complexity)</label>
+            <input type="number" id="fo" name="fo" step="any" required>
+            <div class="description">Measures the number of other modules or functions a particular module or function calls.</div>
+        </div>
+        <div class="form-group">
+            <label for="r">R (Reusability Index)</label>
+            <input type="number" id="r" name="r" step="any" required>
+            <div class="description">Assesses how reusable the code is. Higher values suggest easier reuse in other projects.</div>
+        </div>
+        <div class="form-group centered-form-group" style="grid-column: 2;">
+            <label for="e">E (Effort Estimate)</label>
+            <input type="number" id="e" name="e" step="any" required>
+            <div class="description">Estimates the effort required to develop or maintain the code based on various factors.</div>
+        </div>
+        <button type="button" class="next-button" onclick="submitManualInput()">Next</button>
+    </form>
+</div>
+
+<div id="uploadInputContainer" class="upload-container">
+    <h2 class="sub-title" id="uploadTitle">Upload File</h2>
+    <input type="file" id="fileInput" accept=".csv, .json, .jsonl" required>
+    <button type="button" class="next-button" onclick="submitUploadInput()">Next</button>
+</div>
+
+<script>
+    function showManualInput() {
+        document.getElementById('manualInputContainer').style.display = 'flex';
+        document.getElementById('uploadInputContainer').style.display = 'none';
+    }
+
+    function showUploadInput(fileType) {
+        document.getElementById('manualInputContainer').style.display = 'none';
+        document.getElementById('uploadInputContainer').style.display = 'flex';
+        document.getElementById('uploadTitle').textContent = `Upload ${fileType.toUpperCase()} File`;
+        document.getElementById('fileInput').accept = fileType === 'csv' ? '.csv' : (fileType === 'json' ? '.json' : '.jsonl');
+    }
+
+    function submitManualInput() {
+        const form = document.getElementById('manualInputForm');
+        const formData = new FormData(form);
+        const formObj = {};
+        formData.forEach((value, key) => formObj[key] = value);
+        sessionStorage.setItem('formData', JSON.stringify(formObj));
+        window.location.href = '/info';
+    }
+
+    function submitUploadInput() {
+        const fileInput = document.getElementById('fileInput');
+        if (fileInput.files.length === 0) {
+            alert("Please select a file to upload.");
+            return;
+        }
+
+        const file = fileInput.files[0];
+        const formData = new FormData();
+        formData.append('file', file);
+
+        fetch('/upload', {
+            method: 'POST',
+            body: formData,
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.error) {
+                alert(data.error);
+            } else {
+                sessionStorage.setItem('fileContent', JSON.stringify(data));
+                sessionStorage.removeItem('formData');  // Clear the formData storage to prevent conflicts
+                window.location.href = '/info';
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('An error occurred while uploading the file.');
+        });
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const formData = sessionStorage.getItem('formData');
+        const fileContent = sessionStorage.getItem('fileContent');
+        if (!formData && !fileContent) {
+            const introductionVisited = sessionStorage.getItem('introductionVisited');
+            if (!introductionVisited) {
+                sessionStorage.setItem('introductionVisited', 'true');
+                window.location.href = '/introduction';
+            }
+        }
+    });
+</script>
+
+</body>
+</html>
+
+
+
