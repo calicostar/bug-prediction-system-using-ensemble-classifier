@@ -1,0 +1,386 @@
+Starting pipeline...
+Loading preprocessed datasets...
+Starting pipeline...
+Loading preprocessed datasets...
+Best params: {'xgb_max_depth': 2, 'xgb_learning_rate': 0.06993091429139281, 'rf_max_depth': 17, 'rf_n_estimators': 464, 'lr_C': 0.15888745340414573, 'kn_neighbors': 3, 'svm_C': 1.4493749473421607, 'svm_kernel': 'linear', 'gb_learning_rate': 0.06369319281091873, 'gb_n_estimators': 216}
+Creating advanced ensemble model with VotingClassifier...
+Performing cross-validation with VotingClassifier...
+Cross-validation accuracy scores with VotingClassifier: [0.65297741 0.76386037 0.74897119 0.76954733 0.781893  ]
+Mean cross-validation accuracy with VotingClassifier: 0.7434498609949214
+Training Advanced_Ensemble_Model...
+Training completed in 24.89 seconds.
+Evaluating Advanced_Ensemble_Model on training set...
+************ Advanced_Ensemble_Model_Train ************
+  eval_ROC-AUC = 0.9950565468461449
+  eval_acc = 0.9428453947368421
+  eval_f1 = 0.9426872765537329
+  eval_mcc = 0.9244357322066901
+  eval_precision = 0.9445609329330197
+  eval_recall = 0.9428453947368421
+Evaluating Advanced_Ensemble_Model on test set...
+************ Advanced_Ensemble_Model_Test ************
+  eval_ROC-AUC = 0.681318340861703
+  eval_acc = 0.5212765957446809
+  eval_f1 = 0.5397936455415019
+  eval_mcc = 0.20503958908441194
+  eval_precision = 0.5830052874456204
+  eval_recall = 0.5212765957446809
+Saving Advanced_Ensemble_Model...
+Saving the best advanced ensemble model...
+Performing cross-validation with StackingClassifier...
+Cross-validation accuracy scores with StackingClassifier: [0.7063655  0.8275154  0.82921811 0.83127572 0.82098765]
+Mean cross-validation accuracy with StackingClassifier: 0.8030724769944483
+Training Best_Stacking_Model...
+Training completed in 127.04 seconds.
+Evaluating Best_Stacking_Model on training set...
+************ Best_Stacking_Model_Train ************
+  eval_ROC-AUC = 0.9999247064000462
+  eval_acc = 0.9946546052631579
+  eval_f1 = 0.9946576083008033
+  eval_mcc = 0.9928779549924991
+  eval_precision = 0.9946760564725748
+  eval_recall = 0.9946546052631579
+Evaluating Best_Stacking_Model on test set...
+************ Best_Stacking_Model_Test ************
+  eval_ROC-AUC = 0.7098944292370012
+  eval_acc = 0.5602836879432624
+  eval_f1 = 0.5581309910593341
+  eval_mcc = 0.16113539227970122
+  eval_precision = 0.5621277804985702
+  eval_recall = 0.5602836879432624
+Saving Best_Stacking_Model...
+Saving the best stacking model...
+Pipeline completed.
+Evaluating on validation set...
+************ Validation_Set ************
+  eval_ROC-AUC = 0.7298821572081562
+  eval_acc = 0.625
+  eval_f1 = 0.6302527487680131
+  eval_mcc = 0.3075604346437142
+  eval_precision = 0.6376264139086719
+  eval_recall = 0.625
+Evaluating on test set...
+************ Test_Set ************
+  eval_ROC-AUC = 0.7098944292370012
+  eval_acc = 0.5602836879432624
+  eval_f1 = 0.5581309910593341
+  eval_mcc = 0.16113539227970122
+  eval_precision = 0.5621277804985702
+  eval_recall = 0.5602836879432624
+All evaluations completed.
+************ Overall Evaluation Summary ************
+Advanced Ensemble Model Metrics: (0.5212765957446809, 0.5397936455415019, 0.681318340861703, 0.20503958908441194, 0.5830052874456204, 0.5212765957446809)
+Stacking Model Metrics: (0.5602836879432624, 0.5581309910593341, 0.7098944292370012, 0.16113539227970122, 0.5621277804985702, 0.5602836879432624)
+Final Test Set Metrics: (0.5602836879432624, 0.5581309910593341, 0.7098944292370012, 0.16113539227970122, 0.5621277804985702, 0.5602836879432624)
+Overall Accuracy: 0.5472813238770686
+***************************************************
+Starting pipeline...
+Loading preprocessed datasets...
+Starting pipeline...
+Loading preprocessed datasets...
+Best params: {'xgb_max_depth': 7, 'xgb_learning_rate': 0.01958563562385323, 'rf_max_depth': 20, 'rf_n_estimators': 299, 'lr_C': 0.017019224670635442, 'kn_neighbors': 6, 'svm_C': 0.09841890342163989, 'svm_kernel': 'linear', 'gb_learning_rate': 0.016938153880820254, 'gb_n_estimators': 132}
+Creating advanced ensemble model with VotingClassifier...
+Performing cross-validation with VotingClassifier...
+Cross-validation accuracy scores with VotingClassifier: [0.71457906 0.80082136 0.78806584 0.80246914 0.82304527]
+Mean cross-validation accuracy with VotingClassifier: 0.7857961315182397
+Training Advanced_Ensemble_Model...
+Training completed in 5.81 seconds.
+Evaluating Advanced_Ensemble_Model on training set...
+************ Advanced_Ensemble_Model_Train ************
+  eval_ROC-AUC = 0.9983417373614959
+  eval_acc = 0.969983552631579
+  eval_f1 = 0.9700149689216742
+  eval_mcc = 0.9601683491889145
+  eval_precision = 0.9706278585596331
+  eval_recall = 0.969983552631579
+Evaluating Advanced_Ensemble_Model on test set...
+************ Advanced_Ensemble_Model_Test ************
+  eval_ROC-AUC = 0.7209387096440724
+  eval_acc = 0.599290780141844
+  eval_f1 = 0.6053593152491016
+  eval_mcc = 0.26942852716204246
+  eval_precision = 0.6241450589854846
+  eval_recall = 0.599290780141844
+Saving Advanced_Ensemble_Model...
+Saving the best advanced ensemble model...
+Performing cross-validation with StackingClassifier...
+Cross-validation accuracy scores with StackingClassifier: [0.73305955 0.86036961 0.87037037 0.82921811 0.86831276]
+Mean cross-validation accuracy with StackingClassifier: 0.8322660785357568
+Training Best_Stacking_Model...
+Training completed in 28.25 seconds.
+Evaluating Best_Stacking_Model on training set...
+************ Best_Stacking_Model_Train ************
+  eval_ROC-AUC = 0.9999589717509233
+  eval_acc = 0.9958881578947368
+  eval_f1 = 0.995892534335067
+  eval_mcc = 0.994520458394854
+  eval_precision = 0.9959056639210109
+  eval_recall = 0.9958881578947368
+Evaluating Best_Stacking_Model on test set...
+************ Best_Stacking_Model_Test ************
+  eval_ROC-AUC = 0.7239608597336916
+  eval_acc = 0.6312056737588653
+  eval_f1 = 0.6234315161875541
+  eval_mcc = 0.26999367130072394
+  eval_precision = 0.619782650648912
+  eval_recall = 0.6312056737588653
+Saving Best_Stacking_Model...
+Saving the best stacking model...
+Pipeline completed.
+Evaluating on validation set...
+************ Validation_Set ************
+  eval_ROC-AUC = 0.7567660491481775
+  eval_acc = 0.665
+  eval_f1 = 0.6567373848185657
+  eval_mcc = 0.3282007057589801
+  eval_precision = 0.651781746031746
+  eval_recall = 0.665
+Evaluating on test set...
+************ Test_Set ************
+  eval_ROC-AUC = 0.7239608597336916
+  eval_acc = 0.6312056737588653
+  eval_f1 = 0.6234315161875541
+  eval_mcc = 0.26999367130072394
+  eval_precision = 0.619782650648912
+  eval_recall = 0.6312056737588653
+All evaluations completed.
+************ Overall Evaluation Summary ************
+Advanced Ensemble Model Metrics: (0.599290780141844, 0.6053593152491016, 0.7209387096440724, 0.26942852716204246, 0.6241450589854846, 0.599290780141844)
+Stacking Model Metrics: (0.6312056737588653, 0.6234315161875541, 0.7239608597336916, 0.26999367130072394, 0.619782650648912, 0.6312056737588653)
+Final Test Set Metrics: (0.6312056737588653, 0.6234315161875541, 0.7239608597336916, 0.26999367130072394, 0.619782650648912, 0.6312056737588653)
+Overall Accuracy (Voting): 0.599290780141844
+Overall Accuracy (Stacking): 0.6312056737588653
+Overall Accuracy (Validation Set): 0.665
+Overall Accuracy (Test Set): 0.6312056737588653
+***************************************************
+Starting pipeline...
+Loading preprocessed datasets...
+Best params: {'xgb_max_depth': 2, 'xgb_learning_rate': 0.026501308942213198, 'rf_max_depth': 19, 'rf_n_estimators': 453, 'lr_C': 0.0392716129033541, 'kn_neighbors': 11, 'svm_C': 0.028012068664748188, 'svm_kernel': 'linear', 'gb_learning_rate': 0.014595289066260038, 'gb_n_estimators': 206}
+Creating advanced ensemble model with VotingClassifier...
+Performing cross-validation with VotingClassifier...
+Cross-validation accuracy scores with VotingClassifier: [0.69199179 0.77823409 0.79218107 0.7962963  0.81893004]
+Mean cross-validation accuracy with VotingClassifier: 0.7755266560194691
+Training Advanced_Ensemble_Model...
+Training completed in 8.45 seconds.
+Evaluating Advanced_Ensemble_Model on training set...
+************ Advanced_Ensemble_Model_Train ************
+  eval_ROC-AUC = 0.9950087556988688
+  eval_acc = 0.9527138157894737
+  eval_f1 = 0.9528145246348511
+  eval_mcc = 0.9373856841035466
+  eval_precision = 0.9542486135007812
+  eval_recall = 0.9527138157894737
+Evaluating Advanced_Ensemble_Model on test set...
+************ Advanced_Ensemble_Model_Test ************
+  eval_ROC-AUC = 0.7226291746829573
+  eval_acc = 0.6028368794326241
+  eval_f1 = 0.6136172207997965
+  eval_mcc = 0.2874371688464991
+  eval_precision = 0.6380761330043864
+  eval_recall = 0.6028368794326241
+Saving Advanced_Ensemble_Model...
+Saving the best advanced ensemble model...
+Performing cross-validation with StackingClassifier...
+Cross-validation accuracy scores with StackingClassifier: [0.74537988 0.85215606 0.87037037 0.84567901 0.86625514]
+Mean cross-validation accuracy with StackingClassifier: 0.8359680922081104
+Training Best_Stacking_Model...
+Training completed in 37.18 seconds.
+Evaluating Best_Stacking_Model on training set...
+************ Best_Stacking_Model_Train ************
+  eval_ROC-AUC = 0.9999720466874423
+  eval_acc = 0.9958881578947368
+  eval_f1 = 0.9958925152362901
+  eval_mcc = 0.994521803573591
+  eval_precision = 0.9959095960404092
+  eval_recall = 0.9958881578947368
+Evaluating Best_Stacking_Model on test set...
+************ Best_Stacking_Model_Test ************
+  eval_ROC-AUC = 0.7310691726316337
+  eval_acc = 0.6312056737588653
+  eval_f1 = 0.626832816341055
+  eval_mcc = 0.2796877201063868
+  eval_precision = 0.6253743154606104
+  eval_recall = 0.6312056737588653
+Saving Best_Stacking_Model...
+Saving the best stacking model...
+Pipeline completed.
+Evaluating on validation set...
+************ Validation_Set ************
+  eval_ROC-AUC = 0.7507981109844603
+  eval_acc = 0.66
+  eval_f1 = 0.6537225681536555
+  eval_mcc = 0.32482865222070045
+  eval_precision = 0.6490095520421607
+  eval_recall = 0.66
+Evaluating on test set...
+************ Test_Set ************
+  eval_ROC-AUC = 0.7310691726316337
+  eval_acc = 0.6312056737588653
+  eval_f1 = 0.626832816341055
+  eval_mcc = 0.2796877201063868
+  eval_precision = 0.6253743154606104
+  eval_recall = 0.6312056737588653
+All evaluations completed.
+************ Overall Evaluation Summary ************
+Advanced Ensemble Model Metrics: (0.6028368794326241, 0.6136172207997965, 0.7226291746829573, 0.2874371688464991, 0.6380761330043864, 0.6028368794326241)
+Stacking Model Metrics: (0.6312056737588653, 0.626832816341055, 0.7310691726316337, 0.2796877201063868, 0.6253743154606104, 0.6312056737588653)
+Final Test Set Metrics: (0.6312056737588653, 0.626832816341055, 0.7310691726316337, 0.2796877201063868, 0.6253743154606104, 0.6312056737588653)
+Overall Accuracy (Voting): 0.6028368794326241
+Overall Accuracy (Stacking): 0.6312056737588653
+Overall Accuracy (Validation Set): 0.66
+Overall Accuracy (Test Set): 0.6312056737588653
+***************************************************
+Starting pipeline...
+Loading preprocessed datasets...
+Best params: {'xgb_max_depth': 3, 'xgb_learning_rate': 0.04181750612306679, 'rf_max_depth': 19, 'rf_n_estimators': 324, 'lr_C': 0.216883380304746, 'kn_neighbors': 19, 'svm_C': 0.11543493612348256, 'svm_kernel': 'rbf', 'gb_learning_rate': 0.026757931860407286, 'gb_n_estimators': 132}
+Creating advanced ensemble model with VotingClassifier...
+Performing cross-validation with VotingClassifier...
+Cross-validation accuracy scores with VotingClassifier: [0.67145791 0.74537988 0.76131687 0.77160494 0.79423868]
+Mean cross-validation accuracy with VotingClassifier: 0.7487996552336046
+Training Advanced_Ensemble_Model...
+Training completed in 8.31 seconds.
+Evaluating Advanced_Ensemble_Model on training set...
+************ Advanced_Ensemble_Model_Train ************
+  eval_ROC-AUC = 0.991418783904663
+  eval_acc = 0.9263980263157895
+  eval_f1 = 0.9265409258261834
+  eval_mcc = 0.9028796408375556
+  eval_precision = 0.9298254292575812
+  eval_recall = 0.9263980263157895
+Evaluating Advanced_Ensemble_Model on test set...
+************ Advanced_Ensemble_Model_Test ************
+  eval_ROC-AUC = 0.7117952491187217
+  eval_acc = 0.5638297872340425
+  eval_f1 = 0.5796943013106289
+  eval_mcc = 0.25216373475889764
+  eval_precision = 0.6134405689532451
+  eval_recall = 0.5638297872340425
+Saving Advanced_Ensemble_Model...
+Saving the best advanced ensemble model...
+Performing cross-validation with StackingClassifier...
+Cross-validation accuracy scores with StackingClassifier: [0.72689938 0.862423   0.86213992 0.84567901 0.86831276]
+Mean cross-validation accuracy with StackingClassifier: 0.8330908138345967
+Training Best_Stacking_Model...
+Training completed in 38.08 seconds.
+Evaluating Best_Stacking_Model on training set...
+************ Best_Stacking_Model_Train ************
+  eval_ROC-AUC = 0.9999657346491228
+  eval_acc = 0.9958881578947368
+  eval_f1 = 0.995892534335067
+  eval_mcc = 0.994520458394854
+  eval_precision = 0.9959056639210109
+  eval_recall = 0.9958881578947368
+Evaluating Best_Stacking_Model on test set...
+************ Best_Stacking_Model_Test ************
+  eval_ROC-AUC = 0.7293099821857444
+  eval_acc = 0.6347517730496454
+  eval_f1 = 0.6273957154178724
+  eval_mcc = 0.2772802290014468
+  eval_precision = 0.6245072589627895
+  eval_recall = 0.6347517730496454
+Saving Best_Stacking_Model...
+Saving the best stacking model...
+Pipeline completed.
+Evaluating on validation set...
+************ Validation_Set ************
+  eval_ROC-AUC = 0.7507131398262966
+  eval_acc = 0.66
+  eval_f1 = 0.6526410774410775
+  eval_mcc = 0.320985336960922
+  eval_precision = 0.6481274980015986
+  eval_recall = 0.66
+Evaluating on test set...
+************ Test_Set ************
+  eval_ROC-AUC = 0.7293099821857444
+  eval_acc = 0.6347517730496454
+  eval_f1 = 0.6273957154178724
+  eval_mcc = 0.2772802290014468
+  eval_precision = 0.6245072589627895
+  eval_recall = 0.6347517730496454
+All evaluations completed.
+************ Overall Evaluation Summary ************
+Advanced Ensemble Model Metrics: (0.5638297872340425, 0.5796943013106289, 0.7117952491187217, 0.25216373475889764, 0.6134405689532451, 0.5638297872340425)
+Stacking Model Metrics: (0.6347517730496454, 0.6273957154178724, 0.7293099821857444, 0.2772802290014468, 0.6245072589627895, 0.6347517730496454)
+Final Test Set Metrics: (0.6347517730496454, 0.6273957154178724, 0.7293099821857444, 0.2772802290014468, 0.6245072589627895, 0.6347517730496454)
+Overall Accuracy (Voting): 0.5638297872340425
+Overall Accuracy (Stacking): 0.6347517730496454
+Overall Accuracy (Validation Set): 0.66
+Overall Accuracy (Test Set): 0.6347517730496454
+***************************************************
+Starting pipeline...
+Loading preprocessed datasets...
+Best params: {'xgb_max_depth': 3, 'xgb_learning_rate': 0.010069522524430668, 'rf_max_depth': 20, 'rf_n_estimators': 170, 'lr_C': 0.0216294988722193, 'kn_neighbors': 2, 'svm_C': 5.7469739149070085, 'svm_kernel': 'rbf', 'gb_learning_rate': 0.015057232037077324, 'gb_n_estimators': 281}
+Creating advanced ensemble model with VotingClassifier...
+Performing cross-validation with VotingClassifier...
+Cross-validation accuracy scores with VotingClassifier: [0.72073922 0.77412731 0.79218107 0.78395062 0.79835391]
+Mean cross-validation accuracy with VotingClassifier: 0.7738704252963893
+Training Advanced_Ensemble_Model...
+Training completed in 8.16 seconds.
+Evaluating Advanced_Ensemble_Model on training set...
+************ Advanced_Ensemble_Model_Train ************
+  eval_ROC-AUC = 0.9935321895919899
+  eval_acc = 0.9263980263157895
+  eval_f1 = 0.9266362345183322
+  eval_mcc = 0.9030853378411308
+  eval_precision = 0.9305263070865376
+  eval_recall = 0.9263980263157895
+Evaluating Advanced_Ensemble_Model on test set...
+************ Advanced_Ensemble_Model_Test ************
+  eval_ROC-AUC = 0.7251901537595827
+  eval_acc = 0.5567375886524822
+  eval_f1 = 0.5745594874789474
+  eval_mcc = 0.255451337099108
+  eval_precision = 0.6153922018129093
+  eval_recall = 0.5567375886524822
+Saving Advanced_Ensemble_Model...
+Saving the best advanced ensemble model...
+Performing cross-validation with StackingClassifier...
+Cross-validation accuracy scores with StackingClassifier: [0.75154004 0.86036961 0.85185185 0.82921811 0.85596708]
+Mean cross-validation accuracy with StackingClassifier: 0.8297893375922124
+Training Best_Stacking_Model...
+Training completed in 37.41 seconds.
+Evaluating Best_Stacking_Model on training set...
+************ Best_Stacking_Model_Train ************
+  eval_ROC-AUC = 0.9999562665916436
+  eval_acc = 0.9958881578947368
+  eval_f1 = 0.9958905187956852
+  eval_mcc = 0.9945186648316956
+  eval_precision = 0.995896248967214
+  eval_recall = 0.9958881578947368
+Evaluating Best_Stacking_Model on test set...
+************ Best_Stacking_Model_Test ************
+  eval_ROC-AUC = 0.7307598253971279
+  eval_acc = 0.648936170212766
+  eval_f1 = 0.6480720622184316
+  eval_mcc = 0.3246125064903985
+  eval_precision = 0.6501876725960022
+  eval_recall = 0.648936170212766
+Saving Best_Stacking_Model...
+Saving the best stacking model...
+Pipeline completed.
+Evaluating on validation set...
+************ Validation_Set ************
+  eval_ROC-AUC = 0.7445377054716973
+  eval_acc = 0.675
+  eval_f1 = 0.6679500597371565
+  eval_mcc = 0.3513040742828643
+  eval_precision = 0.6631327665140616
+  eval_recall = 0.675
+Evaluating on test set...
+************ Test_Set ************
+  eval_ROC-AUC = 0.7307598253971279
+  eval_acc = 0.648936170212766
+  eval_f1 = 0.6480720622184316
+  eval_mcc = 0.3246125064903985
+  eval_precision = 0.6501876725960022
+  eval_recall = 0.648936170212766
+All evaluations completed.
+************ Overall Evaluation Summary ************
+Advanced Ensemble Model Metrics: (0.5567375886524822, 0.5745594874789474, 0.7251901537595827, 0.255451337099108, 0.6153922018129093, 0.5567375886524822)
+Stacking Model Metrics: (0.648936170212766, 0.6480720622184316, 0.7307598253971279, 0.3246125064903985, 0.6501876725960022, 0.648936170212766)
+Final Test Set Metrics: (0.648936170212766, 0.6480720622184316, 0.7307598253971279, 0.3246125064903985, 0.6501876725960022, 0.648936170212766)
+Overall Accuracy (Voting): 0.5567375886524822
+Overall Accuracy (Stacking): 0.648936170212766
+Overall Accuracy (Validation Set): 0.675
+Overall Accuracy (Test Set): 0.648936170212766
+***************************************************
